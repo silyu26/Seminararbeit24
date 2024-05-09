@@ -1,0 +1,1956 @@
+<?xml version="1.0"?>
+<rdf:RDF
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:bibo="http://purl.org/ontology/biblio/"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+>
+
+<bibo:Article rdf:about="https://doi.org/10.1016/j.metrad.2023.100017">
+
+    <dc:title>Summary of ChatGPT&#45;Related research and perspective towards the future of large language models</dc:title>
+    <dc:date>2023</dc:date>
+    <dcterms:isPartOf><bibo:Journal><dc:title>Meta&#45;Radiology</dc:title></bibo:Journal></dcterms:isPartOf>
+    <bibo:volume>1</bibo:volume>
+    <bibo:doi>10.1016/j.metrad.2023.100017</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Liu&#44; Yiheng"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Han&#44; Tianle"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ma&#44; Siyuan"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhang&#44; Jiayue"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yang&#44; Yuanyuan"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Tian&#44; Jiaming"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="He&#44; Hao"/></bibo:contributor>
+    <bibo:position>7</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Li&#44; Antong"/></bibo:contributor>
+    <bibo:position>8</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="He&#44; Mengshen"/></bibo:contributor>
+    <bibo:position>9</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Liu&#44; Zhengliang"/></bibo:contributor>
+    <bibo:position>10</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wu&#44; Zihao"/></bibo:contributor>
+    <bibo:position>11</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhao&#44; Lin"/></bibo:contributor>
+    <bibo:position>12</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhu&#44; Dajiang"/></bibo:contributor>
+    <bibo:position>13</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Li&#44; Xiang"/></bibo:contributor>
+    <bibo:position>14</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Qiang&#44; Ning"/></bibo:contributor>
+    <bibo:position>15</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Shen&#44; Dingang"/></bibo:contributor>
+    <bibo:position>16</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Liu&#44; Tianming"/></bibo:contributor>
+    <bibo:position>17</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ge&#44; Bao"/></bibo:contributor>
+    <bibo:position>18</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.2307.08225">
+
+    <dc:title>Harnessing Scalable Transactional Stream Processing for Managing Large Language Models [Vision]</dc:title>
+    <dc:date>2023</dc:date>
+    <bibo:doi>10.48550/arXiv.2307.08225</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhang&#44; Shuhao"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zeng&#44; Xianzhi"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wu&#44; Yuhao"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yang&#44; Zhonghao"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Article rdf:about="https://doi.org/10.1016/j.inffus.2023.102038">
+
+    <dc:title>Semantic understanding and prompt engineering for large&#45;scale traffic data imputation</dc:title>
+    <dc:date>2024</dc:date>
+    <dcterms:isPartOf><bibo:Journal><dc:title>Information Fusion</dc:title></bibo:Journal></dcterms:isPartOf>
+    <bibo:volume>102</bibo:volume>
+    <bibo:doi>10.1016/j.inffus.2023.102038</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhang&#44; Kunpeng"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhou&#44; Feng"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wu&#44; Lan"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Xie&#44; Na"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="He&#44; Zhengbing"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Article rdf:about="https://doi.org/10.48550/arXiv.2307.14385">
+
+    <dc:title>Mental&#45;LLM: Leveraging Large Language Models for Mental Health Prediction via Online Text Data</dc:title>
+    <dc:date>2023</dc:date>
+
+
+    <bibo:doi>10.48550/arXiv.2307.14385</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Xu&#44; Xuhai"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yao&#44; Bingsheng"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Dong&#44; Yuanzhe"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Gabriel&#44; Saadia"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yu&#44; Hong"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Hendler&#44; James"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ghassemi&#44; Marzyeh"/></bibo:contributor>
+    <bibo:position>7</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Dey&#44; Anind K."/></bibo:contributor>
+    <bibo:position>8</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wang&#44; Dakuo"/></bibo:contributor>
+    <bibo:position>9</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.2403.06139">
+
+    <dc:title>Fine&#45;grainedly Synthesize Streaming Data Based On Large Language Models With Graph Structure Understanding For Data Sparsity</dc:title>
+    <dc:date>2024</dc:date>
+    <bibo:doi>10.48550/arXiv.2403.06139</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhang&#44; Xin"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhang&#44; Linhai"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhou&#44; Deyu"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Xu&#44; Guoqiang"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.2402.01364">
+
+    <dc:title>Continual Learning for Large Language Models: A Survey</dc:title>
+    <dc:date>2024</dc:date>
+    <bibo:doi>10.48550/arXiv.2402.01364</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wu&#44; Tongtong"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Luo&#44; Linhao"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Li&#44; Yuan&#45;Fang"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Pan&#44; Shirui"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Vu&#44; Thuy&#45;Trang"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Haffari&#44; Gholamreza"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.2005.14165">
+
+    <dc:title>Language Models are Few&#45;Shot Learners</dc:title>
+    <dc:date>2020</dc:date>
+    <bibo:doi>10.48550/arXiv.2005.14165</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Brown&#44; Tom B."/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Mann&#44; Benjamin"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ryder&#44; Nick"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Subbiah&#44; Melanie"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Kaplan&#44; Jared"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Dhariwal&#44; Prafulla"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Neelakantan&#44; Arvind"/></bibo:contributor>
+    <bibo:position>7</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Shyam&#44; Pranav"/></bibo:contributor>
+    <bibo:position>8</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Sastry&#44; Girish"/></bibo:contributor>
+    <bibo:position>9</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Askell&#44; Amanda"/></bibo:contributor>
+    <bibo:position>10</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Agarwal&#44; Sandhini"/></bibo:contributor>
+    <bibo:position>11</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Herbert&#45;Voss&#44; Ariel"/></bibo:contributor>
+    <bibo:position>12</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Krueger&#44; Gretchen"/></bibo:contributor>
+    <bibo:position>13</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Henighan&#44; Tom"/></bibo:contributor>
+    <bibo:position>14</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Child&#44; Rewon"/></bibo:contributor>
+    <bibo:position>15</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ramesh&#44; Aditya"/></bibo:contributor>
+    <bibo:position>16</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ziegler&#44; Daniel M."/></bibo:contributor>
+    <bibo:position>17</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wu&#44; Jeffrey"/></bibo:contributor>
+    <bibo:position>18</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Winter&#44; Clemens"/></bibo:contributor>
+    <bibo:position>19</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Hesse&#44; Christopher"/></bibo:contributor>
+    <bibo:position>20</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Chen&#44; Mark"/></bibo:contributor>
+    <bibo:position>21</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Sigler&#44; Eric"/></bibo:contributor>
+    <bibo:position>22</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Litwin&#44; Mateusz"/></bibo:contributor>
+    <bibo:position>23</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Gray&#44; Scott"/></bibo:contributor>
+    <bibo:position>24</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Chess&#44; Benjamin"/></bibo:contributor>
+    <bibo:position>25</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Clark&#44; Jack"/></bibo:contributor>
+    <bibo:position>26</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Berner&#44; Christopher"/></bibo:contributor>
+    <bibo:position>27</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="McCandlish&#44; Sam"/></bibo:contributor>
+    <bibo:position>28</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Radford&#44; Alec"/></bibo:contributor>
+    <bibo:position>29</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Sutskever&#44; Ilya"/></bibo:contributor>
+    <bibo:position>30</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Amodei&#44; Dario"/></bibo:contributor>
+    <bibo:position>31</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Article rdf:about="https://doi.org/10.1007/s10994&#45;012&#45;5320&#45;9">
+
+    <dc:title>On evaluating stream learning algorithms</dc:title>
+    <dc:date>2012</dc:date>
+    <dcterms:isPartOf><bibo:Journal><dc:title>Machine Learning</dc:title></bibo:Journal></dcterms:isPartOf>
+    <bibo:volume>90</bibo:volume>
+    <bibo:doi>10.1007/s10994&#45;012&#45;5320&#45;9</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Gama&#44; Jo&#227;o"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Sebasti&#227;o&#44; Raquel"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Rodrigues&#44; Pedro Pereira"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Article rdf:about="https://doi.org/10.48550/arXiv.2110.03215">
+
+    <dc:title>Towards Continual Knowledge Learning of Language Models</dc:title>
+    <dc:date>2021</dc:date>
+
+
+    <bibo:doi>10.48550/arXiv.2110.03215</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Jang&#44; Joel"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ye&#44; Seonghyeon"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yang&#44; Sohee"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Shin&#44; Joongbo"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Han&#44; Janghoon"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Kim&#44; Gyeonghun"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Choi&#44; Stanley Jungkyu"/></bibo:contributor>
+    <bibo:position>7</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Seo&#44; Minjoon"/></bibo:contributor>
+    <bibo:position>8</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Document rdf:about="https://doi.org/10.4230/DFU.Vol5.10452.275">
+
+    <dc:title>Data Stream Management Systems</dc:title>
+    <dc:date>2013</dc:date>
+    <bibo:doi>10.4230/DFU.Vol5.10452.275</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Geisler&#44; Sandra"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Article rdf:about="https://doi.org/10.1016/j.lindif.2023.102274">
+
+    <dc:title>ChatGPT for good&#63; On opportunities and challenges of large language models for education</dc:title>
+    <dc:date>2023</dc:date>
+    <dcterms:isPartOf><bibo:Journal><dc:title>Learning and Individual Differences</dc:title></bibo:Journal></dcterms:isPartOf>
+    <bibo:volume>103</bibo:volume>
+    <bibo:doi>10.1016/j.lindif.2023.102274</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Kasneci&#44; Enkelejda"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Sessler&#44; Kathrin"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="K&#252;chemann&#44; Stefan"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Bannert&#44; Maria"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Dementieva&#44; Daryna"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Fischer&#44; Frank"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Gasser&#44; Urs"/></bibo:contributor>
+    <bibo:position>7</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Groh&#44; Georg"/></bibo:contributor>
+    <bibo:position>8</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="G&#252;nnemann&#44; Stephan"/></bibo:contributor>
+    <bibo:position>9</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="H&#252;llermeier&#44; Eyke"/></bibo:contributor>
+    <bibo:position>10</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Krusche&#44; Stephan"/></bibo:contributor>
+    <bibo:position>11</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Kutyniok&#44; Gitta"/></bibo:contributor>
+    <bibo:position>12</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Michaeli&#44; Tilman"/></bibo:contributor>
+    <bibo:position>13</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Nerdel&#44; Claudia"/></bibo:contributor>
+    <bibo:position>14</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Pfeffer&#44; J&#252;rgen"/></bibo:contributor>
+    <bibo:position>15</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Poquet&#44; Oleksandra"/></bibo:contributor>
+    <bibo:position>16</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Sailer&#44; Michael"/></bibo:contributor>
+    <bibo:position>17</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Schmidt&#44; Albrecht"/></bibo:contributor>
+    <bibo:position>18</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Seidel&#44; Tina"/></bibo:contributor>
+    <bibo:position>19</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Stadler&#44; Matthias"/></bibo:contributor>
+    <bibo:position>20</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Weller&#44; Jochen"/></bibo:contributor>
+    <bibo:position>21</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Kuhn&#44; Jochen"/></bibo:contributor>
+    <bibo:position>22</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Kasneci&#44; Gjergji"/></bibo:contributor>
+    <bibo:position>23</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Article rdf:about="https://doi.org/10.1038/s41591&#45;023&#45;02448&#45;8">
+
+    <dc:title>Large language models in medicine</dc:title>
+    <dc:date>2023</dc:date>
+    <dcterms:isPartOf><bibo:Journal><dc:title>Nature Medicine</dc:title></bibo:Journal></dcterms:isPartOf>
+    <bibo:volume>29</bibo:volume>
+    <bibo:doi>10.1038/s41591&#45;023&#45;02448&#45;8</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Thirunavukarasu&#44; Arun James"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ting&#44; Darren Shu Jeng"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Elangovan&#44; Kabilan"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Gutierrez&#44; Laura"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Tan&#44; Ting Fang"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ting&#44; Daniel Shu Wei"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Article rdf:about="https://doi.org/10.1145/3641289">
+
+    <dc:title>A Survey on Evaluation of Large Language Models</dc:title>
+    <dc:date>2024</dc:date>
+    <dcterms:isPartOf><bibo:Journal><dc:title>ACM Transactions on Intelligent Systems and Technology</dc:title></bibo:Journal></dcterms:isPartOf>
+    <bibo:volume>15</bibo:volume>
+    <bibo:doi>10.1145/3641289</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Chang&#44; Yupeng"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wang&#44; Xu"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wang&#44; Jindong"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wu&#44; Yuan"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yang&#44; Linyi"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhu&#44; Kaijie"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Chen&#44; Hao"/></bibo:contributor>
+    <bibo:position>7</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yi&#44; Xiaoyuan"/></bibo:contributor>
+    <bibo:position>8</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wang&#44; Cunxiang"/></bibo:contributor>
+    <bibo:position>9</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wang&#44; Yidong"/></bibo:contributor>
+    <bibo:position>10</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ye&#44; Wei"/></bibo:contributor>
+    <bibo:position>11</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhang&#44; Yue"/></bibo:contributor>
+    <bibo:position>12</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Chang&#44; Yi"/></bibo:contributor>
+    <bibo:position>13</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yu&#44; Philip S."/></bibo:contributor>
+    <bibo:position>14</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yang&#44; Qiang"/></bibo:contributor>
+    <bibo:position>15</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Xie&#44; Xing"/></bibo:contributor>
+    <bibo:position>16</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.1810.04805">
+
+    <dc:title>BERT: Pre&#45;training of Deep Bidirectional Transformers for Language Understanding</dc:title>
+    <dc:date>2018</dc:date>
+    <bibo:doi>10.48550/arXiv.1810.04805</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Devlin&#44; Jacob"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Chang&#44; Ming&#45;Wei"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Lee&#44; Kenton"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Toutanova&#44; Kristina"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Article rdf:about="https://doi.org/10.1109/ACCESS.2024.3389497">
+
+    <dc:title>GPT (Generative Pre&#45;trained Transformer) &#8211; A Comprehensive Review on Enabling Technologies&#44; Potential Applications&#44; Emerging Challenges&#44; and Future Directions</dc:title>
+    <dc:date>2024</dc:date>
+    <dcterms:isPartOf><bibo:Journal><dc:title>IEEE Access</dc:title></bibo:Journal></dcterms:isPartOf>
+
+    <bibo:doi>10.1109/ACCESS.2024.3389497</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yenduri&#44; Gokul"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ramalingam&#44; M"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Chemmalar Selvi&#44; G"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Supriya&#44; Y"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Srivastava&#44; Gautam"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Maddikunta&#44; Praveen Kumar Reddy"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Deepti Raj&#44; G"/></bibo:contributor>
+    <bibo:position>7</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Jhaveri&#44; Rutvij H"/></bibo:contributor>
+    <bibo:position>8</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Prabadevi&#44; B"/></bibo:contributor>
+    <bibo:position>9</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wang&#44; Weizheng"/></bibo:contributor>
+    <bibo:position>10</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Vasilakos&#44; Athanasios V."/></bibo:contributor>
+    <bibo:position>11</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Gadekallu&#44; Thippa Reddy"/></bibo:contributor>
+    <bibo:position>12</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.2104.08691">
+
+    <dc:title>The Power of Scale for Parameter&#45;Efficient Prompt Tuning</dc:title>
+    <dc:date>2021</dc:date>
+    <bibo:doi>10.48550/arXiv.2104.08691</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Lester&#44; Brian"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Al&#45;Rfou&#44; Rami"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Constant&#44; Noah"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.1901.11117">
+
+    <dc:title>The Evolved Transformer</dc:title>
+    <dc:date>2019</dc:date>
+    <bibo:doi>10.48550/arXiv.1901.11117</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="So&#44; David R."/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Liang&#44; Chen"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Le&#44; Quoc V."/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.2403.00782">
+
+    <dc:title>Ploutos: Towards interpretable stock movement prediction with financial large language model</dc:title>
+    <dc:date>2024</dc:date>
+    <bibo:doi>10.48550/arXiv.2403.00782</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Tong&#44; Hanshuang"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Li&#44; Jun"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wu&#44; Ning"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Gong&#44; Ming"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhang&#44; Dongmei"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhang&#44; Qi"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Article rdf:about="https://doi.org/10.1016/j.eswa.2022.117958">
+
+    <dc:title>Multi&#45;layer features ablation of BERT model and its application in stock trend prediction</dc:title>
+    <dc:date>2022</dc:date>
+    <dcterms:isPartOf><bibo:Journal><dc:title>Expert Systems with Applications</dc:title></bibo:Journal></dcterms:isPartOf>
+    <bibo:volume>207</bibo:volume>
+    <bibo:doi>10.1016/j.eswa.2022.117958</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhao&#44; Feng"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Li&#44; Xinning"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Gao&#44; Yating"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Li&#44; Ying"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Feng&#44; Zhiquan"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhang&#44; Caiming"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.1908.10063">
+
+    <dc:title>FinBERT: Financial Sentiment Analysis with Pre&#45;trained Language Models</dc:title>
+    <dc:date>2019</dc:date>
+    <bibo:doi>10.48550/arXiv.1908.10063</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Araci&#44; Dogu"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.2403.02221">
+
+    <dc:title>TPLLM: A Traffic Prediction Framework Based on Pretrained Large Language Models</dc:title>
+    <dc:date>2024</dc:date>
+    <bibo:doi>10.48550/arXiv.2403.02221</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ren&#44; Yilong"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Chen&#44; Yue"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Liu&#44; Shuai"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wang&#44; Boyue"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yu&#44; Haiyang"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Cui&#44; Zhiyong"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.2401.10134">
+
+    <dc:title>Spatial&#45;Temporal Large Language Model for Traffic Prediction</dc:title>
+    <dc:date>2024</dc:date>
+    <bibo:doi>10.48550/arXiv.2401.10134</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Liu&#44; Chenxi"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yang&#44; Sun"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Xu&#44; Qianxiong"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Li&#44; Zhishuai"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Long&#44; Cheng"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Li&#44; Ziyue"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhao&#44; Rui"/></bibo:contributor>
+    <bibo:position>7</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+<bibo:Article rdf:about="https://doi.org/10.1038/s41746&#45;022&#45;00742&#45;2">
+
+    <dc:title>A large language model for electronic health records</dc:title>
+    <dc:date>2022</dc:date>
+    <dcterms:isPartOf><bibo:Journal><dc:title>npj Digital Medicine</dc:title></bibo:Journal></dcterms:isPartOf>
+    <bibo:volume>5</bibo:volume>
+    <bibo:doi>10.1038/s41746&#45;022&#45;00742&#45;2</bibo:doi>
+
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Yang&#44; Xi"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Chen&#44; Aokun"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="PourNejatian&#44; Nima"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Shin&#44; Hoo Chang"/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Smith&#44; Kaleb E."/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Parisien&#44; Christopher"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Compas&#44; Colin"/></bibo:contributor>
+    <bibo:position>7</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Martin&#44; Cheryl"/></bibo:contributor>
+    <bibo:position>8</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Costa&#44; Anthony B."/></bibo:contributor>
+    <bibo:position>9</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Flores&#44; Mona G."/></bibo:contributor>
+    <bibo:position>10</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Zhang&#44; Ying"/></bibo:contributor>
+    <bibo:position>11</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Magoc&#44; Tanja"/></bibo:contributor>
+    <bibo:position>12</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Harle&#44; Christopher A."/></bibo:contributor>
+    <bibo:position>13</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Lipori&#44; Gloria"/></bibo:contributor>
+    <bibo:position>14</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Mitchell&#44; Duane A."/></bibo:contributor>
+    <bibo:position>15</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Hogan&#44; William R."/></bibo:contributor>
+    <bibo:position>16</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Shenkman&#44; Elizabeth A."/></bibo:contributor>
+    <bibo:position>17</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Bian&#44; Jiang"/></bibo:contributor>
+    <bibo:position>18</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Wu&#44; Yonghui"/></bibo:contributor>
+    <bibo:position>19</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Article>
+<bibo:Document rdf:about="https://doi.org/10.48550/arXiv.2308.04014">
+
+    <dc:title>Continual Pre&#45;Training of Large Language Models: How to (re)warm your model&#63;</dc:title>
+    <dc:date>2023</dc:date>
+    <bibo:doi>10.48550/arXiv.2308.04014</bibo:doi>
+
+
+   <bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Gupta&#44; Kshitij"/></bibo:contributor>
+    <bibo:position>1</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Th&#233;rien&#44; Benjamin"/></bibo:contributor>
+    <bibo:position>2</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Ibrahim&#44; Adam"/></bibo:contributor>
+    <bibo:position>3</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Richter&#44; Mats L."/></bibo:contributor>
+    <bibo:position>4</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Anthony&#44; Quentin"/></bibo:contributor>
+    <bibo:position>5</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Belilovsky&#44; Eugene"/></bibo:contributor>
+    <bibo:position>6</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Rish&#44; Irina"/></bibo:contributor>
+    <bibo:position>7</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+<bibo:contribution>
+  <bibo:Contribution>
+    <bibo:role rdf:resource="http://purl.org/ontology/bibo/roles/author" />
+    <bibo:contributor><foaf:Person foaf:name="Lesort&#44; Timoth&#233;e"/></bibo:contributor>
+    <bibo:position>8</bibo:position>
+  </bibo:Contribution>
+</bibo:contribution>
+
+
+
+</bibo:Document>
+</rdf:RDF>
