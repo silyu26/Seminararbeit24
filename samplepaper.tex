@@ -48,7 +48,8 @@
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
-    Large language models, such as ChatGPT, have become widely recognized and are extensively utilized across various domains. However, these models are typically trained on static datasets, lacking updates to new data beyond their initial training set. To enable models that can continuously update themselves based on incoming data, it is necessary to have large language models trained and updated on input data streams.
+    Large language models, such as ChatGPT, have become widely recognized and are extensively utilized across various domains. However, these models are typically trained on static datasets, lacking updates to new data beyond their initial training set. 
+    To enable models that can continuously update themselves based on incoming data, it is necessary to have large language models trained and updated on input data streams.
 
     In this paper, we begin by outlining the structure and fundamental applications of large language models. Subsequently, we introduce the concept of data streams and provide an overview of current use cases where large language models are adapted to accommodate streaming data. Finally, we summarize the existing challenges associated with integrating large language models with data streams and discuss potential solutions.
 \keywords{LLM  \and data streams \and chatGPT.}
@@ -57,18 +58,23 @@
 %
 %
 \section{Introduction}
-In this part I would like to mainly talk about the motivation of this seminar paper, which is about the fact that large language models are trained based on certain static datasets that will not automatically be updated, and this causes the resulted models to only be able to access information from its training datasets. But in many scenarios such models can't satisfy our needs, for example if we want to have traffic prediction based on real time traffic data,
-monitor news and events sentiment to help predict finacial market, monitor health condition based on real-time health data and etc.
-So In order to have models that can fulfill those use cases, we need to find and compare useful methods that combine large language models and continuous data input (data streams) together, and also summarize the current major obstacles. 
+Large language models have shown their wide usage and significant competence in many fields according to \cite{Liu23}, such as learning and answering users' questions in academic fields,
+assisting in diagnosing diseases in medical fields, generating text and classifying text data to various categories etc. However, as \cite{Gupta23} demonstrates, 
+there is a significant limitation of current large language models: they are trained based on certain static datasets that will not automatically be updated, and this causes the resulting models to only be able to access information from its training datasets. 
+When the models need to be updated as new data becomes available, the only way is to start the training process over again. But in many scenarios such models can't satisfy our needs. 
+For example, to have a better traffic prediction, real-time traffic data is needed \cite{Zhang24},
+Analyzing news and events sentiment can help predict the financial market \cite{Araci19}, 
+real-time health data is of great importance when monitoring patients' health condition \cite{Thiru23} etc.
+So to have models that can fulfill those use cases, we need to find and compare useful methods that combine large language models and continuous data input (data streams) together, and also summarize the current major obstacles. 
 
 \section{Related Works}
-In this chapter I will talk about the concepts and techniques that are related to this topic
+In this chapter, I will talk about the concepts and techniques that are related to this topic
 
 \subsection{Large Language Model}
 In this subsection I will talk about following aspects of large language models:
     \subsubsection{The component of large language models}
       \begin{itemize}
-        \item Transformer architecture: neural network architectures designed to handle sequential data, such as text, effectively
+        \item Transformer architecture: neural network architectures designed to handle sequential data, such as text, effectively \cite{Vaswani17}
         \item Self-attention mechanism: enables the model to capture dependencies between words in a sentence more effectively.
         \item Embedding layer:  converts words or tokens into high-dimensional vectors, which represent their semantic meaning in the context of the sentence.
         \item Encoder layers: help the model to encode the input text into a meaningful representation.
@@ -90,7 +96,12 @@ In this subsection I will talk about following aspects of large language models:
     
     It has huge potential and capabilities such as language translation, text classification,
     content generation, chatbots etc.
-
+    \begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.5\textwidth]{attention1.jpg}
+      \caption{The tranformer structure}
+      \label{fig:attention}
+  \end{figure}
 
 \subsection{Data Stream}
 In this subsection I will talk about following aspects of data streams:
@@ -317,6 +328,10 @@ Naga Sanjay, "Continuous Training of ML models. A case-study on how to keep our 
 
 \bibitem{Prapas21}
 Prapas, Ioannis, Behrouz Derakhshan, Alireza Rezaei Mahdiraji, and Volker Markl. "Continuous training and deployment of deep learning models." Datenbank-Spektrum 21, no. 3 (2021): 203-212.
+
+\bibitem{Araci19}
+Araci, Dogu. "Finbert: Financial sentiment analysis with pre-trained language models." arXiv preprint arXiv:1908.10063 (2019).
+
 
 \end{thebibliography}
 
