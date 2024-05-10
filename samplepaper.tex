@@ -13,6 +13,7 @@
 % Other font encondings may result in incorrect characters.
 %
 \usepackage{graphicx}
+\usepackage{enumitem}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -71,7 +72,7 @@ So to have models that can fulfill those use cases, we need to find and compare 
 In this chapter, I will talk about the concepts and techniques that are related to this topic
 
 \subsection{Large Language Model}
-In this subsection I will talk about following aspects of large language models:
+In this subsection I will talk about the following aspects of large language models:
     \subsubsection{The component of large language models}
       \begin{itemize}
         \item Transformer architecture: neural network architectures designed to handle sequential data, such as text, effectively \cite{Vaswani17}
@@ -82,66 +83,95 @@ In this subsection I will talk about following aspects of large language models:
         \item Positional encoding: added to the input embeddings to provide information about the position of each word in the sequence.
         \item Output layer: takes the final representation produced by the decoder layers and maps it to the output vocabulary.
         \item Softmax: convert the raw scores into probabilities.
+        \item Training datasets: numerous persona-chats and crawling various sources over the web.
       \end{itemize}
     \subsubsection{The evolution of large language models}
       \begin{itemize}
         \item Earliest simple models: relied on statistical methods and shallow learning techniques.
         \item Models using deep learning techniques: recurrent neural networks (RNNs) and long short-term memory (LSTM) 
-        \item Models using tranformer architecture: revolutionized natural language processing (NLP) by allowing models to capture dependencies between words more effectively through attention mechanisms.
-        \item Models using BERT technique: further improved language understanding by pre-training models on large corpora of text in both forward and backward directions. 
-        \item GPT series: trained on massive datasets.
+        \item Models using the transformer architecture: revolutionized natural language processing (NLP) by allowing models to capture dependencies between words more effectively through attention mechanisms.
+        \item Models using BERT technique: further improved language understanding by pre-training models on large corpora of text in both forward and backward directions \cite{Devlin18}. 
+        \item GPT series: trained on massive datasets \cite{Roum23}. GPT2 owns 1,5 billion parameters, whereas GPT3 has 175 billion parameters.
         \item Future trend: continual increase in model size and training data.
       \end{itemize}
     \subsubsection{The use case of large language models} 
     
     It has huge potential and capabilities such as language translation, text classification,
     content generation, chatbots etc.
-    \begin{figure}[htbp]
+  \begin{figure}[htbp]
       \centering
-      \includegraphics[width=0.5\textwidth]{attention1.jpg}
-      \caption{The tranformer structure}
+      \includegraphics[width=0.6\textwidth]{attention1.jpg}
+      \caption{The transformer structure \cite{Vaswani17}}
       \label{fig:attention}
   \end{figure}
 
+\begin{figure}[]
+    \centering
+    \includegraphics[width=0.7\textwidth]{BERT input repres.png}
+    \caption{Input representation in the BERT model \cite{Devlin18}}
+    \label{fig:bert_input}
+\end{figure}
+
 \subsection{Data Stream}
-In this subsection I will talk about following aspects of data streams:
+In this subsection, the following aspects of data streams will be covered:
 %\begin{itemize}
-    \subsubsection{The definition of data streams} With the definition from different sources
-    \subsubsection{The use case of data streams} Large amount of real-time data is very useful in many application fields such as Weather Forecasting, Health monitoring, Internet of Things etc.
+    \subsubsection{The definition of data streams} With the definition from different sources \cite{Geisler13}.
+    \begin{theorem}
+      Data Stream S: Unbounded multiset of data stream elements ($s$,$\tau$) 
+    \end{theorem}
+    \subsubsection{The use case of data streams} Data streams are the key components in many application fields such as Weather Forecasting, Health monitoring, Internet of Things etc \cite{Geisler16}.
 %\end{itemize}
 
 \section{Use Cases and Obstacles}
-In this section I will give an overview of current use cases where large language models and data streams are combined together, and also summarize the major obstacles of combining large language models with data streams. Furthermore I will also give an introduction of what measurements have been taken to mitigate the obstacles. 
+In this section, I will give an overview of current use cases where large language models and data streams are combined, and also summarize the major challenges of combining large language models with data streams. Furthermore I will also give an introduction of what measurements have been taken to mitigate the obstacles. 
 \subsection{Use Cases}
 Following use cases will be covered:
 \begin{itemize}
     \item Social Media Monitoring: Analyzing streaming data from social media platforms can help monitor regional news, sentiment, and trends in real-time.
-    \item Financial Monitoring:  Large language models can analyze streaming news feeds to identify important events, trends, and sentiment in real-time. This can be valuable for financial institutions, and risk management companies to stay informed about current events and market trends.
+    \item Financial Monitoring:  Large language models can analyze streaming news feeds to identify important events, trends, and sentiment in real-time. This can be valuable for financial institutions and risk management companies to stay informed about current events and market trends.
     \item Health Care Monitoring: Large language models can analyze streaming medical data such as patient records, diagnostic reports, and research papers to assist healthcare providers in diagnosing diseases, identifying treatment options, and monitoring public health trends in real-time.
     \item Traffic Data Monitoring: Large language models can analyze streaming traffic data to monitor traffic conditions in real-time to help reduce traffic accidents and level up transportation efficiency. 
     %\item Security and Threats Detection: Large language models can analyze streaming data from network logs, security alerts, and threat intelligence feeds to detect and respond to cybersecurity threats in real-time. This includes identifying suspicious activities, malware signatures, and potential vulnerabilities.
 \end{itemize}
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.7\textwidth]{TStreamLLM architecture.png}
+  \caption{Architecture of TStreamLLM \cite{Zhang24}}
+  \label{fig:TStreamLLM}
+\end{figure}
 
-\subsection{Obstacles and Methods}
-Following obstacles will be covered:
+\subsection{Comparison of LLMs with static datasets and data streams}
+
+\subsection{Challenges}
+Following challenges will be covered:
 \begin{itemize}
-    \item Concept Drift: if the LLM is trained for a long time, it is possible that the relationship between the inputs and the outputs itself might change.
-    \item Computational Resources: continuous learning requires significant computational resources, which may be costly or impractical to scale.
-    \item Privacy and Security:  streaming data often contains sensitive or private information, raising concerns about data privacy and security.
-    \item Data Quality: data streams may contain noisy or unreliable information, leading to incorrect model updates.
+    \item Catastrophic forgetting \cite{Gupta23}
+    \item Concept drift: if the LLM is trained for a long time, it is possible that the relationship between the inputs and the outputs itself might change.
+    \item Computational resources: continuous learning requires significant computational resources, which may be costly or impractical to scale.
+    \item Privacy and security:  streaming data often contains sensitive or private information, raising concerns about data privacy and security.
+    \item Data quality: data streams may contain noisy or unreliable information, leading to incorrect model updates.
 \end{itemize}
-\noindent
-Following measurements will be covered:
+
+\subsection{Solutions}
+Following solutions will be covered:
 \begin{itemize}
+    \item Finetuning \cite{Devlin18}. 
+    \item Continual pre-training: continuously pretraining models on new incoming data \cite{Gupta23}.
     \item Using data preprocessing techniques to filter out noise and ensure data quality. Use anomaly detection algorithms to identify and remove outliers in the data. Employ quality assurance measures to verify the accuracy of incoming data.
     \item Continuously monitor model performance and detect concept drift using statistical methods or machine learning algorithms. Implement adaptive learning techniques to update the model in response to concept drift. Periodically retrain the model on recent data batches to maintain accuracy.
     \item Optimize model architectures and algorithms to reduce computational overhead. Utilize distributed computing frameworks to parallelize model training and inference tasks.
     \item Implement data anonymization and encryption techniques to protect sensitive information during data transmission and storage
 \end{itemize}
 %\paragraph{Following measurements will be covered:}
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.8\textwidth]{BERT Finetuning.png}
+  \caption{Finetuning in the BERT model \cite{Devlin18}}
+  \label{fig:bert_finetune}
+\end{figure}
 
 \section{Conclusion}
-In this section I will shortly summarize the outline of this paper and also talk about the possible future development of large language models using data streams.
+In this section, I will shortly summarize the outline of this paper and also talk about the possible future development of large language models using data streams.
 
 %\paragraph{Sample Heading (Fourth Level)}
 %The contribution should contain no more than four levels of
@@ -332,7 +362,8 @@ Prapas, Ioannis, Behrouz Derakhshan, Alireza Rezaei Mahdiraji, and Volker Markl.
 \bibitem{Araci19}
 Araci, Dogu. "Finbert: Financial sentiment analysis with pre-trained language models." arXiv preprint arXiv:1908.10063 (2019).
 
-
+\bibitem{Roum23}
+Roumeliotis, Konstantinos I., and Nikolaos D. Tselikas. "Chatgpt and open-ai models: A preliminary review." Future Internet 15, no. 6 (2023): 192.
 \end{thebibliography}
 
 \end{document}

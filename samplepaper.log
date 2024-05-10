@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  10 MAY 2024 00:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  10 MAY 2024 09:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -169,40 +169,48 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen161
 \Gin@req@width=\dimen162
+) (c:/texlive/2022/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip51
+\enit@outerparindent=\dimen163
+\enit@toks=\toks21
+\enit@inbox=\box97
+\enit@count@id=\count289
+\enitdp@description=\count290
 ) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count289
-\l__pdf_internal_box=\box97
+\l__color_backend_stack_int=\count291
+\l__pdf_internal_box=\box98
 ) (./samplepaper.aux)
 \openout1 = `samplepaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count290
-\scratchdimen=\dimen163
-\scratchbox=\box98
-\nofMPsegments=\count291
-\nofMParguments=\count292
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count293
-\MPscratchDim=\dimen164
-\MPnumerator=\count294
-\makeMPintoPDFobject=\count295
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count292
+\scratchdimen=\dimen164
+\scratchbox=\box99
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen165
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks23
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -210,11 +218,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 48.
+(Font)              <7> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 48.
+(Font)              <5> on input line 49.
 
-Overfull \hbox (6.87927pt too wide) in paragraph at lines 51--53
+Overfull \hbox (6.87927pt too wide) in paragraph at lines 52--54
 []\T1/cmr/m/n/9 Large lan-guage mod-els, such as Chat-GPT, have be-come widely
  []
 
@@ -224,22 +232,52 @@ Overfull \hbox (6.87927pt too wide) in paragraph at lines 51--53
 <attention1.jpg, id=12, 1324.95pt x 1866.975pt>
 File: attention1.jpg Graphic file (type jpg)
 <use attention1.jpg>
-Package pdftex.def Info: attention1.jpg  used on input line 101.
-(pdftex.def)             Requested size: 173.56177pt x 244.53848pt.
- [2] [3 <./attention1.jpg>] Excluding 'comment' comment. Excluding 'comment' comment. [4] [5] [6] (./samplepaper.aux) ) 
+Package pdftex.def Info: attention1.jpg  used on input line 103.
+(pdftex.def)             Requested size: 208.27623pt x 293.48036pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 108.
+
+<BERT input repres.png, id=13, 592.2125pt x 184.18813pt>
+File: BERT input repres.png Graphic file (type png)
+<use BERT input repres.png>
+Package pdftex.def Info: BERT input repres.png  used on input line 110.
+(pdftex.def)             Requested size: 242.98541pt x 75.571pt.
+[2] [3 <./attention1.jpg> <./BERT input repres.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 136.
+
+<TStreamLLM architecture.png, id=23, 298.61563pt x 176.66pt>
+File: TStreamLLM architecture.png Graphic file (type png)
+<use TStreamLLM architecture.png>
+Package pdftex.def Info: TStreamLLM architecture.png  used on input line 138.
+(pdftex.def)             Requested size: 242.98541pt x 143.75154pt.
+[4]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 166.
+
+<BERT Finetuning.png, id=29, 754.82pt x 305.64188pt>
+File: BERT Finetuning.png Graphic file (type png)
+<use BERT Finetuning.png>
+Package pdftex.def Info: BERT Finetuning.png  used on input line 168.
+(pdftex.def)             Requested size: 277.69987pt x 112.44678pt.
+Excluding 'comment' comment. [5 <./TStreamLLM architecture.png>] Excluding 'comment' comment. [6 <./BERT Finetuning.png>] [7] [8] (./samplepaper.aux) ) 
 Here is how much of TeX's memory you used:
- 2056 strings out of 478268
- 30546 string characters out of 5850345
- 335324 words of memory out of 5000000
- 20283 multiletter control sequences out of 15000+600000
- 475759 words of font info for 37 fonts, out of 8000000 for 9000
+ 2416 strings out of 478268
+ 36968 string characters out of 5850345
+ 343703 words of memory out of 5000000
+ 20634 multiletter control sequences out of 15000+600000
+ 476445 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,7n,62p,524b,306s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on samplepaper.pdf (6 pages, 716494 bytes).
+ 55i,7n,62p,524b,308s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on samplepaper.pdf (8 pages, 954363 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
