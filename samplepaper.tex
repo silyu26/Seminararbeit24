@@ -69,24 +69,24 @@ real-time health data is of great importance when monitoring patients' health co
 So to have models that can fulfill those use cases, we need to find and compare useful methods that combine large language models and continuous data input (data streams) together, and also summarize the current major obstacles. 
 
 \section{Related Works}
-In this chapter, I will talk about the concepts and techniques that are related to this topic
+In this chapter, the following concepts and techniques that are related to this topic will be covered.
 
 \subsection{Large Language Model}
-In this subsection I will talk about the following aspects of large language models:
-    \subsubsection{The component of large language models}
-      \begin{itemize}
-        \item Transformer architecture: neural network architectures designed to handle sequential data, such as text, effectively \cite{Vaswani17}
-        \item Self-attention mechanism: enables the model to capture dependencies between words in a sentence more effectively.
-        \item Embedding layer:  converts words or tokens into high-dimensional vectors, which represent their semantic meaning in the context of the sentence.
-        \item Encoder layers: help the model to encode the input text into a meaningful representation.
-        \item Decoder layers: consist of self-attention mechanisms and feed-forward neural networks, but they also include additional attention mechanisms to focus on relevant parts of the input during the decoding process.
-        \item Positional encoding: added to the input embeddings to provide information about the position of each word in the sequence.
-        \item Output layer: takes the final representation produced by the decoder layers and maps it to the output vocabulary.
-        \item Softmax: convert the raw scores into probabilities.
-        \item Training datasets: numerous persona-chats and crawling various sources over the web.
-      \end{itemize}
-    \subsubsection{The evolution of large language models}
-      \begin{itemize}
+In this subsection, I will talk about the following aspects of large language models:
+    
+  
+\subsubsection{The evolution of large language models}   
+The earliest language models, taking n-grams as an example, are statistical. n-grams refers to an N-characters substring of a longer string and n represents the length of the substring, according to \cite{Cavnar94}.
+Taking the sentence "I read a book" as example, a bi-grams composition of this sentence would be "I read", "read a" and "a book". By considering the n previous words, the frequency and probability of each
+n-grams can be calculated, which makes n-grams model perform well in text classification and word prediction with short documents \cite{Cavnar94}. 
+However, n-grams performs poorly with long documents due to the rapid growth of dimensionality with large n, and it has only restricted access to the words that appear in the document.\\
+\noindent
+Later models using word embeddings such as Word2Vec solve the problems of earlier models to some extent by representing words in vector spaces, and words with similar meanings such as "walk" and "run" have closer distance
+in the vector space \cite{Mikolov13}. Word embeddings successfully reduces the dimensionality of word representations and can work with larger documents by combining techniques such as "Continuous Bags of Words" \cite{Mikolov13}.    
+
+
+
+\begin{itemize}
         \item Earliest simple models: relied on statistical methods and shallow learning techniques.
         \item Models using deep learning techniques: recurrent neural networks (RNNs) and long short-term memory (LSTM) 
         \item Models using the transformer architecture: revolutionized natural language processing (NLP) by allowing models to capture dependencies between words more effectively through attention mechanisms.
@@ -94,6 +94,21 @@ In this subsection I will talk about the following aspects of large language mod
         \item GPT series: trained on massive datasets \cite{Roum23}. GPT2 owns 1,5 billion parameters, whereas GPT3 has 175 billion parameters.
         \item Future trend: continual increase in model size and training data.
       \end{itemize}
+
+    \subsubsection{The component of large language models}
+      The architecture of large language models such as ChatGPT is based on the transformer architecture, introduced by \cite{Vaswani17}. The transformer architecture
+        \begin{itemize}
+          \item Transformer architecture: neural network architectures designed to handle sequential data, such as text, effectively \cite{Vaswani17}
+          \item Self-attention mechanism: enables the model to capture dependencies between words in a sentence more effectively.
+          \item Embedding layer:  converts words or tokens into high-dimensional vectors, which represent their semantic meaning in the context of the sentence.
+          \item Encoder layers: help the model to encode the input text into a meaningful representation.
+          \item Decoder layers: consist of self-attention mechanisms and feed-forward neural networks, but they also include additional attention mechanisms to focus on relevant parts of the input during the decoding process.
+          \item Positional encoding: added to the input embeddings to provide information about the position of each word in the sequence.
+          \item Output layer: takes the final representation produced by the decoder layers and maps it to the output vocabulary.
+          \item Softmax: convert the raw scores into probabilities.
+          \item Training datasets: numerous persona-chats and crawling various sources over the web.
+        \end{itemize}
+
     \subsubsection{The use case of large language models} 
     
     It has huge potential and capabilities such as language translation, text classification,
@@ -364,6 +379,13 @@ Araci, Dogu. "Finbert: Financial sentiment analysis with pre-trained language mo
 
 \bibitem{Roum23}
 Roumeliotis, Konstantinos I., and Nikolaos D. Tselikas. "Chatgpt and open-ai models: A preliminary review." Future Internet 15, no. 6 (2023): 192.
+
+\bibitem{Cavnar94}
+Cavnar, William B., and John M. Trenkle. "N-gram-based text categorization." In Proceedings of SDAIR-94, 3rd annual symposium on document analysis and information retrieval, vol. 161175, p. 14. 1994.
+
+\bibitem{Mikolov13}
+Mikolov, Tomas, Ilya Sutskever, Kai Chen, Greg S. Corrado, and Jeff Dean. "Distributed representations of words and phrases and their compositionality." Advances in neural information processing systems 26 (2013).
+
 \end{thebibliography}
 
 \end{document}

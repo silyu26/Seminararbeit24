@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  10 MAY 2024 09:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  14 MAY 2024 23:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -228,53 +228,53 @@ Overfull \hbox (6.87927pt too wide) in paragraph at lines 52--54
 
 [1
 
-{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<attention1.jpg, id=12, 1324.95pt x 1866.975pt>
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<attention1.jpg, id=16, 1324.95pt x 1866.975pt>
 File: attention1.jpg Graphic file (type jpg)
 <use attention1.jpg>
-Package pdftex.def Info: attention1.jpg  used on input line 103.
+Package pdftex.def Info: attention1.jpg  used on input line 118.
 (pdftex.def)             Requested size: 208.27623pt x 293.48036pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 108.
+               Default added (so using `htbp') on input line 123.
 
-<BERT input repres.png, id=13, 592.2125pt x 184.18813pt>
+<BERT input repres.png, id=17, 592.2125pt x 184.18813pt>
 File: BERT input repres.png Graphic file (type png)
 <use BERT input repres.png>
-Package pdftex.def Info: BERT input repres.png  used on input line 110.
+Package pdftex.def Info: BERT input repres.png  used on input line 125.
 (pdftex.def)             Requested size: 242.98541pt x 75.571pt.
-[2] [3 <./attention1.jpg> <./BERT input repres.png>]
+[3 <./attention1.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 136.
+               Default added (so using `htbp') on input line 151.
 
-<TStreamLLM architecture.png, id=23, 298.61563pt x 176.66pt>
+<TStreamLLM architecture.png, id=22, 298.61563pt x 176.66pt>
 File: TStreamLLM architecture.png Graphic file (type png)
 <use TStreamLLM architecture.png>
-Package pdftex.def Info: TStreamLLM architecture.png  used on input line 138.
+Package pdftex.def Info: TStreamLLM architecture.png  used on input line 153.
 (pdftex.def)             Requested size: 242.98541pt x 143.75154pt.
-[4]
+[4 <./BERT input repres.png>] [5 <./TStreamLLM architecture.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 166.
+               Default added (so using `htbp') on input line 181.
 
-<BERT Finetuning.png, id=29, 754.82pt x 305.64188pt>
+<BERT Finetuning.png, id=33, 754.82pt x 305.64188pt>
 File: BERT Finetuning.png Graphic file (type png)
 <use BERT Finetuning.png>
-Package pdftex.def Info: BERT Finetuning.png  used on input line 168.
+Package pdftex.def Info: BERT Finetuning.png  used on input line 183.
 (pdftex.def)             Requested size: 277.69987pt x 112.44678pt.
-Excluding 'comment' comment. [5 <./TStreamLLM architecture.png>] Excluding 'comment' comment. [6 <./BERT Finetuning.png>] [7] [8] (./samplepaper.aux) ) 
+Excluding 'comment' comment. Excluding 'comment' comment. [6 <./BERT Finetuning.png>] [7] [8] (./samplepaper.aux) ) 
 Here is how much of TeX's memory you used:
- 2416 strings out of 478268
- 36968 string characters out of 5850345
- 343703 words of memory out of 5000000
- 20634 multiletter control sequences out of 15000+600000
+ 2418 strings out of 478268
+ 36989 string characters out of 5850345
+ 343711 words of memory out of 5000000
+ 20636 multiletter control sequences out of 15000+600000
  476445 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,7n,62p,524b,308s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,7n,62p,524b,304s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on samplepaper.pdf (8 pages, 954363 bytes).
+Output written on samplepaper.pdf (8 pages, 957955 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream
