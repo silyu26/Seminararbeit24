@@ -14,6 +14,7 @@
 %
 \usepackage{graphicx}
 \usepackage{enumitem}
+\usepackage{amssymb}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -75,44 +76,65 @@ In this chapter, the following concepts and techniques that are related to this 
 In this subsection, I will talk about the following aspects of large language models:
     
   
-\subsubsection{The evolution of large language models}   
+\subsubsection{The evolution of large language models}  
+\noindent \newline 
 The earliest language models, taking n-grams as an example, are statistical. n-grams refers to an N-characters substring of a longer string and n represents the length of the substring, according to \cite{Cavnar94}.
 Taking the sentence "I read a book" as example, a bi-grams composition of this sentence would be "I read", "read a" and "a book". By considering the n previous words, the frequency and probability of each
 n-grams can be calculated, which makes n-grams model perform well in text classification and word prediction with short documents \cite{Cavnar94}. 
 However, n-grams performs poorly with long documents due to the rapid growth of dimensionality with large n, and it has only restricted access to the words that appear in the document.\\
-\noindent
+\noindent \newline
 Later models using word embeddings such as Word2Vec solve the problems of earlier models to some extent by representing words in vector spaces, and words with similar meanings such as "walk" and "run" have closer distance
-in the vector space \cite{Mikolov13}. Word embeddings successfully reduces the dimensionality of word representations and can work with larger documents by combining techniques such as "Continuous Bags of Words" \cite{Mikolov13}.    
+in the vector space \cite{Mikolov13}. Word embeddings successfully reduces the dimensionality of word representations and can work with larger documents by combining techniques such as "Continuous Bags of Words" \cite{Mikolov13}. \\   
+\noindent \newline
+With the development of neural networks, more powerful models such as the Seq2Seq model began to take a more important role in many application fields such aspects
+machine translation \cite{Sutskever14}. The core idea of the Seq2Seq model is that it uses the Long Short-Term Memory networks as an encoder to map the input to a vector with fixed dimensionality, and then
+uses another LSTM to decode the output sentence from the vector. The use of LSTM makes it possible for the model to handle long input sequences and the encoder-decoder structure enables the model 
+to manage different lengths for input and output sequences \cite{Sutskever14}. \\
+\noindent \newline
+Large language models start to have a huge leap forward after the introduction of the transformer architecture \cite{Vaswani17}. \cite{Radford18} demonstrates that the transformer architecture can
+effectively improve the language understanding ability of language models even with large unlabeled text corpora by first generatively pre-training the model on the text data and then discriminative fine-tuning them on various tasks.
+According to \cite{Radford19}, large language models such as GPT-2 (with 1,5 billion parameters) are trained on massive training datasets including the crawling results from millions of different web pages, called WebText.
+As for the relationship between model performance, the number of model parameters $N$, the size of dataset $D$ and the amount of computing to train the model $C$, \cite{Kaplan20} demonstrates the \textbf{Smooth Power Laws} which says:
+"Performance has a power-law relationship with each of the three scale factors N, D, C when not bottlenecked by the other two, with trends spanning more than six orders of magnitude". Nowadays, there are various models
+that have distinct capabilities, for example, DALL-E can generate and modify images based on text input, whereas ChatGPT 3.5 can generate code and natural language \cite{Gozalo23}.
+\noindent \newline
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.7\textwidth]{models overview.png}
+  \caption{An overview of the recent major generative AI models  \cite{Gozalo23}}
+  \label{fig:model_overview}
+\end{figure}
 
-
-
+\subsubsection{The architecture and training process of large language models}
+\noindent \newline
+As discussed before, large language models such as ChatGPT and BERT are based on transformer-based neural networks. The transformer architecture, as figure \ref{fig:attention} shows, is an 
+encoder-decoder architecture. According to \cite{Vaswani17}, the encoder takes the input sequence and converts them into dense vectors of fixed size at the input embedding step. Then with the 
+help of the positional encoding step, the input sequence contains information about each token in the sequence. The encoded inputs are then passed through the multi-head attention mechanism so that the 
+model can capture various relationships and features from the input sequence. Then the Add and Normalization layer is applied to stabilize and speed up the training process. In the end, the Feed Forward layer is 
+applied to help in introducing non-linearity and learning complex representations for each token's position in the sequence. Similarly, the decoder uses the vector representation of the input sequence created
+by the encoder along with the previously generated tokens to produce the next token in the output sequence and the masked multi-head attention mechanism is applied to ensure that the prediction for a particular position depends only on the known outputs at earlier positions. \\
+\noindent \newline
+Various input text datasets must be pre-processed before they can be used for the training process, and the data pre-processing includes the following steps \cite{Roum23}:
 \begin{itemize}
-        \item Earliest simple models: relied on statistical methods and shallow learning techniques.
-        \item Models using deep learning techniques: recurrent neural networks (RNNs) and long short-term memory (LSTM) 
-        \item Models using the transformer architecture: revolutionized natural language processing (NLP) by allowing models to capture dependencies between words more effectively through attention mechanisms.
-        \item Models using BERT technique: further improved language understanding by pre-training models on large corpora of text in both forward and backward directions \cite{Devlin18}. 
-        \item GPT series: trained on massive datasets \cite{Roum23}. GPT2 owns 1,5 billion parameters, whereas GPT3 has 175 billion parameters.
-        \item Future trend: continual increase in model size and training data.
-      \end{itemize}
+  \item Tokenization involves segmenting text into tokens, which are the basic units of broken text. Tokenization can simplify and standardize the input data and improve model performance \cite{Devlin18}.
+  \item Subword encoding refers to breaking down the input text into smaller units and helping handle rare or out-of-vocabulary words in the input text.
+  \item Data cleaning is the step where the noisy information in the input data should be removed, which can significantly improve the quality and suitability of the input data for the model.
+\end{itemize} 
+\noindent \newline
+The model starts its training algorithm after taking the pre-processed data as its input. For models such as ChatGPT and BERT, their training algorithm consists of an unsupervised pre-training phase and a supervised fine-tuning phase \cite{Roum23}.
+In the pre-training phase, a large amount of unlabeled WebText data is used as the model's training dataset to make it a high-capacity language model. Given an unlabeled corpus of tokens $U=\{u_1,...,u_n\}$ as training dataset, the core idea of the pre-training phase is to 
+predict the next token $u_i$ for a sequence $\{u_{i-k},...,u_{i-1}\}$. According to \cite{Radford18}, this is done by maximizing the likelihood: 
+\begin{equation}
+  L_1(U) = \sum_{i}\log{P(u_i|u_{i-k},...,u_{i-1}; \Theta)}
+\end{equation}
+$k$ refers to the context window size and $\Theta$ is the parameter of the neural network with which the conditional probability $P$ is modeled. \\
+\noindent \newline
+The supervised fine-tuning phase is used to improve the model's performance on specific tasks by training it on a smaller corpus of labeled data \cite{Roum23}. Given a labeled dataset $C$,
+where each instance of $C$ has a sequence of tokens \{$c^1,...,c^m$\} and a label $y$, the goal of the fine-tuning phase is to maximize the following likelihood \cite{Radford18}:
+\begin{equation}
+  L_2(U) = \sum_{(x,y)}\log{P(y|x^1,...,x^m)}
+\end{equation}
 
-    \subsubsection{The component of large language models}
-      The architecture of large language models such as ChatGPT is based on the transformer architecture, introduced by \cite{Vaswani17}. The transformer architecture
-        \begin{itemize}
-          \item Transformer architecture: neural network architectures designed to handle sequential data, such as text, effectively \cite{Vaswani17}
-          \item Self-attention mechanism: enables the model to capture dependencies between words in a sentence more effectively.
-          \item Embedding layer:  converts words or tokens into high-dimensional vectors, which represent their semantic meaning in the context of the sentence.
-          \item Encoder layers: help the model to encode the input text into a meaningful representation.
-          \item Decoder layers: consist of self-attention mechanisms and feed-forward neural networks, but they also include additional attention mechanisms to focus on relevant parts of the input during the decoding process.
-          \item Positional encoding: added to the input embeddings to provide information about the position of each word in the sequence.
-          \item Output layer: takes the final representation produced by the decoder layers and maps it to the output vocabulary.
-          \item Softmax: convert the raw scores into probabilities.
-          \item Training datasets: numerous persona-chats and crawling various sources over the web.
-        \end{itemize}
-
-    \subsubsection{The use case of large language models} 
-    
-    It has huge potential and capabilities such as language translation, text classification,
-    content generation, chatbots etc.
   \begin{figure}[htbp]
       \centering
       \includegraphics[width=0.6\textwidth]{attention1.jpg}
@@ -120,22 +142,24 @@ in the vector space \cite{Mikolov13}. Word embeddings successfully reduces the d
       \label{fig:attention}
   \end{figure}
 
-\begin{figure}[]
-    \centering
-    \includegraphics[width=0.7\textwidth]{BERT input repres.png}
-    \caption{Input representation in the BERT model \cite{Devlin18}}
-    \label{fig:bert_input}
-\end{figure}
+%\begin{figure}[]
+%    \centering
+%    \includegraphics[width=0.7\textwidth]{BERT input repres.png}
+%    \caption{Input representation in the BERT model \cite{Devlin18}}
+%    \label{fig:bert_input}
+%\end{figure}
 
 \subsection{Data Stream}
-In this subsection, the following aspects of data streams will be covered:
-%\begin{itemize}
-    \subsubsection{The definition of data streams} With the definition from different sources \cite{Geisler13}.
-    \begin{theorem}
-      Data Stream S: Unbounded multiset of data stream elements ($s$,$\tau$) 
-    \end{theorem}
-    \subsubsection{The use case of data streams} Data streams are the key components in many application fields such as Weather Forecasting, Health monitoring, Internet of Things etc \cite{Geisler16}.
-%\end{itemize}
+Data stream has many informal definitions, \cite{Patro06} describes data stream as "time-varying, volatile, unpredicted and possibly unbounded information". \cite{Golab03} describes data stream as
+"a data set that is produced incrementally over time, rather than being available in full before its processing begins". According to \cite{Geisler13}, data stream has the following formal definition:
+\begin{definition}
+  A data stream $S$ is an unbounded, potentially infinite multiset of data stream elements $(s,\tau)$, where $\tau \in \mathbb{T}$. $\mathbb{T}$ is a timestamp attribute with values from a monotonic, infinite time domain $\mathbb{T}$ with discrete time units.
+\end{definition}
+
+
+\subsubsection{The definition of data streams} With the definition from different sources \cite{Geisler13}.
+
+\subsubsection{The use case of data streams} Data streams are the key components in many application fields such as Weather Forecasting, Health monitoring, Internet of Things etc \cite{Geisler16}.
 
 \section{Use Cases and Obstacles}
 In this section, I will give an overview of current use cases where large language models and data streams are combined, and also summarize the major challenges of combining large language models with data streams. Furthermore I will also give an introduction of what measurements have been taken to mitigate the obstacles. 
@@ -386,6 +410,29 @@ Cavnar, William B., and John M. Trenkle. "N-gram-based text categorization." In 
 \bibitem{Mikolov13}
 Mikolov, Tomas, Ilya Sutskever, Kai Chen, Greg S. Corrado, and Jeff Dean. "Distributed representations of words and phrases and their compositionality." Advances in neural information processing systems 26 (2013).
 
+\bibitem{Sutskever14}
+Sutskever, Ilya, Oriol Vinyals, and Quoc V. Le. "Sequence to sequence learning with neural networks." Advances in neural information processing systems 27 (2014).
+
+\bibitem{Radford19}
+Radford, Alec, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, and Ilya Sutskever. "Language models are unsupervised multitask learners." OpenAI blog 1, no. 8 (2019): 9.
+
+\bibitem{Radford18}
+Radford, Alec, Karthik Narasimhan, Tim Salimans, and Ilya Sutskever. "Improving language understanding by generative pre-training." (2018).
+
+\bibitem{Kaplan20}
+Kaplan, Jared, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, and Dario Amodei. "Scaling laws for neural language models." arXiv preprint arXiv:2001.08361 (2020).
+
+\bibitem{Gozalo23}
+Gozalo-Brizuela, Roberto, and Eduardo C. Garrido-Merchan. "ChatGPT is not all you need. A State of the Art Review of large Generative AI models." arXiv preprint arXiv:2301.04655 (2023).
+
+\bibitem{Patro06}
+Patroumpas, Kostas, and Timos Sellis. "Window specification over data streams." In International Conference on Extending Database Technology, pp. 445-464. Berlin, Heidelberg: Springer Berlin Heidelberg, 2006.
+
+\bibitem{Golab03}
+Golab, Lukasz, and M. Tamer Özsu. "Issues in data stream management." ACM Sigmod Record 32, no. 2 (2003): 5-14.
+
+\bibitem{Gaber05}
+Gaber, Mohamed Medhat, Arkady Zaslavsky, and Shonali Krishnaswamy. "Mining data streams: a review." ACM Sigmod Record 34, no. 2 (2005): 18-26.
 \end{thebibliography}
 
 \end{document}
