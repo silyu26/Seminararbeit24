@@ -168,7 +168,14 @@ overall outcome for the data stream. Task-based solutions, on the other hand, of
 \end{itemize}
 
 \section{Use Cases and Obstacles}
-In this section, I will give an overview of current use cases where large language models and data streams are combined, and also summarize the major challenges of combining large language models with data streams. Furthermore I will also give an introduction of what measurements have been taken to mitigate the obstacles. 
+Although large language models have shown strong capabilities in many application fields, their knowledge remains static as they are pre-trained on static datasets. In some occasions, however, a user query
+expects up-to-date results. Considering the following questions: \textit{Who is the current president of the USA?} The answer to such a question expires likely every 4 years, which seems a reasonable time
+for an update of the large language model's training datasets. The question \textit{What are the results of the last Bundesliga match day?} would require the knowledge of large language models to be updated
+at least every week. The question \textit{What is the current traffic condition in the Königstraße of city Aachen?} would require even a near real-time result. Thus, in many application fields, the performance of a 
+pre-trained large language model is likely to gradually degrade over time \cite{Shi24}. In this section, we will first summarize some use cases where large language models are combined with data streams, then We
+will give a comparison of large language models using static datasets and those updated with data streams. Finally, we will summarize some common issues and challenges in this field as well as the measurements and 
+solutions.
+
 \subsection{Comparison of LLMs with static datasets and data streams}
 
 \subsection{Use Cases}
@@ -440,6 +447,9 @@ Golab, Lukasz, and M. Tamer Özsu. "Issues in data stream management." ACM Sigmo
 
 \bibitem{Gaber05}
 Gaber, Mohamed Medhat, Arkady Zaslavsky, and Shonali Krishnaswamy. "Mining data streams: a review." ACM Sigmod Record 34, no. 2 (2005): 18-26.
+
+\bibitem{Shi24}
+Shi, Haizhou, Zihao Xu, Hengyi Wang, Weiyi Qin, Wenyuan Wang, Yibin Wang, and Hao Wang. "Continual Learning of Large Language Models: A Comprehensive Survey." arXiv preprint arXiv:2404.16789 (2024).
 \end{thebibliography}
 
 \end{document}
