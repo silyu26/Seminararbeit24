@@ -15,6 +15,7 @@
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{amssymb}
+\usepackage{amsmath}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -176,7 +177,7 @@ pre-trained large language model is likely to gradually degrade over time \cite{
 will give a comparison of large language models using static datasets and those updated with data streams. Finally, we will summarize some common issues and challenges in this field as well as the measurements and 
 solutions.
 
-\subsection{continual learning}
+\subsection{Continual Learning}
 The need for regular updates of large language models brings intense focus to the concept of \textbf{Continual Learning}.  
 \subsubsection{Continual learning of LLMs} 
 \noindent \newline
@@ -194,16 +195,52 @@ continual learning into 3 stages as figure \ref{fig:acl_stages} shows:
   \caption{Stages of continual learning \cite{Wu24}}
   \label{fig:acl_stages}
 \end{figure}
-%Furthermore, \cite{Jang21} 
-According to \ldots, CL has been proven to be an efficient method \ldots
+Furthermore, \cite{Biesi20} demonstrates that there are various methods of computing continual learning and categorize them as follows:
+\begin{itemize}
+  \item 
+\end{itemize}
 
 \subsubsection{use cases?}
+\noindent \newline
+Continual learning is already applied in the field of health-care, one example is 
+
+\subsubsection{Challenge of CL}
+A critical challenge of continual learning is catastrophic forgetting, which refers to the models forgetting previously learned knowledge 
+when they are updated with new data \cite{Gupta23}. Catastrophic forgetting happens in the continual pre-training stage as the model is continuously updated with data stream.
+According to \cite{Shi24}, the methods to address catastrophic forgetting
 
 \subsection{prompt engineering?}
 \subsubsection{promt engineering}
+\noindent \newline
+Prompt engineering is the process of providing large language models with effective inputs or queries to elicit specific, high-quality responses \cite{Zhang24}.
+It has been proven to have positive infuence on the performance of many downstream tasks such as text summarization, sentiment analysis,
+and natural language translation \cite{Liu21}.
 \subsubsection{use cases}
+\noindent \newline
+In the field of traffic signal control, \cite{Lai23} proposes a model called LLMLight based on large language models to act as a decision-making agent. As figure \ref{fig:llmlight} shows,
+An LLMLight agent is responsible for controlling the traffic light at an intersection. Real time observations about the traffic condition is converted into human-readable text and transferred to 
+the model, followed by the prompt engineering formed by the real time observations, task descriptions and control action.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{LLMLight.PNG}
+  \caption{The workflow of LLMLight \cite{Lai23}}
+  \label{fig:llmlight}
+\end{figure}
+\cite{Lai23} also formulates the workflow as the following equation:
+\begin{definition}
+  $(Y, a) = \pi_{\theta}(\text{Prompt}(o, d_{\text{scene}}, d_{\text{task}}, d_{\text{know}}, A))$.
+\end{definition}
+Where $\pi_{\theta}$ refers to the traffic signal control policy, $(Y, a)$ refers to the reasoning trajectory and the action output by the model,
+based on the real-time traffic condition observation $o$, traffic scenario description $d_{\text{scene}}$, task descriptions $d_{\text{task}}$ , commonsense knowledge $d_{\text{know}}$, and control action space $A$.
+Figure \ref{fig:llmlight_prompt} shows an example template of the prompt.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{Prompt LLMLight.PNG}
+  \caption{Prompt template \cite{Lai23}}
+  \label{fig:llmlight_prompt}
+\end{figure}
 
-
+\subsubsection{Challenges}
 
 \subsection{Use Cases}
 Following use cases will be covered:
@@ -480,6 +517,12 @@ Shi, Haizhou, Zihao Xu, Hengyi Wang, Weiyi Qin, Wenyuan Wang, Yibin Wang, and Ha
 
 \bibitem{Biesi20}
 Biesialska, Magdalena, Katarzyna Biesialska, and Marta R. Costa-Jussa. "Continual lifelong learning in natural language processing: A survey." arXiv preprint arXiv:2012.09823 (2020).
+
+\bibitem{Lai23}
+Lai, Siqi, Zhao Xu, Weijia Zhang, Hao Liu, and Hui Xiong. "Large language models as traffic signal control agents: Capacity and opportunity." arXiv preprint arXiv:2312.16044 (2023).
+
+\bibitem{Liu21}
+Liu, Xiao, Kaixuan Ji, Yicheng Fu, Weng Lam Tam, Zhengxiao Du, Zhilin Yang, and Jie Tang. "P-tuning v2: Prompt tuning can be comparable to fine-tuning universally across scales and tasks." arXiv preprint arXiv:2110.07602 (2021).
 \end{thebibliography}
 
 \end{document}
