@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  18 MAY 2024 20:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  19 MAY 2024 02:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -287,39 +287,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--160
  []
 
 [4] [5 <./attention1.jpg>] [6]
+<CL stages.png, id=41, 790.45313pt x 285.065pt>
+File: CL stages.png Graphic file (type png)
+<use CL stages.png>
+Package pdftex.def Info: CL stages.png  used on input line 193.
+(pdftex.def)             Requested size: 329.7663pt x 118.92613pt.
+ [7 <./CL stages.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 190.
+               Default added (so using `htbp') on input line 217.
 
-<TStreamLLM architecture.png, id=41, 298.61563pt x 176.66pt>
+<TStreamLLM architecture.png, id=47, 298.61563pt x 176.66pt>
 File: TStreamLLM architecture.png Graphic file (type png)
 <use TStreamLLM architecture.png>
-Package pdftex.def Info: TStreamLLM architecture.png  used on input line 192.
+Package pdftex.def Info: TStreamLLM architecture.png  used on input line 219.
 (pdftex.def)             Requested size: 242.98541pt x 143.75154pt.
-[7 <./TStreamLLM architecture.png>]
+[8 <./TStreamLLM architecture.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 219.
+               Default added (so using `htbp') on input line 246.
 
-<BERT Finetuning.png, id=47, 754.82pt x 305.64188pt>
+<BERT Finetuning.png, id=52, 754.82pt x 305.64188pt>
 File: BERT Finetuning.png Graphic file (type png)
 <use BERT Finetuning.png>
-Package pdftex.def Info: BERT Finetuning.png  used on input line 221.
+Package pdftex.def Info: BERT Finetuning.png  used on input line 248.
 (pdftex.def)             Requested size: 277.69987pt x 112.44678pt.
-Excluding 'comment' comment. Excluding 'comment' comment. [8 <./BERT Finetuning.png>] [9] [10] [11] (./samplepaper.aux) ) 
+Excluding 'comment' comment. Excluding 'comment' comment. [9 <./BERT Finetuning.png>] [10] [11] [12] (./samplepaper.aux) ) 
 Here is how much of TeX's memory you used:
- 2966 strings out of 478268
- 43393 string characters out of 5850345
- 344225 words of memory out of 5000000
- 21164 multiletter control sequences out of 15000+600000
+ 2976 strings out of 478268
+ 43557 string characters out of 5850345
+ 344237 words of memory out of 5000000
+ 21173 multiletter control sequences out of 15000+600000
  478144 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,7n,62p,524b,304s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,7n,62p,524b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on samplepaper.pdf (11 pages, 1106437 bytes).
+Output written on samplepaper.pdf (12 pages, 1345266 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

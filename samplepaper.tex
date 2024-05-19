@@ -167,7 +167,7 @@ overall outcome for the data stream. Task-based solutions, on the other hand, of
   \item Sliding window is a task-based solution
 \end{itemize}
 
-\section{Use Cases and Obstacles}
+\section{LLMs with data stream}
 Although large language models have shown strong capabilities in many application fields, their knowledge remains static as they are pre-trained on static datasets. In some occasions, however, a user query
 expects up-to-date results. Considering the following questions: \textit{Who is the current president of the USA?} The answer to such a question expires likely every 4 years, which seems a reasonable time
 for an update of the large language model's training datasets. The question \textit{What are the results of the last Bundesliga match day?} would require the knowledge of large language models to be updated
@@ -176,7 +176,34 @@ pre-trained large language model is likely to gradually degrade over time \cite{
 will give a comparison of large language models using static datasets and those updated with data streams. Finally, we will summarize some common issues and challenges in this field as well as the measurements and 
 solutions.
 
-\subsection{Comparison of LLMs with static datasets and data streams}
+\subsection{continual learning}
+The need for regular updates of large language models brings intense focus to the concept of \textbf{Continual Learning}.  
+\subsubsection{Continual learning of LLMs} 
+\noindent \newline
+According to \cite{Biesi20}, continual learning refers to the process of accumulating knowledge on non-stationary data. For a data stream of tasks $\mathcal{T}= \{\mathcal{T}_1,\ldots,\mathcal{T}_n \}$, the goal is to
+have the model learn sequentially based on the input stream, where it only has access to $\mathcal{T}_i$ at time $i$. \cite{Wu24}, in their continual learning framework for large language models, categorizes 
+continual learning into 3 stages as figure \ref{fig:acl_stages} shows:
+\begin{itemize}
+  \item Continual Pre-training: It refers to incrementally updating a large language model on input data over time without retraining it from scratch. 
+  \item Continual Instruction Tuning: It refers to continuously refining the model's ability to follow the instruction.
+  \item Continual Alignment: It refers to adjusting the model so it always produces output that satisfies certain standards and guidelines.
+\end{itemize}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{CL stages.png}
+  \caption{Stages of continual learning \cite{Wu24}}
+  \label{fig:acl_stages}
+\end{figure}
+%Furthermore, \cite{Jang21} 
+According to \ldots, CL has been proven to be an efficient method \ldots
+
+\subsubsection{use cases?}
+
+\subsection{prompt engineering?}
+\subsubsection{promt engineering}
+\subsubsection{use cases}
+
+
 
 \subsection{Use Cases}
 Following use cases will be covered:
@@ -450,6 +477,9 @@ Gaber, Mohamed Medhat, Arkady Zaslavsky, and Shonali Krishnaswamy. "Mining data 
 
 \bibitem{Shi24}
 Shi, Haizhou, Zihao Xu, Hengyi Wang, Weiyi Qin, Wenyuan Wang, Yibin Wang, and Hao Wang. "Continual Learning of Large Language Models: A Comprehensive Survey." arXiv preprint arXiv:2404.16789 (2024).
+
+\bibitem{Biesi20}
+Biesialska, Magdalena, Katarzyna Biesialska, and Marta R. Costa-Jussa. "Continual lifelong learning in natural language processing: A survey." arXiv preprint arXiv:2012.09823 (2020).
 \end{thebibliography}
 
 \end{document}
