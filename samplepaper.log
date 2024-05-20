@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.15)  20 MAY 2024 00:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.15)  21 MAY 2024 01:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -257,79 +257,87 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
+) (d:/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (d:/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (d:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen175
+\captionmargin=\dimen176
+\caption@leftmargin=\dimen177
+\caption@rightmargin=\dimen178
+\caption@width=\dimen179
+\caption@indent=\dimen180
+\caption@parindent=\dimen181
+\caption@hangindent=\dimen182
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\small \vskip \abovecaptionskip \sbox \@tempboxa {{\bfseries #1.} #2}\ifdim \wd \@tempboxa >\hsize {\bfseries #1.} #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi \vskip \belowcaptionskip  on input line 1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count306
+\c@continuedfloat=\count307
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count308
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count309
 ) (d:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
+\l__color_backend_stack_int=\count310
 \l__pdf_internal_box=\box102
 ) (./samplepaper.aux)
 \openout1 = `samplepaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
  (d:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen175
+\scratchcounter=\count311
+\scratchdimen=\dimen183
 \scratchbox=\box103
-\nofMPsegments=\count308
-\nofMParguments=\count309
+\nofMPsegments=\count312
+\nofMParguments=\count313
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen176
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
+\MPscratchCnt=\count314
+\MPscratchDim=\dimen184
+\MPnumerator=\count315
+\makeMPintoPDFobject=\count316
 \everyMPtoPDFconversion=\toks30
 ) (d:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
- (d:/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (d:/texlive/2024/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
- (d:/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)) (d:/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (d:/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (d:/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (d:/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (d:/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
  (d:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
  (d:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
  (d:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (6.87927pt too wide) in paragraph at lines 54--56
+Overfull \hbox (6.87927pt too wide) in paragraph at lines 55--57
 []\T1/cmr/m/n/9 Large lan-guage mod-els, such as Chat-GPT, have be-come widely
  []
 
@@ -338,104 +346,122 @@ Overfull \hbox (6.87927pt too wide) in paragraph at lines 54--56
 {d:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 102.
+               Default added (so using `htbp') on input line 103.
 
 <models overview.png, id=12, 518.43687pt x 395.97937pt>
 File: models overview.png Graphic file (type png)
 <use models overview.png>
-Package pdftex.def Info: models overview.png  used on input line 104.
+Package pdftex.def Info: models overview.png  used on input line 105.
 (pdftex.def)             Requested size: 242.98541pt x 185.5907pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--108
+Underfull \hbox (badness 10000) in paragraph at lines 82--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--108
+Underfull \hbox (badness 10000) in paragraph at lines 82--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--108
+Underfull \hbox (badness 10000) in paragraph at lines 82--109
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 110--120
+Underfull \hbox (badness 10000) in paragraph at lines 111--121
 
  []
 
 [3 <./models overview.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 130--135
+Underfull \hbox (badness 10000) in paragraph at lines 132--137
 
  []
 
 <attention1.jpg, id=23, 1324.95pt x 1866.975pt>
 File: attention1.jpg Graphic file (type jpg)
 <use attention1.jpg>
-Package pdftex.def Info: attention1.jpg  used on input line 141.
+Package pdftex.def Info: attention1.jpg  used on input line 143.
 (pdftex.def)             Requested size: 208.27623pt x 293.48036pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--161
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 147.
+
+<BERT Finetuning.png, id=24, 754.82pt x 305.64188pt>
+File: BERT Finetuning.png Graphic file (type png)
+<use BERT Finetuning.png>
+Package pdftex.def Info: BERT Finetuning.png  used on input line 149.
+(pdftex.def)             Requested size: 329.7663pt x 133.52676pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--168
 
  []
 
-[4] [5 <./attention1.jpg>] [6]
-<CL stages.png, id=41, 790.45313pt x 285.065pt>
+[4] [5 <./attention1.jpg> <./BERT Finetuning.png>] [6]
+<CL stages.png, id=43, 790.45313pt x 285.065pt>
 File: CL stages.png Graphic file (type png)
 <use CL stages.png>
-Package pdftex.def Info: CL stages.png  used on input line 194.
+Package pdftex.def Info: CL stages.png  used on input line 201.
 (pdftex.def)             Requested size: 329.7663pt x 118.92613pt.
- [7 <./CL stages.png>]
-<LLMLight.PNG, id=47, 590.205pt x 348.17578pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--232
+
+ []
+
+[7 <./CL stages.png>]
+<prompt_ds_1.PNG, id=49, 638.76141pt x 519.44063pt>
+File: prompt_ds_1.PNG Graphic file (type png)
+<use prompt_ds_1.PNG>
+Package pdftex.def Info: prompt_ds_1.PNG  used on input line 249.
+(pdftex.def)             Requested size: 166.61781pt x 135.49522pt.
+<prompt_ds_2.PNG, id=50, 649.30078pt x 514.92375pt>
+File: prompt_ds_2.PNG Graphic file (type png)
+<use prompt_ds_2.PNG>
+Package pdftex.def Info: prompt_ds_2.PNG  used on input line 256.
+(pdftex.def)             Requested size: 166.61781pt x 132.13274pt.
+<LLMLight.PNG, id=51, 590.205pt x 348.17578pt>
 File: LLMLight.PNG Graphic file (type png)
 <use LLMLight.PNG>
-Package pdftex.def Info: LLMLight.PNG  used on input line 225.
+Package pdftex.def Info: LLMLight.PNG  used on input line 271.
 (pdftex.def)             Requested size: 329.7663pt x 194.54144pt.
-<Prompt LLMLight.PNG, id=48, 470.88422pt x 172.39406pt>
+ [8]
+Underfull \vbox (badness 6477) has occurred while \output is active []
+
+ [9 <./prompt_ds_1.PNG> <./prompt_ds_2.PNG> <./LLMLight.PNG>]
+<Prompt LLMLight.PNG, id=61, 470.88422pt x 172.39406pt>
 File: Prompt LLMLight.PNG Graphic file (type png)
 <use Prompt LLMLight.PNG>
-Package pdftex.def Info: Prompt LLMLight.PNG  used on input line 238.
+Package pdftex.def Info: Prompt LLMLight.PNG  used on input line 284.
 (pdftex.def)             Requested size: 329.7663pt x 120.73026pt.
- [8 <./LLMLight.PNG>]
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 254.
+               Default added (so using `htbp') on input line 304.
 
-<TStreamLLM architecture.png, id=55, 298.61563pt x 176.66pt>
+<TStreamLLM architecture.png, id=62, 298.61563pt x 176.66pt>
 File: TStreamLLM architecture.png Graphic file (type png)
 <use TStreamLLM architecture.png>
-Package pdftex.def Info: TStreamLLM architecture.png  used on input line 256.
+Package pdftex.def Info: TStreamLLM architecture.png  used on input line 306.
 (pdftex.def)             Requested size: 242.98541pt x 143.75154pt.
-[9 <./Prompt LLMLight.PNG>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 283.
-
-<BERT Finetuning.png, id=60, 754.82pt x 305.64188pt>
-File: BERT Finetuning.png Graphic file (type png)
-<use BERT Finetuning.png>
-Package pdftex.def Info: BERT Finetuning.png  used on input line 285.
-(pdftex.def)             Requested size: 277.69987pt x 112.44678pt.
-Excluding 'comment' comment. Excluding 'comment' comment. [10 <./TStreamLLM architecture.png>] [11 <./BERT Finetuning.png>] [12] [13] (./samplepaper.aux)
+[10 <./Prompt LLMLight.PNG>] Excluding 'comment' comment. Excluding 'comment' comment. [11 <./TStreamLLM architecture.png>] [12] [13] [14] (./samplepaper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4278 strings out of 474103
- 63165 string characters out of 5747481
+ 5193 strings out of 474103
+ 81016 string characters out of 5747481
  1937496 words of memory out of 5000000
- 26592 multiletter control sequences out of 15000+600000
+ 27530 multiletter control sequences out of 15000+600000
  569862 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,7n,69p,480b,327s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,9n,77p,480b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on samplepaper.pdf (13 pages, 1757718 bytes).
+Output written on samplepaper.pdf (14 pages, 2028697 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 158 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

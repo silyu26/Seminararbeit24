@@ -16,6 +16,7 @@
 \usepackage{enumitem}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{subcaption}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -74,8 +75,8 @@ So to have models that can fulfill those use cases, we need to find and compare 
 In this chapter, the following concepts and techniques that are related to this topic will be covered.
 
 \subsection{Large Language Model}
-In this subsection, I will talk about the following aspects of large language models:
-    
+In this subsection, we will first summarize the evolution of language models, followed by an overview of the current large language
+models' structure and training process.    
   
 \subsubsection{The evolution of large language models}  
 \noindent \newline 
@@ -97,7 +98,7 @@ effectively improve the language understanding ability of language models even w
 According to \cite{Radford19}, large language models such as GPT-2 (with 1,5 billion parameters) are trained on massive training datasets including the crawling results from millions of different web pages, called WebText.
 As for the relationship between model performance, the number of model parameters $N$, the size of dataset $D$ and the amount of computing to train the model $C$, \cite{Kaplan20} demonstrates the \textbf{Smooth Power Laws} which says:
 "Performance has a power-law relationship with each of the three scale factors N, D, C when not bottlenecked by the other two, with trends spanning more than six orders of magnitude". Nowadays, there are various models
-that have distinct capabilities, for example, DALL-E can generate and modify images based on text input, whereas ChatGPT 3.5 can generate code and natural language \cite{Gozalo23}.
+that have distinct capabilities, for example, DALL-E can generate and modify images based on text input, whereas ChatGPT 3.5 can generate code and natural language, as \cite{Gozalo23} in figure \ref{fig:model_overview} summaries.
 \noindent \newline
 \begin{figure}[]
   \centering
@@ -108,8 +109,8 @@ that have distinct capabilities, for example, DALL-E can generate and modify ima
 
 \subsubsection{The architecture and training process of large language models}
 \noindent \newline
-As discussed before, large language models such as ChatGPT and BERT are based on transformer-based neural networks. The transformer architecture, as figure \ref{fig:attention} shows, is an 
-encoder-decoder architecture. According to \cite{Vaswani17}, the encoder takes the input sequence and converts them into dense vectors of fixed size at the input embedding step. Then with the 
+As discussed before, large language models such as ChatGPT and BERT are based on transformer-based neural networks. The transformer architecture, as \cite{Vaswani17} in figure \ref{fig:attention} demonstrates, is an 
+encoder-decoder architecture. The encoder takes the input sequence and converts them into dense vectors of fixed size at the input embedding step. Then with the 
 help of the positional encoding step, the input sequence contains information about each token in the sequence. The encoded inputs are then passed through the multi-head attention mechanism so that the 
 model can capture various relationships and features from the input sequence. Then the Add and Normalization layer is applied to stabilize and speed up the training process. In the end, the Feed Forward layer is 
 applied to help in introducing non-linearity and learning complex representations for each token's position in the sequence. Similarly, the decoder uses the vector representation of the input sequence created
@@ -123,6 +124,7 @@ Various input text datasets must be pre-processed before they can be used for th
 \end{itemize} 
 \noindent \newline
 The model starts its training algorithm after taking the pre-processed data as its input. For models such as ChatGPT and BERT, their training algorithm consists of an unsupervised pre-training phase and a supervised fine-tuning phase \cite{Roum23}.
+Figure \ref{fig:bert_finetune} visualizes the training process of the BERT model \cite{Devlin18}.
 In the pre-training phase, a large amount of unlabeled WebText data is used as the model's training dataset to make it a high-capacity language model. Given an unlabeled corpus of tokens $U=\{u_1,...,u_n\}$ as training dataset, the core idea of the pre-training phase is to 
 predict the next token $u_i$ for a sequence $\{u_{i-k},...,u_{i-1}\}$. According to \cite{Radford18}, this is done by maximizing the likelihood: 
 \begin{equation}
@@ -142,7 +144,12 @@ where each instance of $C$ has a sequence of tokens \{$c^1,...,c^m$\} and a labe
       \caption{The transformer structure \cite{Vaswani17}}
       \label{fig:attention}
   \end{figure}
-
+  \begin{figure}[]
+    \centering
+    \includegraphics[width=0.95\textwidth]{BERT Finetuning.png}
+    \caption{Finetuning in the BERT model \cite{Devlin18}}
+    \label{fig:bert_finetune}
+  \end{figure}
 %\begin{figure}[]
 %    \centering
 %    \includegraphics[width=0.7\textwidth]{BERT input repres.png}
@@ -195,9 +202,13 @@ continual learning into 3 stages as figure \ref{fig:acl_stages} shows:
   \caption{Stages of continual learning \cite{Wu24}}
   \label{fig:acl_stages}
 \end{figure}
-Furthermore, \cite{Biesi20} demonstrates that there are various methods of computing continual learning and categorize them as follows:
+Furthermore, \cite{Shi24} demonstrates that there are various methods of computing continual learning while mitigating
+catastrophic forgetting \cite{Gupta23} and categorize them as follows:
 \begin{itemize}
-  \item 
+  \item Replay-Based Methods: The model keeps a small subset of previous tasks and re-train them periodically.
+  \item Regularization-Based Methods: The capacity of the model is typically fixed, the model adds a regularization term (typically a loss function)
+that reflects the consolidation of previous knowledge.
+  \item Architecture-Based Methods: Change the architecture of the model for each new task and introduce new parameters which fit the task.
 \end{itemize}
 
 \subsubsection{use cases?}
@@ -205,16 +216,51 @@ Furthermore, \cite{Biesi20} demonstrates that there are various methods of compu
 Continual learning is already applied in the field of health-care, one example is 
 
 \subsubsection{Challenge of CL}
+\noindent \newline
 A critical challenge of continual learning is catastrophic forgetting, which refers to the models forgetting previously learned knowledge 
 when they are updated with new data \cite{Gupta23}. Catastrophic forgetting happens in the continual pre-training stage as the model is continuously updated with data stream.
-According to \cite{Shi24}, the methods to address catastrophic forgetting
+As discussed earlier, there are currently 3 types of methods that can mitigate catastrophic forgetting \cite{Shi24}. The architecture-based methods often face the problem of growing 
+training cost, as their models' parameters size grow with new tasks linearly\cite{Jovanov}. The regularization methods avoid the expanding parameters challenge but the computational cost
+increases due to the extra computation of the regularization term \cite{Wang24}. Therefore, the replay-based methods are often considered to be
+a better apporach considering large data stream input. Although the choice of selecting the right exemplars from previous tasks can still be difficuult \cite{Jovanov}. \\
+\noindent \newline
+Another challenge of continual learning is concept drift, where the relationship and distribution of input data change over time \cite{Biesi20}. Concept drift often causes the large language models' performance to decrease
+due to the discrepancies between the models' output based on previous data and current factual accuracies, societal norms and standards. Therefore the continual alignment stage of continual learning is essential to 
+mitigate the effect of concept drift, as it continuously refine the model to align with current standard \cite{Taori23}.
+However, to ensure the right alignment of the model, huge computational resources and human oversight are often required. Additionally, align a model to changes without introducing new bias and the protection of data
+privacy and security are also challenges to the continuous alignment stage \cite{Shi24}.
 
-\subsection{prompt engineering?}
+\subsection{prompt engineering}
 \subsubsection{promt engineering}
 \noindent \newline
-Prompt engineering is the process of providing large language models with effective inputs or queries to elicit specific, high-quality responses \cite{Zhang24}.
+\cite{LiuPengfei23} defines a prompt as "a set of instructions provided to an LLM that programs the LLM by customizing it and/or enhancing or refining its capabilities" and prompt engineering
+as "the means by which LLMs are programmed via prompts". More specifically, Prompt engineering is the process of providing large language models with effective inputs or queries to elicit specific, high-quality responses \cite{Zhang24}.
 It has been proven to have positive infuence on the performance of many downstream tasks such as text summarization, sentiment analysis,
-and natural language translation \cite{Liu21}.
+and natural language translation \cite{Liu21}. Considering the following prompt:
+\begin{example}
+  "Write a detailed and engaging introduction for a blog post about the benefits of learning Python for data science. Highlight at least three key advantages and provide real-world examples to illustrate each point."
+\end{example}
+By giving the prompt, the large language model is required to give an engaging, detailed and structured answer to the topic of benefits of learning Python for data science.
+Figure \ref{fig:both_prompts} shows an example of how different prompts guide ChatGPT to provide different outputs over the same topic.
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{prompt_ds_1.PNG}
+      \caption{Prompt 1}
+      \label{fig:prompt1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{prompt_ds_2.PNG}
+      \caption{Prompt 2}
+      \label{fig:prompt2}
+  \end{subfigure}
+  \caption{2 different prompts yield different output of ChatGPT}
+  \label{fig:both_prompts}
+\end{figure}
+
 \subsubsection{use cases}
 \noindent \newline
 In the field of traffic signal control, \cite{Lai23} proposes a model called LLMLight based on large language models to act as a decision-making agent. As figure \ref{fig:llmlight} shows,
@@ -232,7 +278,7 @@ the model, followed by the prompt engineering formed by the real time observatio
 \end{definition}
 Where $\pi_{\theta}$ refers to the traffic signal control policy, $(Y, a)$ refers to the reasoning trajectory and the action output by the model,
 based on the real-time traffic condition observation $o$, traffic scenario description $d_{\text{scene}}$, task descriptions $d_{\text{task}}$ , commonsense knowledge $d_{\text{know}}$, and control action space $A$.
-Figure \ref{fig:llmlight_prompt} shows an example template of the prompt.
+Figure \ref{fig:llmlight_prompt} shows an example template of the prompt \cite{Lai23}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.95\textwidth]{Prompt LLMLight.PNG}
@@ -241,55 +287,37 @@ Figure \ref{fig:llmlight_prompt} shows an example template of the prompt.
 \end{figure}
 
 \subsubsection{Challenges}
-
-\subsection{Use Cases}
-Following use cases will be covered:
+\noindent \newline
+\cite{White23} demonstrates the quality of the prompt provided by users as the major factor that affects the output quality of large language models using prompt engineering
+Furthermore, they demonstrate that prompt formulation should follow specific prompt pattern and summarize the components of prompt pattern as follows:
 \begin{itemize}
-    \item Social Media Monitoring: Analyzing streaming data from social media platforms can help monitor regional news, sentiment, and trends in real-time.
-    \item Financial Monitoring:  Large language models can analyze streaming news feeds to identify important events, trends, and sentiment in real-time. This can be valuable for financial institutions and risk management companies to stay informed about current events and market trends.
-    \item Health Care Monitoring: Large language models can analyze streaming medical data such as patient records, diagnostic reports, and research papers to assist healthcare providers in diagnosing diseases, identifying treatment options, and monitoring public health trends in real-time.
-    \item Traffic Data Monitoring: Large language models can analyze streaming traffic data to monitor traffic conditions in real-time to help reduce traffic accidents and level up transportation efficiency. 
-    %\item Security and Threats Detection: Large language models can analyze streaming data from network logs, security alerts, and threat intelligence feeds to detect and respond to cybersecurity threats in real-time. This includes identifying suspicious activities, malware signatures, and potential vulnerabilities.
+  \item A name and classification: It uniquely identifies the prompt pattern and indicates the issue being addressed.
+  \item The intent and context: It describes the issue.
+  \item The motivation: It explains the importance of this issue.
+  \item The structure and key ideas: They provide the LLM with important contextual information.
+  \item Example implementation: It provides an example prompt pattern which can be referenced for other pattern formulations.
+  \item Consequences: It gives an explanation of possible effect of this prompt pattern.
 \end{itemize}
+However, \cite{White23} also points out that for different issue categories such as "Alternative Approaches Pattern" (which guide the model to output alternative options) and "Fact Check List Pattern" 
+(which guide the model to provide a list of facts), the sprcific implementation of each component could differ.
+
 \begin{figure}[]
   \centering
   \includegraphics[width=0.7\textwidth]{TStreamLLM architecture.png}
-  \caption{Architecture of TStreamLLM \cite{Zhang24}}
+  \caption{Architecture of TStreamLLM (draft) \cite{Zhang24}}
   \label{fig:TStreamLLM}
 \end{figure}
 
-
-\subsection{Challenges}
-Following challenges will be covered:
-\begin{itemize}
-    \item Catastrophic forgetting \cite{Gupta23}
-    \item Concept drift: if the LLM is trained for a long time, it is possible that the relationship between the inputs and the outputs itself might change.
-    \item Computational resources: continuous learning requires significant computational resources, which may be costly or impractical to scale.
-    \item Privacy and security:  streaming data often contains sensitive or private information, raising concerns about data privacy and security.
-    \item Data quality: data streams may contain noisy or unreliable information, leading to incorrect model updates.
-\end{itemize}
-
-\subsection{Solutions}
-Following solutions will be covered:
-\begin{itemize}
-    \item Finetuning \cite{Devlin18}. 
-    \item Continual pre-training: continuously pretraining models on new incoming data \cite{Gupta23}.
-    \item Using data preprocessing techniques to filter out noise and ensure data quality. Use anomaly detection algorithms to identify and remove outliers in the data. Employ quality assurance measures to verify the accuracy of incoming data.
-    \item Continuously monitor model performance and detect concept drift using statistical methods or machine learning algorithms. Implement adaptive learning techniques to update the model in response to concept drift. Periodically retrain the model on recent data batches to maintain accuracy.
-    \item Optimize model architectures and algorithms to reduce computational overhead. Utilize distributed computing frameworks to parallelize model training and inference tasks.
-    \item Implement data anonymization and encryption techniques to protect sensitive information during data transmission and storage
-\end{itemize}
-%\paragraph{Following measurements will be covered:}
-\begin{figure}[]
-  \centering
-  \includegraphics[width=0.8\textwidth]{BERT Finetuning.png}
-  \caption{Finetuning in the BERT model \cite{Devlin18}}
-  \label{fig:bert_finetune}
-\end{figure}
-
 \section{Conclusion}
-In this section, I will shortly summarize the outline of this paper and also talk about the possible future development of large language models using data streams.
-
+This paper discussed the gap between large language models, which are pre-trained on massiv static datasets, and data streams, which are continuous and potentially unbounded.
+Two approaches were presented to mitigate the issue:
+\begin{itemize}
+  \item Continual learning of large language models enables the mdoel to continual pre-train over data stream input and by apply continual instruction tuning and continual alignment,
+the model can adapt itself to the continuous data input. However catastrophic forgetting is likely to occur during this process, so replay-based, regularization-based and architecture-based
+methods are applied to mitigate the effect of catastrophic forgetting.
+  \item In some application fields, another option is to convert the data stream input into model-readable input and update the model's knowledge via prompt engineering. However, this method is
+heavily replied on the quality of the prompt formulated by users.
+\end{itemize}
 %\paragraph{Sample Heading (Fourth Level)}
 %The contribution should contain no more than four levels of
 %headings. Table~\ref{tab1} gives a summary of all heading levels.
@@ -523,6 +551,21 @@ Lai, Siqi, Zhao Xu, Weijia Zhang, Hao Liu, and Hui Xiong. "Large language models
 
 \bibitem{Liu21}
 Liu, Xiao, Kaixuan Ji, Yicheng Fu, Weng Lam Tam, Zhengxiao Du, Zhilin Yang, and Jie Tang. "P-tuning v2: Prompt tuning can be comparable to fine-tuning universally across scales and tasks." arXiv preprint arXiv:2110.07602 (2021).
+
+\bibitem{Jovanov}
+Jovanović, Mlađan. "Towards Incremental Learning in Large Language Models: A Critical Review."
+
+\bibitem{Wang24}
+Wang, Yifan, Yafei Liu, Chufan Shi, Haoling Li, Chen Chen, Haonan Lu, and Yujiu Yang. "InsCL: A Data-efficient Continual Learning Paradigm for Fine-tuning Large Language Models with Instructions." arXiv preprint arXiv:2403.11435 (2024).
+
+\bibitem{Taori23}
+Taori, Rohan, Ishaan Gulrajani, Tianyi Zhang, Yann Dubois, Xuechen Li, Carlos Guestrin, Percy Liang, and Tatsunori B. Hashimoto. "Alpaca: A strong, replicable instruction-following model." Stanford Center for Research on Foundation Models. https://crfm. stanford. edu/2023/03/13/alpaca. html 3, no. 6 (2023): 7.
+
+\bibitem{LiuPengfei23}
+Liu, Pengfei, Weizhe Yuan, Jinlan Fu, Zhengbao Jiang, Hiroaki Hayashi, and Graham Neubig. "Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing." ACM Computing Surveys 55, no. 9 (2023): 1-35.
+
+\bibitem{White23}
+White, Jules, Quchen Fu, Sam Hays, Michael Sandborn, Carlos Olea, Henry Gilbert, Ashraf Elnashar, Jesse Spencer-Smith, and Douglas C. Schmidt. "A prompt pattern catalog to enhance prompt engineering with chatgpt." arXiv preprint arXiv:2302.11382 (2023).
 \end{thebibliography}
 
 \end{document}
