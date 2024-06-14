@@ -1,0 +1,30 @@
+iS there any tr. process steps that are general 
+
+which steps of the tr pro. can be generalized by comparing models
+they may share some steps, but also have some differences, so llm
+can deal with different things
+
+Try to create a comparison table of the LLMs: nr. of parameters
+specific use cases, think about the dimensions that need to be compared
+since they are the general attributes that chara. a model
+
+challenges and solutions don't need to be use case specific. define the general
+challenges before presenting the use cases. It's too fast to directly come to 
+the use cases, try to discuss it specific and precisely what challenges are there, 
+then there should be the solutions and use cases targeting the challenges.
+Then the rest may be the future topics.
+
+In  this seminar, we'll answer the following questions:
+bullet points.....(slides) 
+
+---------------------------------------------------------------------------------
+
+new contents to come: 
+
+1. The table of comparisons
+2. more of catastrophic forgetting, concept drift, maybe some examples?
+3. more introduction to different LLMs, summarize the common & indifferent aspects
+    - more or less unsupervised pre-training and supervised fine-tuning.
+    -
+4. More use cases?
+

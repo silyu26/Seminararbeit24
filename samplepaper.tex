@@ -95,17 +95,54 @@ to manage different lengths for input and output sequences \cite{Sutskever14}. \
 \noindent \newline
 Large language models start to have a huge leap forward after the introduction of the transformer architecture \cite{Vaswani17}. \cite{Radford18} demonstrates that the transformer architecture can
 effectively improve the language understanding ability of language models even with large unlabeled text corpora by first generatively pre-training the model on the text data and then discriminative fine-tuning them on various tasks.
-According to \cite{Radford19}, large language models such as GPT-2 (with 1,5 billion parameters) are trained on massive training datasets including the crawling results from millions of different web pages, called WebText.
-As for the relationship between model performance, the number of model parameters $N$, the size of dataset $D$ and the amount of computing to train the model $C$, \cite{Kaplan20} demonstrates the \textbf{Smooth Power Laws} which says:
+Modern models usually own a large number of parameters and large-scale training datasets, but the source of the training datasets can vary from model to model. For example, 
+according to \cite{Radford19}, GPT-2 (with 1,5 billion parameters) is trained on massive training datasets including the crawling results from millions of different web pages, called WebText. Where BERT (BERT$_{BASE}$ with 110 million
+parameters, BERT$_{LARGE}$ with 340 million parameters) is trained on the English Wikipedia (2,500 million words) and BookCorpus (800 million words), a large dataset of books used for machine learning approaches \cite{Devlin18}. 
+A more recent model collection called LLaMA (with 7 to 65 billion parameters) is trained on various open-source data such as commoncrawl\footnote{\url{https://commoncrawl.org/}}, C4, Github, Wikipedia etc \cite{Touvron23}. 
+Table \ref{table:comparison} provides a brief overview of the 3 models together with information of the most recent GPT3.5 and GPT4 models according to the OpenAI blog\footnote{https://platform.openai.com/docs/models/gpt-base}. \\
+
+\noindent
+The parameter size of different models has a growing trend, which can be explained by the relationship between model performance, the number of model parameters $N$, the size of dataset $D$ and the amount of computing to train the model $C$. \cite{Kaplan20} demonstrates the \textbf{Smooth Power Laws} which says:
 "Performance has a power-law relationship with each of the three scale factors N, D, C when not bottlenecked by the other two, with trends spanning more than six orders of magnitude". Nowadays, there are various models
 that have distinct capabilities, for example, DALL-E can generate and modify images based on text input, whereas ChatGPT 3.5 can generate code and natural language, as \cite{Gozalo23} in figure \ref{fig:model_overview} summaries.
 \noindent \newline
 \begin{figure}[]
   \centering
-  \includegraphics[width=0.7\textwidth]{models overview.png}
+  \includegraphics[width=0.8\textwidth]{models overview.png}
   \caption{An overview of the recent major generative AI models  \cite{Gozalo23}}
   \label{fig:model_overview}
-\end{figure}
+\end{figure} 
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{| p{4cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} |}
+  %\hline
+  %\textbf{Aspect} & \textbf{Model 1} & \textbf{Model 2} & \textbf{Model 3} & \textbf{Model 4} \\\textbf{Model Name} & GPT-4 & BERT & T5 & RoBERTa \\
+  \hline
+  \textbf{Model Name} & BERT & GPT2 & LLaMA & GPT3,5/ 4 \\
+  \hline
+  \textbf{Developer} & GoogleAI & OpenAI & MetaAI & OpenAI \\
+  \hline
+  \textbf{Release Date} & 2018 & 2019 & 2023 & 2022/2023 \\
+  \hline
+  \textbf{Nr. of Parameters} & 110 M/ 340 M & 1,5 B & 7-65 B & 175 B/1,7 T \\
+  \hline
+  \textbf{Training Data} & Wikipedia(en) \& BookCorpus & WebText & Various open-source datasets & WebText \\
+  \hline
+  \textbf{Open-sourced} & Yes & No & Yes & No \\
+  %\hline
+  %\textbf{Performance} & SOTA on many NLP tasks & High on NLU tasks & High on text generation and NLU tasks & High on NLU tasks \\
+  \hline
+  \textbf{Major Applications?} & QA & Text generation \& Translation & Text generation \& QA & Content generation \& QA \\
+  %\hline
+  %\textbf{Pricing} & Subscription-based & Open-source & Open-source & Open-source \\
+  %\hline
+  %\textbf{Availability} & API & Downloadable model & Downloadable model & Downloadable model \\
+  \hline
+  \end{tabular}
+  \caption{Comparison of Large Language Models}
+  \label{table:comparison}
+  \end{table}
 
 \subsubsection{The Architecture and Training Process of Large Language Models}
 \noindent \newline
@@ -212,6 +249,21 @@ that reflects the consolidation of previous knowledge.
   \item Architecture-Based Methods: Change the architecture of the model for each new task and introduce new parameters that fit the task.
 \end{itemize}
 
+\subsubsection{Challenge of CL}
+\noindent \newline
+A critical challenge of continual learning is catastrophic forgetting, which refers to the models forgetting previously learned knowledge 
+when they are updated with new data \cite{Gupta23}. Catastrophic forgetting happens in the continual pre-training stage as the model is continuously updated with a data stream.
+As discussed earlier, there are currently 3 types of methods that can mitigate catastrophic forgetting \cite{Shi24}. The architecture-based methods often face the problem of the growing 
+training cost, as their models' parameter size grows with new tasks linearly\cite{Jovanov}. The regularization methods avoid the expanding parameters challenge but the computational cost
+increases due to the extra computation of the regularization term \cite{Wang24}. Therefore, the replay-based methods are often considered to be
+a better approach considering large data stream input. Although the choice of selecting the right exemplars from previous tasks can still be difficult \cite{Jovanov}. \\
+\noindent \newline
+Another challenge of continual learning is concept drift, where the relationship and distribution of input data change over time \cite{Biesi20}. Concept drift often causes the large language models' performance to decrease
+due to the discrepancies between the models' output based on previous data and current factual accuracies, societal norms and standards. Therefore the continual alignment stage of continual learning is essential to 
+mitigate the effect of concept drift, as it continuously refines the model to align with the current standard \cite{Taori23}.
+However, to ensure the right alignment of the model, huge computational resources and human oversight are often required. Additionally, aligning a model to changes without introducing new bias and the protection of data
+privacy and security are also challenges to the continuous alignment stage \cite{Shi24}.
+
 \subsubsection{Use Cases}
 \noindent \newline
 Continual learning is already applied in the field of linguistics, one example is from \cite{Fujii24}, where they discovered the fact that some large language models are trained on English datasets and their performance 
@@ -229,21 +281,6 @@ The results showed that despite the large data stream input, Swallow managed to 
   \caption{Performance curve of the Swallow model in question answering task \cite{Fujii24}}
   \label{fig:swallow}
 \end{figure}
-
-\subsubsection{Challenge of CL}
-\noindent \newline
-A critical challenge of continual learning is catastrophic forgetting, which refers to the models forgetting previously learned knowledge 
-when they are updated with new data \cite{Gupta23}. Catastrophic forgetting happens in the continual pre-training stage as the model is continuously updated with a data stream.
-As discussed earlier, there are currently 3 types of methods that can mitigate catastrophic forgetting \cite{Shi24}. The architecture-based methods often face the problem of the growing 
-training cost, as their models' parameter size grows with new tasks linearly\cite{Jovanov}. The regularization methods avoid the expanding parameters challenge but the computational cost
-increases due to the extra computation of the regularization term \cite{Wang24}. Therefore, the replay-based methods are often considered to be
-a better approach considering large data stream input. Although the choice of selecting the right exemplars from previous tasks can still be difficult \cite{Jovanov}. \\
-\noindent \newline
-Another challenge of continual learning is concept drift, where the relationship and distribution of input data change over time \cite{Biesi20}. Concept drift often causes the large language models' performance to decrease
-due to the discrepancies between the models' output based on previous data and current factual accuracies, societal norms and standards. Therefore the continual alignment stage of continual learning is essential to 
-mitigate the effect of concept drift, as it continuously refines the model to align with the current standard \cite{Taori23}.
-However, to ensure the right alignment of the model, huge computational resources and human oversight are often required. Additionally, aligning a model to changes without introducing new bias and the protection of data
-privacy and security are also challenges to the continuous alignment stage \cite{Shi24}. 
 
 \subsection{Prompt Engineering}
 \subsubsection{Definition}
@@ -276,6 +313,21 @@ Figure \ref{fig:both_prompts} shows an example of how different prompts guide Ch
   \label{fig:both_prompts}
 \end{figure}
 
+\subsubsection{Challenges}
+\noindent \newline
+\cite{White23} demonstrates the quality of the prompt provided by users as the major factor that affects the output quality of large language models using prompt engineering
+Furthermore, they demonstrate that prompt formulation should follow the specific prompt pattern and summarize the components of a prompt pattern as follows:
+\begin{itemize}
+  \item A name and classification: It uniquely identifies the prompt pattern and indicates the issue being addressed.
+  \item The intent and context: It describes the issue.
+  \item The motivation: It explains the importance of this issue.
+  \item The structure and key ideas: They provide the LLM with important contextual information.
+  \item Example implementation: It provides an example prompt pattern that can be referenced for other pattern formulations.
+  \item Consequences: It explains the possible effect of this prompt pattern.
+\end{itemize}
+However, \cite{White23} also points out that for different issue categories such as "Alternative Approaches Pattern" (which guides the model to output alternative options) and "Fact Check List Pattern" 
+(which guides the model to provide a list of facts), the specific implementation of each component could differ.
+
 \subsubsection{Use Cases}
 \noindent \newline
 In the field of traffic signal control, \cite{Lai23} proposes a model called LLMLight based on large language models to act as a decision-making agent. As figure \ref{fig:llmlight} shows,
@@ -300,21 +352,6 @@ Figure \ref{fig:llmlight_prompt} shows an example template of the prompt \cite{L
   \caption{Prompt template \cite{Lai23}}
   \label{fig:llmlight_prompt}
 \end{figure}
-
-\subsubsection{Challenges}
-\noindent \newline
-\cite{White23} demonstrates the quality of the prompt provided by users as the major factor that affects the output quality of large language models using prompt engineering
-Furthermore, they demonstrate that prompt formulation should follow the specific prompt pattern and summarize the components of a prompt pattern as follows:
-\begin{itemize}
-  \item A name and classification: It uniquely identifies the prompt pattern and indicates the issue being addressed.
-  \item The intent and context: It describes the issue.
-  \item The motivation: It explains the importance of this issue.
-  \item The structure and key ideas: They provide the LLM with important contextual information.
-  \item Example implementation: It provides an example prompt pattern that can be referenced for other pattern formulations.
-  \item Consequences: It explains the possible effect of this prompt pattern.
-\end{itemize}
-However, \cite{White23} also points out that for different issue categories such as "Alternative Approaches Pattern" (which guides the model to output alternative options) and "Fact Check List Pattern" 
-(which guides the model to provide a list of facts), the specific implementation of each component could differ.
 
 \begin{figure}[]
   \centering
@@ -587,6 +624,9 @@ Fujii, Kazuki, Taishi Nakamura, Mengsay Loem, Hiroki Iida, Masanari Ohi, Kakeru 
 
 \bibitem{Penedo23}
 Penedo, Guilherme, Quentin Malartic, Daniel Hesslow, Ruxandra Cojocaru, Alessandro Cappelli, Hamza Alobeidli, Baptiste Pannier, Ebtesam Almazrouei, and Julien Launay. "The RefinedWeb dataset for Falcon LLM: outperforming curated corpora with web data, and web data only." arXiv preprint arXiv:2306.01116 (2023).
+
+\bibitem{Touvron23}
+Touvron, Hugo, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière et al. "Llama: Open and efficient foundation language models." arXiv preprint arXiv:2302.13971 (2023).
 \end{thebibliography}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  21 MAY 2024 22:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  11 JUN 2024 22:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -330,126 +330,179 @@ Overfull \hbox (6.87927pt too wide) in paragraph at lines 55--57
 [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 103.
-
-<models overview.png, id=12, 518.43687pt x 395.97937pt>
-File: models overview.png Graphic file (type png)
-<use models overview.png>
-Package pdftex.def Info: models overview.png  used on input line 105.
-(pdftex.def)             Requested size: 242.98541pt x 185.5907pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--109
+Underfull \hbox (badness 10000) in paragraph at lines 82--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--109
+Underfull \hbox (badness 10000) in paragraph at lines 82--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--109
+Underfull \hbox (badness 10000) in paragraph at lines 82--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--103
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 111--121
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 109.
+
+<models overview.png, id=17, 518.43687pt x 395.97937pt>
+File: models overview.png Graphic file (type png)
+<use models overview.png>
+Package pdftex.def Info: models overview.png  used on input line 111.
+(pdftex.def)             Requested size: 277.69987pt x 212.11575pt.
+
+Overfull \hbox (0.8984pt too wide) in paragraph at lines 130--130
+[]\T1/cmr/m/n/9 Wikipedia(en)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+\T1/cmr/m/n/9 & Book-Cor-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+[]\T1/cmr/m/n/9 Various
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+\T1/cmr/m/n/9 open-source
+ []
+
+
+Underfull \hbox (badness 5924) in paragraph at lines 136--136
+[]\T1/cmr/m/n/9 Text gen-er-a-
+ []
+
+
+Underfull \hbox (badness 5924) in paragraph at lines 136--136
+[]\T1/cmr/m/n/9 Text gen-er-a-
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 136--141
+[]\T1/cmr/m/n/9 Content gen-
+ []
+
+
+Overfull \hbox (8.30943pt too wide) in paragraph at lines 118--143
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--158
 
  []
 
-[3 <./models overview.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 132--137
+[3 <./models overview.png>] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 169--174
 
  []
 
-<attention1.jpg, id=23, 1324.95pt x 1866.975pt>
+<attention1.jpg, id=29, 1324.95pt x 1866.975pt>
 File: attention1.jpg Graphic file (type jpg)
 <use attention1.jpg>
-Package pdftex.def Info: attention1.jpg  used on input line 143.
+Package pdftex.def Info: attention1.jpg  used on input line 180.
 (pdftex.def)             Requested size: 208.27623pt x 293.48036pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 147.
+               Default added (so using `htbp') on input line 184.
 
-<BERT Finetuning.png, id=24, 754.82pt x 305.64188pt>
+<BERT Finetuning.png, id=30, 754.82pt x 305.64188pt>
 File: BERT Finetuning.png Graphic file (type png)
 <use BERT Finetuning.png>
-Package pdftex.def Info: BERT Finetuning.png  used on input line 149.
+Package pdftex.def Info: BERT Finetuning.png  used on input line 186.
 (pdftex.def)             Requested size: 329.7663pt x 133.52676pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--168
+Underfull \hbox (badness 10000) in paragraph at lines 198--205
 
  []
 
-[4] [5 <./attention1.jpg> <./BERT Finetuning.png>] [6]
-<CL stages.png, id=43, 790.45313pt x 285.065pt>
+[5] [6 <./attention1.jpg> <./BERT Finetuning.png>]
+<CL stages.png, id=45, 790.45313pt x 285.065pt>
 File: CL stages.png Graphic file (type png)
 <use CL stages.png>
-Package pdftex.def Info: CL stages.png  used on input line 202.
+Package pdftex.def Info: CL stages.png  used on input line 239.
 (pdftex.def)             Requested size: 329.7663pt x 118.92613pt.
-<swallow.png, id=44, 484.81125pt x 236.885pt>
+ [7]
+Underfull \hbox (badness 10000) in paragraph at lines 253--266
+
+ []
+
+[8 <./CL stages.png>]
+<swallow.png, id=54, 484.81125pt x 236.885pt>
 File: swallow.png Graphic file (type png)
 <use swallow.png>
-Package pdftex.def Info: swallow.png  used on input line 228.
+Package pdftex.def Info: swallow.png  used on input line 280.
 (pdftex.def)             Requested size: 277.69987pt x 135.69453pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--232
+Underfull \hbox (badness 10000) in paragraph at lines 268--284
 
  []
 
-[7 <./CL stages.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 234--247
-
- []
-
-[8 <./swallow.png>]
-<prompt_ds_1.PNG, id=54, 638.76141pt x 519.44063pt>
+[9]
+<prompt_ds_1.PNG, id=58, 638.76141pt x 519.44063pt>
 File: prompt_ds_1.PNG Graphic file (type png)
 <use prompt_ds_1.PNG>
-Package pdftex.def Info: prompt_ds_1.PNG  used on input line 264.
+Package pdftex.def Info: prompt_ds_1.PNG  used on input line 301.
 (pdftex.def)             Requested size: 166.61781pt x 135.49522pt.
-<prompt_ds_2.PNG, id=55, 649.30078pt x 514.92375pt>
+<prompt_ds_2.PNG, id=59, 649.30078pt x 514.92375pt>
 File: prompt_ds_2.PNG Graphic file (type png)
 <use prompt_ds_2.PNG>
-Package pdftex.def Info: prompt_ds_2.PNG  used on input line 271.
+Package pdftex.def Info: prompt_ds_2.PNG  used on input line 308.
 (pdftex.def)             Requested size: 166.61781pt x 132.13274pt.
-<LLMLight.PNG, id=56, 590.205pt x 348.17578pt>
+ [10 <./swallow.png> <./prompt_ds_1.PNG> <./prompt_ds_2.PNG>]
+<LLMLight.PNG, id=66, 590.205pt x 348.17578pt>
 File: LLMLight.PNG Graphic file (type png)
 <use LLMLight.PNG>
-Package pdftex.def Info: LLMLight.PNG  used on input line 286.
+Package pdftex.def Info: LLMLight.PNG  used on input line 338.
 (pdftex.def)             Requested size: 329.7663pt x 194.54144pt.
- [9]
-<Prompt LLMLight.PNG, id=60, 470.88422pt x 172.39406pt>
+ [11 <./LLMLight.PNG>]
+<Prompt LLMLight.PNG, id=71, 470.88422pt x 172.39406pt>
 File: Prompt LLMLight.PNG Graphic file (type png)
 <use Prompt LLMLight.PNG>
-Package pdftex.def Info: Prompt LLMLight.PNG  used on input line 299.
+Package pdftex.def Info: Prompt LLMLight.PNG  used on input line 351.
 (pdftex.def)             Requested size: 329.7663pt x 120.73026pt.
- [10 <./prompt_ds_1.PNG> <./prompt_ds_2.PNG> <./LLMLight.PNG>]
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 319.
+               Default added (so using `htbp') on input line 356.
 
-<TStreamLLM architecture.png, id=68, 298.61563pt x 176.66pt>
+<TStreamLLM architecture.png, id=72, 298.61563pt x 176.66pt>
 File: TStreamLLM architecture.png Graphic file (type png)
 <use TStreamLLM architecture.png>
-Package pdftex.def Info: TStreamLLM architecture.png  used on input line 321.
+Package pdftex.def Info: TStreamLLM architecture.png  used on input line 358.
 (pdftex.def)             Requested size: 242.98541pt x 143.75154pt.
-[11 <./Prompt LLMLight.PNG>] Excluding 'comment' comment. Excluding 'comment' comment. [12 <./TStreamLLM architecture.png>] [13] [14] [15] (./samplepaper.aux) ) 
+
+Underfull \vbox (badness 4859) has occurred while \output is active []
+
+ [12 <./Prompt LLMLight.PNG> <./TStreamLLM architecture.png>] Excluding 'comment' comment. Excluding 'comment' comment. [13] [14] [15] [16] (./samplepaper.aux) ) 
 Here is how much of TeX's memory you used:
- 5151 strings out of 478268
- 81411 string characters out of 5850345
- 381482 words of memory out of 5000000
- 23313 multiletter control sequences out of 15000+600000
- 481052 words of font info for 50 fonts, out of 8000000 for 9000
+ 5176 strings out of 478268
+ 81682 string characters out of 5850345
+ 386482 words of memory out of 5000000
+ 23330 multiletter control sequences out of 15000+600000
+ 484920 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,9n,77p,524b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on samplepaper.pdf (15 pages, 2159217 bytes).
+ 67i,10n,77p,524b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on samplepaper.pdf (16 pages, 2183762 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 171 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
