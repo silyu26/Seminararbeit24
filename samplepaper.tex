@@ -146,23 +146,37 @@ that have distinct capabilities, for example, DALL-E can generate and modify ima
 
 \subsubsection{The Architecture and Training Process of Large Language Models}
 \noindent \newline
-As discussed before, large language models such as ChatGPT and BERT are based on transformer-based neural networks. The transformer architecture, as \cite{Vaswani17} in figure \ref{fig:attention} demonstrates, is an 
+Many of the recent large language models such as ChatGPT, LLaMA and BERT are based on transformer-based neural networks. The transformer architecture, as \cite{Vaswani17} in figure \ref{fig:attention} demonstrates, is an 
 encoder-decoder architecture. The encoder takes the input sequence and converts them into dense vectors of fixed size at the input embedding step. Then with the 
 help of the positional encoding step, the input sequence contains information about each token in the sequence. The encoded inputs are then passed through the multi-head attention mechanism so that the 
 model can capture various relationships and features from the input sequence. Then the Add and Normalization layer is applied to stabilize and speed up the training process. In the end, the Feed Forward layer is 
 applied to help in introducing non-linearity and learning complex representations for each token's position in the sequence. Similarly, the decoder uses the vector representation of the input sequence created
 by the encoder along with the previously generated tokens to produce the next token in the output sequence and the masked multi-head attention mechanism is applied to ensure that the prediction for a particular position depends only on the known outputs at earlier positions. \\
 \noindent \newline
-Various input text datasets must be pre-processed before they can be used for the training process, and the data pre-processing includes the following steps \cite{Roum23}:
+Various input text datasets must be pre-processed as valid input representations before they can be used for the training process, and the data pre-processing includes the following steps \cite{Roum23}:
 \begin{itemize}
   \item Tokenization involves segmenting text into tokens, which are the basic units of broken text. Tokenization can simplify and standardize the input data and improve model performance \cite{Devlin18}.
   \item Subword encoding refers to breaking down the input text into smaller units and helping handle rare or out-of-vocabulary words in the input text.
   \item Data cleaning is the step where the noisy information in the input data should be removed, which can significantly improve the quality and suitability of the input data for the model.
 \end{itemize} 
 \noindent \newline
-The model starts its training algorithm after taking the pre-processed data as its input. For models such as ChatGPT and BERT, their training algorithm consists of an unsupervised pre-training phase and a supervised fine-tuning phase \cite{Roum23}.
+More specifically, BERT uses the WordPiece embeddings \cite{Wu16} with a 3000 token vocabulary. For each input, a classification token $([CLS])$ is used to mark the beginning of the sentence and a $([SEP])$ token is
+used to mark the end of a sentence. In some cases, several sentences are combined as one single sentence, therefore a new embedding is needed to mark to which sub-sentence each token belongs \cite{Devlin18}.
+As figure \ref{fig:bert_input} shows, an example input sentence "My dog is cute, he likes playing." is first tokenized into smaller units, where $([CLS])$ marks the start of the input and 
+$([SEP])$ marks the end of the sentence as well as splits the sentence into 2 parts. A token embedding is added for each token, a segment embedding is added to show to which sentence each token belongs and
+a position embedding is used to show the position of each token within the sentence. The final input representation is the sum of all embeddings.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{BERT input repres.png}
+  \caption{Input representation of BERT \cite{Devlin18}}
+  \label{fig:bert_input}
+\end{figure}
+
+
+\noindent \newline
+A model starts its training algorithm after taking the pre-processed data as its input. For recent models such as ChatGPT, LLaMA and BERT, their training algorithms all consist of an unsupervised pre-training phase and a supervised fine-tuning phase \cite{Roum23}.
 Figure \ref{fig:bert_finetune} visualizes the training process of the BERT model \cite{Devlin18}.
-In the pre-training phase, a large amount of unlabeled WebText data is used as the model's training dataset to make it a high-capacity language model. Given an unlabeled corpus of tokens $U=\{u_1,...,u_n\}$ as training dataset, the core idea of the pre-training phase is to 
+In the pre-training phase, a large amount of unlabeled WebText data is used as the model's training dataset to make it a high-capacity language model. Given an unlabeled corpus of tokens $U=\{u_1,...,u_n\}$ as a training dataset, the core idea of the pre-training phase is to 
 predict the next token $u_i$ for a sequence $\{u_{i-k},...,u_{i-1}\}$. According to \cite{Radford18}, this is done by maximizing the likelihood: 
 \begin{equation}
   L_1(U) = \sum_{i}\log{P(u_i|u_{i-k},...,u_{i-1}; \Theta)}
@@ -627,6 +641,9 @@ Penedo, Guilherme, Quentin Malartic, Daniel Hesslow, Ruxandra Cojocaru, Alessand
 
 \bibitem{Touvron23}
 Touvron, Hugo, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière et al. "Llama: Open and efficient foundation language models." arXiv preprint arXiv:2302.13971 (2023).
+
+\bibitem{Wu16}
+Wu, Yonghui, Mike Schuster, Zhifeng Chen, Quoc V. Le, Mohammad Norouzi, Wolfgang Macherey, Maxim Krikun et al. "Google's neural machine translation system: Bridging the gap between human and machine translation." arXiv preprint arXiv:1609.08144 (2016).
 \end{thebibliography}
 
 \end{document}
