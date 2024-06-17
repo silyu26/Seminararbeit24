@@ -172,10 +172,13 @@ a position embedding is used to show the position of each token within the sente
   \label{fig:bert_input}
 \end{figure}
 
+\noindent \newline
+GPT2 and LLaMA use byte pair encoding (BPE) \cite{Sennrich15} to tokenize the input text where BPE iteratively count the frequency of the characters or subwords and merge the most frequent ones
+to form new vocabulary \cite{Radford19}, \cite{Touvron23}. There are several different implementations of BPE that are moderate for different use cases, the training corpus on which BPE is applied also
+significantly influences the size of the result vocabulary. GPT2 applies BPE with a base vocabulary of more than 130,000 tokens, whereas the BPE applied on LLaMA creates around 1,4T tokens.
 
 \noindent \newline
-A model starts its training algorithm after taking the pre-processed data as its input. For recent models such as ChatGPT, LLaMA and BERT, their training algorithms all consist of an unsupervised pre-training phase and a supervised fine-tuning phase \cite{Roum23}.
-Figure \ref{fig:bert_finetune} visualizes the training process of the BERT model \cite{Devlin18}.
+A model starts its training algorithm after taking the pre-processed data as its input. For recent models such as ChatGPT, LLaMA and BERT, their training algorithms share a same process of an unsupervised pre-training phase and a supervised fine-tuning phase \cite{Roum23}.
 In the pre-training phase, a large amount of unlabeled WebText data is used as the model's training dataset to make it a high-capacity language model. Given an unlabeled corpus of tokens $U=\{u_1,...,u_n\}$ as a training dataset, the core idea of the pre-training phase is to 
 predict the next token $u_i$ for a sequence $\{u_{i-k},...,u_{i-1}\}$. According to \cite{Radford18}, this is done by maximizing the likelihood: 
 \begin{equation}
@@ -195,10 +198,18 @@ where each instance of $C$ has a sequence of tokens \{$c^1,...,c^m$\} and a labe
       \caption{The transformer structure \cite{Vaswani17}}
       \label{fig:attention}
   \end{figure}
+In the BERT model, as shown in figure \ref{fig:bert_finetune}, the pre-training phase consists of 2 unsupervised tasks: Masked LM and Next Sentence Prediction (NSP).
+Masked LM is used to help BERT understands the context of words within a sentence, it masks 15\% of all WordPiece tokens in each input sentence and the model 
+predicts only the masked words instead of reconstructing the entire input. NSP is applied to help BERT understand the relationship between 2 sentences. More specifically, when 
+having 2 sentences A and B as input, B is replaced by another random sentence from the training set for half of the time and remains unchanged for other half of the time.
+The BERT is trained to predict whether the second sentence in the input is the actual sentence B. According to \cite{Devlin18}, NSP has significant benefits for question answering (QA).
+%\noindent \newline
+
+
   \begin{figure}[]
     \centering
     \includegraphics[width=0.95\textwidth]{BERT Finetuning.png}
-    \caption{Finetuning in the BERT model \cite{Devlin18}}
+    \caption{Training process in the BERT model \cite{Devlin18}}
     \label{fig:bert_finetune}
   \end{figure}
 %\begin{figure}[]
@@ -644,6 +655,9 @@ Touvron, Hugo, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lach
 
 \bibitem{Wu16}
 Wu, Yonghui, Mike Schuster, Zhifeng Chen, Quoc V. Le, Mohammad Norouzi, Wolfgang Macherey, Maxim Krikun et al. "Google's neural machine translation system: Bridging the gap between human and machine translation." arXiv preprint arXiv:1609.08144 (2016).
+
+\bibitem{Sennrich15}
+Sennrich, Rico, Barry Haddow, and Alexandra Birch. "Neural machine translation of rare words with subword units." arXiv preprint arXiv:1508.07909 (2015).
 \end{thebibliography}
 
 \end{document}
