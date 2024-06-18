@@ -27,4 +27,6 @@ new contents to come:
     - more or less unsupervised pre-training and supervised fine-tuning.
     -
 4. More use cases?
+  progressive prompts?
+  DynaMind?
 

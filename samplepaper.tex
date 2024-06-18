@@ -99,7 +99,7 @@ Modern models usually own a large number of parameters and large-scale training 
 according to \cite{Radford19}, GPT-2 (with 1,5 billion parameters) is trained on massive training datasets including the crawling results from millions of different web pages, called WebText. Where BERT (BERT$_{BASE}$ with 110 million
 parameters, BERT$_{LARGE}$ with 340 million parameters) is trained on the English Wikipedia (2,500 million words) and BookCorpus (800 million words), a large dataset of books used for machine learning approaches \cite{Devlin18}. 
 A more recent model collection called LLaMA (with 7 to 65 billion parameters) is trained on various open-source data such as commoncrawl\footnote{\url{https://commoncrawl.org/}}, C4, Github, Wikipedia etc \cite{Touvron23}. 
-Table \ref{table:comparison} provides a brief overview of the 3 models together with information of the most recent GPT3.5 and GPT4 models according to the OpenAI blog\footnote{https://platform.openai.com/docs/models/gpt-base}. \\
+Table \ref{table:comparison} provides a brief overview of the 3 models together with information on the most recent GPT-3.5 and GPT-4 models according to the OpenAI blog\footnote{https://platform.openai.com/docs/models/gpt-base}. \\
 
 \noindent
 The parameter size of different models has a growing trend, which can be explained by the relationship between model performance, the number of model parameters $N$, the size of dataset $D$ and the amount of computing to train the model $C$. \cite{Kaplan20} demonstrates the \textbf{Smooth Power Laws} which says:
@@ -119,7 +119,7 @@ that have distinct capabilities, for example, DALL-E can generate and modify ima
   %\hline
   %\textbf{Aspect} & \textbf{Model 1} & \textbf{Model 2} & \textbf{Model 3} & \textbf{Model 4} \\\textbf{Model Name} & GPT-4 & BERT & T5 & RoBERTa \\
   \hline
-  \textbf{Model Name} & BERT & GPT2 & LLaMA & GPT3,5/ 4 \\
+  \textbf{Model Name} & BERT & GPT-2 & LLaMA & GPT-3,5/ 4 \\
   \hline
   \textbf{Developer} & GoogleAI & OpenAI & MetaAI & OpenAI \\
   \hline
@@ -173,9 +173,9 @@ a position embedding is used to show the position of each token within the sente
 \end{figure}
 
 \noindent \newline
-GPT2 and LLaMA use byte pair encoding (BPE) \cite{Sennrich15} to tokenize the input text where BPE iteratively count the frequency of the characters or subwords and merge the most frequent ones
+GPT-2 and LLaMA use Byte Pair Encoding (BPE) \cite{Sennrich15} to tokenize the input text where BPE iteratively count the frequency of the characters or subwords and merge the most frequent ones
 to form new vocabulary \cite{Radford19}, \cite{Touvron23}. There are several different implementations of BPE that are moderate for different use cases, the training corpus on which BPE is applied also
-significantly influences the size of the result vocabulary. GPT2 applies BPE with a base vocabulary of more than 130,000 tokens, whereas the BPE applied on LLaMA creates around 1,4T tokens.
+significantly influences the size of the result vocabulary. GPT-2 applies BPE with a base vocabulary of more than 130,000 tokens, whereas the BPE applied on LLaMA creates around 1,4T tokens.
 
 \noindent \newline
 A model starts its training algorithm after taking the pre-processed data as its input. For recent models such as ChatGPT, LLaMA and BERT, their training algorithms share a same process of an unsupervised pre-training phase and a supervised fine-tuning phase \cite{Roum23}.
@@ -198,31 +198,43 @@ where each instance of $C$ has a sequence of tokens \{$c^1,...,c^m$\} and a labe
       \caption{The transformer structure \cite{Vaswani17}}
       \label{fig:attention}
   \end{figure}
+
+\noindent \newline
 In the BERT model, as shown in figure \ref{fig:bert_finetune}, the pre-training phase consists of 2 unsupervised tasks: Masked LM and Next Sentence Prediction (NSP).
-Masked LM is used to help BERT understands the context of words within a sentence, it masks 15\% of all WordPiece tokens in each input sentence and the model 
+Masked LM is used to help BERT understand the context of words within a sentence, it masks 15\% of all WordPiece tokens in each input sentence and the model 
 predicts only the masked words instead of reconstructing the entire input. NSP is applied to help BERT understand the relationship between 2 sentences. More specifically, when 
-having 2 sentences A and B as input, B is replaced by another random sentence from the training set for half of the time and remains unchanged for other half of the time.
+having 2 sentences A and B as input, B is replaced by another random sentence from the training set for half of the time and remains unchanged for the other half of the time.
 The BERT is trained to predict whether the second sentence in the input is the actual sentence B. According to \cite{Devlin18}, NSP has significant benefits for question answering (QA).
-%\noindent \newline
+Fine-tuning BERT is relatively inexpensive compared with pre-training, as it only involves fine-tuning the parameters while feeding BERT with various task-specific inputs and outputs 
+such as QA tasks, single sentence classification tasks, sentence pair classification tasks etc. When fine-tuning, an additional output layer is added to BERT so that the minimal number of 
+parameters need to be learned from scratch again.
+
+\noindent \newline
+GPT-2 and LLaMA make some improvements to the pre-training process such as normalizing the input for each transformer layer and adding a normalization layer
+after the last self-attention layer to improve the training stability (GPT-2 and LLaMA) \cite{Radford19}, replacing the ReLU layer with a SwiGLU layer to improve model performance (LLaMA) and
+replacing the absolute positional encoding with the rotary positional embeddings (RoPE) to increase efficiency and scalability (LLaMA) \cite{Touvron23}. Together with more efficient code implementation
+GPT-2 and LLaMA gain better scores on many evaluation fields such as QA, reading comprehension, summarization, translation etc. Similarly, GPT-2 and LLaMA are fine-tuned with various tasks,
+figure \ref{fig:gpt_finetune} illustrates some fine-tuning tasks of the original GPT.
 
 
-  \begin{figure}[]
+ \begin{figure}[]
+   \centering
+   \includegraphics[width=0.95\textwidth]{BERT Finetuning.png}
+   \caption{Training process in the BERT model \cite{Devlin18}}
+   \label{fig:bert_finetune}
+ \end{figure}
+\begin{figure}[]
     \centering
-    \includegraphics[width=0.95\textwidth]{BERT Finetuning.png}
-    \caption{Training process in the BERT model \cite{Devlin18}}
-    \label{fig:bert_finetune}
-  \end{figure}
-%\begin{figure}[]
-%    \centering
-%    \includegraphics[width=0.7\textwidth]{BERT input repres.png}
-%    \caption{Input representation in the BERT model \cite{Devlin18}}
-%    \label{fig:bert_input}
-%\end{figure}
+    \includegraphics[width=0.8\textwidth]{gpt finetune.png}
+    \caption{Fine-tuning of GPT \cite{Radford18}}
+    \label{fig:gpt_finetune}
+\end{figure}
 
 \subsection{Data Stream}
 In many application fields nowadays, data is often generated and processed at a very high rate. These include health sensors that track body temperature and blood pressure \cite{Geisler13},
 monitoring of production lines, information on stock trading, posted content on social networks etc. \cite{Geisler16}. Due to its near real-time and huge amounts characteristics, traditional data management
-approaches are often not suitable anymore, a new system called Data Stream Management Systems (DSMS) has evolved to address this issue \cite{Geisler16}. \\
+approaches are often not suitable anymore, a new system called Data Stream Management Systems (DSMS) which supports continuous queries, low latency processing, simple scalability and resource management
+ has evolved to address this issue \cite{Geisler16}. \\
 \noindent \newline
 Data stream has many informal definitions, \cite{Patro06} describes data stream as "time-varying, volatile, unpredicted and possibly unbounded information". \cite{Golab03} describes data stream as
 "a data set that is produced incrementally over time, rather than being available in full before its processing begins". According to \cite{Geisler13}, data stream has the following formal definition:
@@ -242,22 +254,27 @@ Although large language models have shown strong capabilities in many applicatio
 expects up-to-date results. Considering the following questions: \textit{Who is the current president of the USA?} The answer to such a question expires likely every 4 years, which seems a reasonable time
 for an update of the large language model's training datasets. The question \textit{What are the results of the last Bundesliga match day?} would require the knowledge of large language models to be updated
 at least every week. The question \textit{What is the current traffic condition in the Königstraße of city Aachen?} would require even a near real-time result. Thus, in many application fields, the performance of a 
-pre-trained large language model is likely to gradually degrade over time \cite{Shi24}. In this section, we will first summarize some use cases where large language models are combined with data streams, then We
-will give a comparison of large language models using static datasets and those updated with data streams. Finally, we will summarize some common issues and challenges in this field as well as the measurements and 
-solutions.
+pre-trained large language model is likely to gradually degrade over time \cite{Shi24}. In this section, we will first summarize some approaches where large language models are combined with data streams, then We
+will discuss some common issues and challenges in this field. Finally, we will list some use cases that address some of the challenges.
 
 \subsection{Continual Learning}
 The need for regular updates of large language models brings intense focus to the concept of \textbf{Continual Learning}.  
 
 \subsubsection{Continual Learning of LLMs} 
 \noindent \newline
-According to \cite{Biesi20}, continual learning refers to the process of accumulating knowledge on non-stationary data. For a data stream of tasks $\mathcal{T}= \{\mathcal{T}_1,\ldots,\mathcal{T}_n \}$, the goal is to
+According to \cite{Biesi20}, continual learning refers to the process of accumulating knowledge on non-stationary data. In the context of large language models, continual learning is applied to enable LLM models
+to learn from a continuous data stream over time. For a data stream of tasks $\mathcal{T}= \{\mathcal{T}_1,\ldots,\mathcal{T}_n \}$, the goal is to
 have the model learn sequentially based on the input stream, where it only has access to $\mathcal{T}_i$ at time $i$. \cite{Wu24}, in their continual learning framework for large language models, categorizes 
 continual learning into 3 stages as figure \ref{fig:acl_stages} shows:
 \begin{itemize}
-  \item Continual Pre-training: It refers to incrementally updating a large language model on input data over time without retraining it from scratch. 
-  \item Continual Instruction Tuning: It refers to continuously refining the model's ability to follow the instruction.
-  \item Continual Alignment: It refers to adjusting the model so it always produces output that satisfies certain standards and guidelines.
+  \item \textbf{Continual Pre-training (CPT)}: It refers to incrementally updating a large language model on input data over time without retraining it from scratch. It can be further categorized into 
+  \textit{CPT for updating facts} which adapts a model to new factual knowledge, \textit{CPT for updating domains} that enriches a model's knowledge in specific fields and \textit{CPT for language expansion} which helps a model
+  support more languages.
+  \item \textbf{Continual Instruction Tuning (CIT)}: It refers to continuously refining the model's ability to follow the instruction. It can be further categorized into \textit{Task-Incremental CIT} for finetuning a model on a series 
+  of tasks to be capable of solving new tasks, \textit{Domain-incremental CIT} for finetuning a model on some continuous instructions so that it can solve domain-specific problems and \textit{Tool-incremental CIT} for 
+  continually advising a model to use new tools for problem-solving.
+  \item \textbf{Continual Alignment (CA)}: It refers to adjusting the model so it always produces output that satisfies certain standards and guidelines. This can be categorized into \textit{Continual Value Alignment} that continually
+  align a model with current ethical and social guidelines and \textit{Continual Preference Alignment} that dynamically adapt a model to different user preferences.
 \end{itemize}
 \begin{figure}[htbp]
   \centering
@@ -287,24 +304,49 @@ Another challenge of continual learning is concept drift, where the relationship
 due to the discrepancies between the models' output based on previous data and current factual accuracies, societal norms and standards. Therefore the continual alignment stage of continual learning is essential to 
 mitigate the effect of concept drift, as it continuously refines the model to align with the current standard \cite{Taori23}.
 However, to ensure the right alignment of the model, huge computational resources and human oversight are often required. Additionally, aligning a model to changes without introducing new bias and the protection of data
-privacy and security are also challenges to the continuous alignment stage \cite{Shi24}.
+privacy and security are also challenges to the continuous alignment stage \cite{Shi24}. \\
+\noindent \newline
+Furthermore, recent studies also point out some other challenges that continual learning with LLM is currently facing \cite{Yang24}.
+\begin{itemize}
+  \item \textbf{Lack of real-world assumption}. In the training process of an LLM, different datasets are usually merged to create new training datasets. However, this often leads to results that
+  lack diversity and real-world complexity. Simple tasks such as text classification and sentiment analysis all have clear labels, but in the real-world assumption, many labels are not always available 
+  due to noise. This may reduce the robustness of an LLM.  
+  \item \textbf{Multi-modal Continual Learning}. Current continual learning approaches mainly focus on the field of NLP tasks such as sentiment analysis and text classification, but multimodal tasks such aspects
+  text-to-image retrieval, text-image classification, and visual question answering would be some possible future work directions of CL. However, this would require the integration of multi-modal datasets with various data types,
+  which can be costly and complex. 
+\end{itemize} 
+
 
 \subsubsection{Use Cases}
 \noindent \newline
 Continual learning is already applied in the field of linguistics, one example is from \cite{Fujii24}, where they discovered the fact that some large language models are trained on English datasets and their performance 
 in other languages differs from their performance in English. They came up with the idea of developing a large language model that has strong performance in Japanese and decided to apply continual learning methods, especially 
-the continual pre-training stage, on an English LLM Llm2 due to the high computational cost of training a LLM in Japanese from scratch. The idea was to apply continual learning so that the Llma2 model can adapt its knowledge 
+the continual pre-training stage, on an English LLM LLaMA 2 due to the high computational cost of training an LLM in Japanese from scratch. The idea was to apply continual learning so that the LLaMA 2 model could adapt its knowledge 
 and capabilities to Japanese and to construct a model called Swallow in the end. \\
 \noindent \newline
-According to \cite{Fujii24}, Swallow preserves the same architecture as Llma2, such as its number of attention heads and its number of layers. To prevent catastrophic forgetting, they applied the replay-based method
+According to \cite{Fujii24}, Swallow preserves the same architecture as LLaMA 2, such as its number of attention heads and its number of layers. To prevent catastrophic forgetting, they applied the replay-based method
 by selecting 5\% of the training data from English RefinedWeb \cite{Penedo23}, 5\% from the English arXiv paper texts and the remaining 90\% from Japanese texts. After developing Swallow, they evaluate its performance in various fields such
-as question answering (QA), reading comprehension (RC), automatic summarization (AS), arithmetic reasoning (AR), commonsense reasoning (CR) and machine translation(MT) and compare its performance to the original Llma2 model.
-The results showed that despite the large data stream input, Swallow managed to have a better performance in many fields compared with Llma2, especially in question answering task as figure \ref{fig:swallow} shows.
+as question answering (QA), reading comprehension (RC), automatic summarization (AS), arithmetic reasoning (AR), commonsense reasoning (CR) and machine translation(MT) and compare its performance to the original LLaMA 2 model.
+The results showed that despite the large data stream input, Swallow managed to have a better performance in many fields compared with LLaMA 2, especially in QA task as figure \ref{fig:swallow} shows.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{swallow.png}
   \caption{Performance curve of the Swallow model in question answering task \cite{Fujii24}}
   \label{fig:swallow}
+\end{figure}
+
+\noindent \newline
+A more recent study proposes another technique called \textit{Progressive Prompt} based on continual learning, while typical continual learning methods train a model on various large datasets, progressive prompt only needs
+to learn less than 0,1\% of all parameters but still match the performance of continual pre-training and fine-tuning on large datasets \cite{Razda23}. Before progressive prompt is proposed, another technique called \textit{Progressive Network}
+was proposed to help a model continually learn from new tasks without catastrophic forgetting \cite{Rusu16}. The idea of progressive network is to freeze the network of parameters learned from a previously task prompt and let it stay accessible by copying it to new
+network of incoming tasks. Since the learned parameters are frozen while learning new networks, it can mitigate the effect of catastrophic forgetting. However, progressive network adds a new copy of the model for each task, causing it extremely 
+computationally expensive for large language models with more parameter size, as figure \ref{fig:progressive} shows. In progressive prompt, however, a separate prompt is learned for each new task and is sequentially concatenated from learned prompts.
+That means the frozen parameters are not copied, but directly accessible to the parameters of new task prompts. Progressive prompt shows significant improvement in efficiency and can be applied to all transformer-based architecture.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{progressive.png}
+  \caption{Illustration of progressive network and progressive prompt \cite{Razda23}}
+  \label{fig:progressive}
 \end{figure}
 
 \subsection{Prompt Engineering}
@@ -376,12 +418,19 @@ Figure \ref{fig:llmlight_prompt} shows an example template of the prompt \cite{L
   \includegraphics[width=0.95\textwidth]{Prompt LLMLight.PNG}
   \caption{Prompt template \cite{Lai23}}
   \label{fig:llmlight_prompt}
-\end{figure}
+\end{figure} \\
+\noindent \newline
+Prompt engineering is also applied in the field of traffic data imputation, \cite{Zhang24} proposes a Graph Transformer-based Traffic Data Imputation (GT-TDI) model to compute the missing and faulty values from 
+the large-scale road network traffic data collected by various sensors, both road-attached and vehicle-carried. The core idea of the GT-TDI model is to model sensors and their relations as nodes and edges in 
+a road network graph, the graph is later processed by a Graph Neural Network component. The data collected by sensors are transformed into prompts with a series of semantic descriptions that contain the spatiotemporal information of the network,
+they are then encoded and passed to the GT-TDI model. By training on the input datasets, the model is then fine-tuned in the domain of traffic data. Finally, by providing the correct prompt such as 
+\textit{"Predict the missing traffic volume for sensor B456 between 3 PM and 4 PM considering the last known values and nearby sensors' data."}, the corresponding missing value can be computed by the model based on the similarity of historical training data
+and the input prompt, As figure \ref{fig:TStreamLLM} illustrates. 
 
 \begin{figure}[]
   \centering
-  \includegraphics[width=0.7\textwidth]{TStreamLLM architecture.png}
-  \caption{Architecture of TStreamLLM (draft) \cite{Zhang24}}
+  \includegraphics[width=0.8\textwidth]{GT-TDI.png}
+  \caption{Implementation of GT-TDI with prompts \cite{Zhang24}}
   \label{fig:TStreamLLM}
 \end{figure}
 
@@ -390,8 +439,8 @@ This paper discussed the gap between large language models, which are pre-traine
 Two approaches were presented to mitigate the issue:
 \begin{itemize}
   \item Continual learning of large language models enables the model to continually pre-train over data stream input and by applying continual instruction tuning and continual alignment,
-the model can adapt itself to the continuous data input. However catastrophic forgetting is likely to occur during this process, so replay-based, regularization-based and architecture-based
-methods are applied to mitigate the effect of catastrophic forgetting.
+the model can adapt itself to the continuous data input. However, catastrophic forgetting is likely to occur during this process, so replay-based, regularization-based and architecture-based
+methods are applied to mitigate the effect of catastrophic forgetting. 
   \item In some application fields, another option is to convert the data stream input into model-readable input and update the model's knowledge via prompt engineering. However, this method is
 heavily relied on the quality of the prompt formulated by users.
 \end{itemize}
@@ -658,6 +707,18 @@ Wu, Yonghui, Mike Schuster, Zhifeng Chen, Quoc V. Le, Mohammad Norouzi, Wolfgang
 
 \bibitem{Sennrich15}
 Sennrich, Rico, Barry Haddow, and Alexandra Birch. "Neural machine translation of rare words with subword units." arXiv preprint arXiv:1508.07909 (2015).
+
+\bibitem{Yang24}
+Yang, Yutao, Jie Zhou, Xuanwen Ding, Tianyu Huai, Shunyu Liu, Qin Chen, Liang He, and Yuan Xie. "Recent Advances of Foundation Language Models-based Continual Learning: A Survey." arXiv preprint arXiv:2405.18653 (2024).
+
+\bibitem{Razda23}
+Razdaibiedina, Anastasia, Yuning Mao, Rui Hou, Madian Khabsa, Mike Lewis, and Amjad Almahairi. "Progressive prompts: Continual learning for language models." arXiv preprint arXiv:2301.12314 (2023).
+
+\bibitem{Lester21}
+Lester, Brian, Rami Al-Rfou, and Noah Constant. "The power of scale for parameter-efficient prompt tuning." arXiv preprint arXiv:2104.08691 (2021).
+
+\bibitem{Rusu16}
+Rusu, Andrei A., Neil C. Rabinowitz, Guillaume Desjardins, Hubert Soyer, James Kirkpatrick, Koray Kavukcuoglu, Razvan Pascanu, and Raia Hadsell. "Progressive neural networks." arXiv preprint arXiv:1606.04671 (2016).
 \end{thebibliography}
 
 \end{document}
