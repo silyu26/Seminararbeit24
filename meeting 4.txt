@@ -30,3 +30,6 @@ new contents to come:
   progressive prompts?
   DynaMind?
 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Other prompt engineering techniques such as Chain of thoughts
+
