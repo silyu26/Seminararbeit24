@@ -63,12 +63,12 @@
 %
 \section{Introduction}
 Large language models have shown their wide usage and significant competence in many fields according to \cite{Liu23}, such as learning and answering users' questions in academic fields,
-assisting in diagnosing diseases in medical fields, generating text and classifying text data to various categories etc. However, as \cite{Gupta23} demonstrates, 
+assisting in diagnosing diseases in medical fields, generating text and classifying text data to various categories and so on. However, as \cite{Gupta23} demonstrates, 
 there is a significant limitation of current large language models: they are trained based on certain static datasets that will not automatically be updated, and this causes the resulting models to only be able to access information from its training datasets. 
 When the models need to be updated as new data becomes available, the only way is to start the training process over again. But in many scenarios such models can't satisfy our needs. 
 For example, to have a better traffic prediction, real-time traffic data is needed \cite{Zhang24},
 Analyzing news and events sentiment can help predict the financial market \cite{Araci19}, 
-real-time health data is of great importance when monitoring patients' health condition \cite{Thiru23} etc.
+real-time health data is of great importance when monitoring patients' health condition \cite{Thiru23} and so on.
 So to have models that can fulfill those use cases, we need to find and compare useful methods that combine large language models and continuous data input (data streams) together, and also summarize the current major obstacles. 
 
 \section{Related Works}
@@ -80,7 +80,7 @@ models' structure and training process.
   
 \subsubsection{The Evolution of Large Language Models}  
 \noindent \newline 
-The earliest language models, taking n-grams as an example, are statistical. n-grams refers to an N-characters substring of a longer string and n represents the length of the substring, according to \cite{Cavnar94}.
+The earliest language models, taking n-grams as an example, are statistical. n-grams refers to an n-words substring of a longer string and n represents the number of words in the substring, according to \cite{Cavnar94}.
 Taking the sentence "I read a book" as example, a bi-grams composition of this sentence would be "I read", "read a" and "a book". By considering the n previous words, the frequency and probability of each
 n-grams can be calculated, which makes n-grams model perform well in text classification and word prediction with short documents \cite{Cavnar94}. 
 However, n-grams performs poorly with long documents due to the rapid growth of dimensionality with large n, and it has only restricted access to the words that appear in the document.\\
@@ -88,7 +88,7 @@ However, n-grams performs poorly with long documents due to the rapid growth of 
 Later models using word embeddings such as Word2Vec solve the problems of earlier models to some extent by representing words in vector spaces, and words with similar meanings such as "walk" and "run" have closer distance
 in the vector space \cite{Mikolov13}. Word embeddings successfully reduces the dimensionality of word representations and can work with larger documents by combining techniques such as "Continuous Bags of Words" \cite{Mikolov13}. \\   
 \noindent \newline
-With the development of neural networks, more powerful models such as the Seq2Seq model began to take a more important role in many application fields such aspects
+With the development of neural networks, more powerful models such as the Seq2Seq model began to take a more important role in many application fields such as
 machine translation \cite{Sutskever14}. The core idea of the Seq2Seq model is that it uses the Long Short-Term Memory networks as an encoder to map the input to a vector with fixed dimensionality, and then
 uses another LSTM to decode the output sentence from the vector. The use of LSTM makes it possible for the model to handle long input sequences and the encoder-decoder structure enables the model 
 to manage different lengths for input and output sequences \cite{Sutskever14}. \\
@@ -96,22 +96,10 @@ to manage different lengths for input and output sequences \cite{Sutskever14}. \
 Large language models start to have a huge leap forward after the introduction of the transformer architecture \cite{Vaswani17}. \cite{Radford18} demonstrates that the transformer architecture can
 effectively improve the language understanding ability of language models even with large unlabeled text corpora by first generatively pre-training the model on the text data and then discriminative fine-tuning them on various tasks.
 Modern models usually own a large number of parameters and large-scale training datasets, but the source of the training datasets can vary from model to model. For example, 
-according to \cite{Radford19}, GPT-2 (with 1,5 billion parameters) is trained on massive training datasets including the crawling results from millions of different web pages, called WebText. Where BERT (BERT$_{BASE}$ with 110 million
+according to \cite{Radford19}, GPT-2 (with 1.5 billion parameters) is trained on massive training datasets including the crawling results from millions of different web pages, called WebText. BERT (BERT$_{BASE}$ with 110 million
 parameters, BERT$_{LARGE}$ with 340 million parameters) is trained on the English Wikipedia (2,500 million words) and BookCorpus (800 million words), a large dataset of books used for machine learning approaches \cite{Devlin18}. 
-A more recent model collection called LLaMA (with 7 to 65 billion parameters) is trained on various open-source data such as commoncrawl\footnote{\url{https://commoncrawl.org/}}, C4, Github, Wikipedia etc \cite{Touvron23}. 
+A more recent model collection called LLaMA (with 7 to 65 billion parameters) is trained on various open-source data such as commoncrawl\footnote{\url{https://commoncrawl.org/}}, C4, Github, Wikipedia and so on \cite{Touvron23}. 
 Table \ref{table:comparison} provides a brief overview of the 3 models together with information on the most recent GPT-3.5 and GPT-4 models according to the OpenAI blog\footnote{https://platform.openai.com/docs/models/gpt-base}. \\
-
-\noindent
-The parameter size of different models has a growing trend, which can be explained by the relationship between model performance, the number of model parameters $N$, the size of dataset $D$ and the amount of computing to train the model $C$. \cite{Kaplan20} demonstrates the \textbf{Smooth Power Laws} which says:
-"Performance has a power-law relationship with each of the three scale factors N, D, C when not bottlenecked by the other two, with trends spanning more than six orders of magnitude". Nowadays, there are various models
-that have distinct capabilities, for example, DALL-E can generate and modify images based on text input, whereas ChatGPT 3.5 can generate code and natural language, as \cite{Gozalo23} in figure \ref{fig:model_overview} summaries.
-\noindent \newline
-\begin{figure}[]
-  \centering
-  \includegraphics[width=0.8\textwidth]{models overview.png}
-  \caption{An overview of the recent major generative AI models  \cite{Gozalo23}}
-  \label{fig:model_overview}
-\end{figure} 
 
 \begin{table}[h!]
   \centering
@@ -144,6 +132,18 @@ that have distinct capabilities, for example, DALL-E can generate and modify ima
   \label{table:comparison}
   \end{table}
 
+\noindent
+The parameter size of different models has a growing trend, which can be explained by the relationship between model performance, the number of model parameters $N$, the size of dataset $D$ and the amount of computing to train the model $C$. \cite{Kaplan20} demonstrates the \textbf{Smooth Power Laws} which says:
+"Performance has a power-law relationship with each of the three scale factors N, D, C when not bottlenecked by the other two, with trends spanning more than six orders of magnitude". Nowadays, there are various models
+that have distinct capabilities, for example, DALL-E can generate and modify images based on text input, whereas ChatGPT 3.5 can generate code and natural language, as \cite{Gozalo23} in figure \ref{fig:model_overview} summaries.
+\noindent \newline
+\begin{figure}[]
+  \centering
+  \includegraphics[width=0.8\textwidth]{models overview.png}
+  \caption{An overview of the recent major generative AI models  \cite{Gozalo23}}
+  \label{fig:model_overview}
+\end{figure} 
+
 \subsubsection{The Architecture and Training Process of Large Language Models}
 \noindent \newline
 Many of the recent large language models such as ChatGPT, LLaMA and BERT are based on transformer-based neural networks. The transformer architecture, as \cite{Vaswani17} in figure \ref{fig:attention} demonstrates, is an 
@@ -152,6 +152,13 @@ help of the positional encoding step, the input sequence contains information ab
 model can capture various relationships and features from the input sequence. Then the Add and Normalization layer is applied to stabilize and speed up the training process. In the end, the Feed Forward layer is 
 applied to help in introducing non-linearity and learning complex representations for each token's position in the sequence. Similarly, the decoder uses the vector representation of the input sequence created
 by the encoder along with the previously generated tokens to produce the next token in the output sequence and the masked multi-head attention mechanism is applied to ensure that the prediction for a particular position depends only on the known outputs at earlier positions. \\
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{attention1.jpg}
+  \caption{The transformer structure \cite{Vaswani17}}
+  \label{fig:attention}
+\end{figure}
 \noindent \newline
 Various input text datasets must be pre-processed as valid input representations before they can be used for the training process, and the data pre-processing includes the following steps \cite{Roum23}:
 \begin{itemize}
@@ -192,13 +199,6 @@ where each instance of $C$ has a sequence of tokens \{$c^1,...,c^m$\} and a labe
   L_2(U) = \sum_{(x,y)}\log{P(y|x^1,...,x^m)}
 \end{equation}
 
-  \begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.6\textwidth]{attention1.jpg}
-      \caption{The transformer structure \cite{Vaswani17}}
-      \label{fig:attention}
-  \end{figure}
-
 \noindent \newline
 In the BERT model, as shown in figure \ref{fig:bert_finetune}, the pre-training phase consists of 2 unsupervised tasks: Masked LM and Next Sentence Prediction (NSP).
 Masked LM is used to help BERT understand the context of words within a sentence, it masks 15\% of all WordPiece tokens in each input sentence and the model 
@@ -206,14 +206,14 @@ predicts only the masked words instead of reconstructing the entire input. NSP i
 having 2 sentences A and B as input, B is replaced by another random sentence from the training set for half of the time and remains unchanged for the other half of the time.
 The BERT is trained to predict whether the second sentence in the input is the actual sentence B. According to \cite{Devlin18}, NSP has significant benefits for question answering (QA).
 Fine-tuning BERT is relatively inexpensive compared with pre-training, as it only involves fine-tuning the parameters while feeding BERT with various task-specific inputs and outputs 
-such as QA tasks, single sentence classification tasks, sentence pair classification tasks etc. When fine-tuning, an additional output layer is added to BERT so that the minimal number of 
+such as QA tasks, single sentence classification tasks, sentence pair classification tasks and so on. When fine-tuning, an additional output layer is added to BERT so that the minimal number of 
 parameters need to be learned from scratch again.
 
 \noindent \newline
 GPT-2 and LLaMA make some improvements to the pre-training process such as normalizing the input for each transformer layer and adding a normalization layer
 after the last self-attention layer to improve the training stability (GPT-2 and LLaMA) \cite{Radford19}, replacing the ReLU layer with a SwiGLU layer to improve model performance (LLaMA) and
 replacing the absolute positional encoding with the rotary positional embeddings (RoPE) to increase efficiency and scalability (LLaMA) \cite{Touvron23}. Together with more efficient code implementation
-GPT-2 and LLaMA gain better scores on many evaluation fields such as QA, reading comprehension, summarization, translation etc. Similarly, GPT-2 and LLaMA are fine-tuned with various tasks,
+GPT-2 and LLaMA gain better scores on many evaluation fields such as QA, reading comprehension, summarization, translation and so on. Similarly, GPT-2 and LLaMA are fine-tuned with various tasks,
 figure \ref{fig:gpt_finetune} illustrates some fine-tuning tasks of the original GPT.
 
 
@@ -232,7 +232,7 @@ figure \ref{fig:gpt_finetune} illustrates some fine-tuning tasks of the original
 
 \subsection{Data Stream}
 In many application fields nowadays, data is often generated and processed at a very high rate. These include health sensors that track body temperature and blood pressure \cite{Geisler13},
-monitoring of production lines, information on stock trading, posted content on social networks etc. \cite{Geisler16}. Due to its near real-time and huge amounts characteristics, traditional data management
+monitoring of production lines, information on stock trading, posted content on social networks and so on. \cite{Geisler16}. Due to its near real-time and huge amounts characteristics, traditional data management
 approaches are often not suitable anymore, a new system called Data Stream Management Systems (DSMS) which supports continuous queries, low latency processing, simple scalability and resource management
  has evolved to address this issue \cite{Geisler16}. \\
 \noindent \newline
@@ -298,7 +298,7 @@ when they are updated with new data \cite{Gupta23}. Catastrophic forgetting happ
 As discussed earlier, there are currently 3 types of methods that can mitigate catastrophic forgetting \cite{Shi24}. The architecture-based methods often face the problem of the growing 
 training cost, as their models' parameter size grows with new tasks linearly\cite{Jovanov}. The regularization methods avoid the expanding parameters challenge but the computational cost
 increases due to the extra computation of the regularization term \cite{Wang24}. Therefore, the replay-based methods are often considered to be
-a better approach considering large data stream input. Although the choice of selecting the right exemplars from previous tasks can still be difficult \cite{Jovanov}. \\
+a better approach considering large data stream input, although the choice of selecting the right exemplars from previous tasks can still be difficult \cite{Jovanov}. \\
 \noindent \newline
 Another challenge of continual learning is concept drift, where the relationship and distribution of input data change over time \cite{Biesi20}. Concept drift often causes the large language models' performance to decrease
 due to the discrepancies between the models' output based on previous data and current factual accuracies, societal norms and standards. Therefore the continual alignment stage of continual learning is essential to 
