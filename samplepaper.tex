@@ -18,6 +18,7 @@
 \usepackage{amsmath}
 \usepackage{subcaption}
 \usepackage{hyperref}
+\usepackage{float}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -102,7 +103,7 @@ parameters, BERT$_{LARGE}$ with 340 million parameters) is trained on the Englis
 A more recent model collection called LLaMA (with 7 to 65 billion parameters) is trained on various open-source data such as commoncrawl\footnote{\url{https://commoncrawl.org/}}, C4, Github, Wikipedia and so on \cite{Touvron23}. 
 Table \ref{table:comparison} provides a brief overview of the 3 models together with information on the most recent GPT-3.5 and GPT-4 models according to the OpenAI blog\footnote{https://platform.openai.com/docs/models/gpt-base}. \\
 
-\begin{table}[h!]
+\begin{table}[H]
   \centering
   \begin{tabular}{| p{4cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} |}
   %\hline
@@ -138,7 +139,7 @@ The parameter size of different models has a growing trend, which can be explain
 "Performance has a power-law relationship with each of the three scale factors N, D, C when not bottlenecked by the other two, with trends spanning more than six orders of magnitude". Nowadays, there are various models
 that have distinct capabilities, for example, DALL-E can generate and modify images based on text input, whereas ChatGPT 3.5 can generate code and natural language, as \cite{Gozalo23} in figure \ref{fig:model_overview} summaries.
 \noindent \newline
-\begin{figure}[]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{models overview.png}
   \caption{An overview of the recent major generative AI models  \cite{Gozalo23}}
@@ -154,7 +155,7 @@ model can capture various relationships and features from the input sequence. Th
 applied to help in introducing non-linearity and learning complex representations for each token's position in the sequence. Similarly, the decoder uses the vector representation of the input sequence created
 by the encoder along with the previously generated tokens to produce the next token in the output sequence and the masked multi-head attention mechanism is applied to ensure that the prediction for a particular position depends only on the known outputs at earlier positions. \\
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{attention1.jpg}
   \caption{The transformer structure \cite{Vaswani17}}
@@ -173,7 +174,7 @@ used to mark the end of a sentence. In some cases, several sentences are combine
 As figure \ref{fig:bert_input} shows, an example input sentence "My dog is cute, he likes playing." is first tokenized into smaller units, where $([CLS])$ marks the start of the input and 
 $([SEP])$ marks the end of the sentence as well as splits the sentence into 2 parts. A token embedding is added for each token, a segment embedding is added to show to which sentence each token belongs and
 a position embedding is used to show the position of each token within the sentence. The final input representation is the sum of all embeddings.
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{BERT input repres.png}
   \caption{Input representation of BERT \cite{Devlin18}}
@@ -210,6 +211,13 @@ Fine-tuning BERT is relatively inexpensive compared with pre-training, as it onl
 such as QA tasks, single sentence classification tasks, sentence pair classification tasks and so on. When fine-tuning, an additional output layer is added to BERT so that the minimal number of 
 parameters need to be learned from scratch again.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{BERT Finetuning.png}
+  \caption{Training process in the BERT model \cite{Devlin18}}
+  \label{fig:bert_finetune}
+\end{figure}
+
 \noindent \newline
 GPT-2 and LLaMA make some improvements to the pre-training process such as normalizing the input for each transformer layer and adding a normalization layer
 after the last self-attention layer to improve the training stability (GPT-2 and LLaMA) \cite{Radford19}, replacing the ReLU layer with a SwiGLU layer to improve model performance (LLaMA) and
@@ -218,13 +226,8 @@ GPT-2 and LLaMA gain better scores on many evaluation fields such as QA, reading
 figure \ref{fig:gpt_finetune} illustrates some fine-tuning tasks of the original GPT.
 
 
- \begin{figure}[]
-   \centering
-   \includegraphics[width=0.95\textwidth]{BERT Finetuning.png}
-   \caption{Training process in the BERT model \cite{Devlin18}}
-   \label{fig:bert_finetune}
- \end{figure}
-\begin{figure}[]
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{gpt finetune.png}
     \caption{Fine-tuning of GPT \cite{Radford18}}
@@ -277,7 +280,7 @@ continual learning into 3 stages as figure \ref{fig:acl_stages} shows:
   \item \textbf{Continual Alignment (CA)}: It refers to adjusting the model so it always produces output that satisfies certain standards and guidelines. This can be categorized into \textit{Continual Value Alignment} that continually
   align a model with current ethical and social guidelines and \textit{Continual Preference Alignment} that dynamically adapt a model to different user preferences.
 \end{itemize}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.95\textwidth]{CL stages.png}
   \caption{Stages of continual learning \cite{Wu24}}
@@ -330,7 +333,7 @@ According to \cite{Fujii24}, Swallow preserves the same architecture as LLaMA 2,
 by selecting 5\% of the training data from English RefinedWeb \cite{Penedo23}, 5\% from the English arXiv paper texts and the remaining 90\% from Japanese texts. After developing Swallow, they evaluate its performance in various fields such
 as question answering (QA), reading comprehension (RC), automatic summarization (AS), arithmetic reasoning (AR), commonsense reasoning (CR) and machine translation(MT) and compare its performance to the original LLaMA 2 model.
 The results showed that despite the large data stream input, Swallow managed to have a better performance in many fields compared with LLaMA 2, especially in QA task as figure \ref{fig:swallow} shows.
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{swallow.png}
   \caption{Performance curve of the Swallow model in question answering task \cite{Fujii24}}
@@ -344,7 +347,7 @@ was proposed to help a model continually learn from new tasks without catastroph
 network of incoming tasks. Since the learned parameters are frozen while learning new networks, it can mitigate the effect of catastrophic forgetting. However, progressive network adds a new copy of the model for each task, causing it extremely 
 computationally expensive for large language models with more parameter size, as figure \ref{fig:progressive} shows. In progressive prompt, however, a separate prompt is learned for each new task and is sequentially concatenated from learned prompts.
 That means the frozen parameters are not copied, but directly accessible to the parameters of new task prompts. Progressive prompt shows significant improvement in efficiency and can be applied to all transformer-based architecture.
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{progressive.png}
   \caption{Illustration of progressive network and progressive prompt \cite{Razda23}}
@@ -363,7 +366,7 @@ and natural language translation \cite{Liu21}. Considering the following prompt:
 \end{example}
 By giving the prompt, the large language model is required to give an engaging, detailed and structured answer to the topic of the benefits of learning Python for data science.
 Figure \ref{fig:both_prompts} shows an example of how different prompts guide ChatGPT to provide different outputs over the same topic.
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.48\textwidth}
       \centering
@@ -402,12 +405,13 @@ However, \cite{White23} also points out that for different issue categories such
 In the field of traffic signal control, \cite{Lai23} proposes a model called LLMLight based on large language models to act as a decision-making agent. As figure \ref{fig:llmlight} shows,
 An LLMLight agent is responsible for controlling the traffic light at an intersection. Real-time observations about the traffic condition are converted into human-readable text and transferred to 
 the model, followed by the prompt engineering formed by the real-time observations, task descriptions and control action.
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.95\textwidth]{LLMLight.PNG}
   \caption{The workflow of LLMLight \cite{Lai23}}
   \label{fig:llmlight}
 \end{figure}
+\noindent
 \cite{Lai23} also formulates the workflow as the following equation:
 \begin{definition}
   $(Y, a) = \pi_{\theta}(\text{Prompt}(o, d_{\text{scene}}, d_{\text{task}}, d_{\text{know}}, A))$.
@@ -415,13 +419,14 @@ the model, followed by the prompt engineering formed by the real-time observatio
 Where $\pi_{\theta}$ refers to the traffic signal control policy, $(Y, a)$ refers to the reasoning trajectory and the action output by the model,
 based on the real-time traffic condition observation $o$, traffic scenario description $d_{\text{scene}}$, task descriptions $d_{\text{task}}$ , commonsense knowledge $d_{\text{know}}$, and control action space $A$.
 Figure \ref{fig:llmlight_prompt} shows an example template of the prompt \cite{Lai23}.
-\begin{figure}[htbp]
+
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.95\textwidth]{Prompt LLMLight.PNG}
   \caption{Prompt template \cite{Lai23}}
   \label{fig:llmlight_prompt}
-\end{figure} \\
-\noindent \newline
+\end{figure} 
+\noindent 
 Prompt engineering is also applied in the field of traffic data imputation, \cite{Zhang24} proposes a Graph Transformer-based Traffic Data Imputation (GT-TDI) model to compute the missing and faulty values from 
 the large-scale road network traffic data collected by various sensors, both road-attached and vehicle-carried. The core idea of the GT-TDI model is to model sensors and their relations as nodes and edges in 
 a road network graph, the graph is later processed by a Graph Neural Network component. The data collected by sensors are transformed into prompts with a series of semantic descriptions that contain the spatiotemporal information of the network,
@@ -429,9 +434,9 @@ they are then encoded and passed to the GT-TDI model. By training on the input d
 \textit{"Predict the missing traffic volume for sensor B456 between 3 PM and 4 PM considering the last known values and nearby sensors' data."}, the corresponding missing value can be computed by the model based on the similarity of historical training data
 and the input prompt, As figure \ref{fig:TStreamLLM} illustrates. 
 
-\begin{figure}[]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{GT-TDI.png}
+  \includegraphics[width=0.5\textwidth]{GT-TDI.png}
   \caption{Implementation of GT-TDI with prompts \cite{Zhang24}}
   \label{fig:TStreamLLM}
 \end{figure}
@@ -448,27 +453,26 @@ and the input prompt, As figure \ref{fig:TStreamLLM} illustrates.
 
 \section{Conclusion}
 This paper addressed the gap between large language models, which are pre-trained on massive static datasets, and data streams, which are continuous and potentially unbounded.
-Two main approaches were proposed to mitigate this issue. 
+Two main approaches were summarized to mitigate this issue. 
 The first approach involves the continual learning of large language models, allowing them to pre-train continually over data stream inputs. 
 By applying continual pre-training, continual instruction tuning and continual alignment, the model can adapt to continuous data inputs.
 However, catastrophic forgetting is likely to occur during this process, so replay-based, regularization-based, and architecture-based methods are applied to mitigate its effects. 
-The second approach converts data stream input into model-readable inputs and update the model's knowledge via prompt engineering, which relies heavily on the quality of the prompts formulated by users.
-
-The primary contribution of this paper lies in presenting these two viable approaches to enable large language models to handle continuous data streams effectively. 
-The continual learning approach, in particular, offers a robust solution to adapt models in real-time, 
-while the prompt engineering method provides a more flexible, though prompt-dependent, alternative.
-
-However, there are several shortcomings in this analysis. Firstly, the continual learning approach, 
-while promising, still faces challenges related to catastrophic forgetting and the computational overhead associated with continual retraining. 
-Secondly, the reliance on high-quality prompts in the second approach poses a limitation, as it requires significant human effort and expertise to formulate effective prompts consistently.
-
-Future work should focus on refining the methods to address these shortcomings. For continual learning, 
-developing more efficient algorithms to reduce computational overhead and further mitigate catastrophic forgetting is essential. 
+The second approach converts data stream input into model-readable inputs and updates the model's knowledge via prompt engineering, which relies heavily on the quality of the prompts formulated by users. \\
+\noindent \newline
+However, there are several shortcomings in this analysis. Firstly, since several models such as ChatGPT and GPT4 are not open-sourced, their exact training process and architecture details remain unknown, 
+making it hard to draw a detailed comparison between different models. Secondly, although the two approaches are presented, their real-world applications are still very limited. Powerful large language models  
+were mostly developed and applied in recent years, and the usage of LLMs with data streams makes this an even newer topic. Lastly, the assumption that models always have access to regular data for their algorithms is problematic. 
+In reality, data is often irregular and multi-modal, making it costly to transform into a usable format. \\
+%while promising, still faces challenges related to catastrophic forgetting and the computational overhead associated with continual retraining. 
+%Secondly, the reliance on high-quality prompts in the second approach poses a limitation, as it requires significant human effort and expertise to formulate effective prompts consistently.
+\noindent \newline
+Therefore in future work, 
+developing more efficient algorithms to reduce the computational overhead of CA while mitigating catastrophic forgetting is essential. 
 For prompt engineering, automating the prompt generation process and improving the model's ability to understand and generate effective prompts autonomously could enhance its applicability. 
-Additionally, exploring hybrid approaches that combine continual learning with automated prompt engineering may offer a more comprehensive solution to handling continuous data streams.
+Additionally, exploring more real-world application fields is essential for gaining a comprehensive understanding of LLMs with data streams.
 
-In conclusion, while this paper makes significant strides in adapting large language models to continuous data streams, 
-further research and development are needed to overcome existing challenges and fully realize the potential of these approaches.
+%In conclusion, while this paper makes significant strides in adapting large language models to continuous data streams, 
+%further research and development are needed to overcome existing challenges and fully realize the potential of these approaches.
 
 
 %\paragraph{Sample Heading (Fourth Level)}
@@ -582,38 +586,38 @@ LNCS Homepage, \url{http://www.springer.com/lncs}, last accessed 2023/10/25
 \bibitem{Liu23}
 Liu, Yiheng, Tianle Han, Siyuan Ma, Jiayue Zhang, Yuanyuan Yang, Jiaming Tian, Hao He et al. "Summary of chatgpt-related research and perspective towards the future of large language models." Meta-Radiology (2023): 100017.
 
-\bibitem{Kasneci23}
-Kasneci, Enkelejda, Kathrin Seßler, Stefan Küchemann, Maria Bannert, Daryna Dementieva, Frank Fischer, Urs Gasser et al. "ChatGPT for good? On opportunities and challenges of large language models for education." Learning and individual differences 103 (2023): 102274.
+%\bibitem{Kasneci23}
+%Kasneci, Enkelejda, Kathrin Seßler, Stefan Küchemann, Maria Bannert, Daryna Dementieva, Frank Fischer, Urs Gasser et al. "ChatGPT for good? On opportunities and challenges of large language models for education." Learning and individual differences 103 (2023): 102274.
 
 \bibitem{Thiru23}
 Thirunavukarasu, Arun James, Darren Shu Jeng Ting, Kabilan Elangovan, Laura Gutierrez, Ting Fang Tan, and Daniel Shu Wei Ting. "Large language models in medicine." Nature medicine 29, no. 8 (2023): 1930-1940.
 
-\bibitem{Chang23}
-Chang, Yupeng, Xu Wang, Jindong Wang, Yuan Wu, Linyi Yang, Kaijie Zhu, Hao Chen et al. "A survey on evaluation of large language models." ACM Transactions on Intelligent Systems and Technology (2023).
+%\bibitem{Chang23}
+%Chang, Yupeng, Xu Wang, Jindong Wang, Yuan Wu, Linyi Yang, Kaijie Zhu, Hao Chen et al. "A survey on evaluation of large language models." ACM Transactions on Intelligent Systems and Technology (2023).
 
-\bibitem{Zhang23}
-Zhang, Shuhao, Xianzhi Zeng, Yuhao Wu, and Zhonghao Yang. "Harnessing scalable transactional stream processing for managing large language models [vision]." arXiv preprint arXiv:2307.08225 (2023).
+%\bibitem{Zhang23}
+%Zhang, Shuhao, Xianzhi Zeng, Yuhao Wu, and Zhonghao Yang. "Harnessing scalable transactional stream processing for managing large language models [vision]." arXiv preprint arXiv:2307.08225 (2023).
 
 \bibitem{Zhang24}
 Zhang, Kunpeng, Feng Zhou, Lan Wu, Na Xie, and Zhengbing He. "Semantic understanding and prompt engineering for large-scale traffic data imputation." Information Fusion 102 (2024): 102038.
 
-\bibitem{Xu23}
-Xu, Xuhai, Bingshen Yao, Yuanzhe Dong, Hong Yu, James Hendler, Anind K. Dey, and Dakuo Wang. "Leveraging large language models for mental health prediction via online text data." arXiv preprint arXiv:2307.14385 (2023).
+%\bibitem{Xu23}
+%Xu, Xuhai, Bingshen Yao, Yuanzhe Dong, Hong Yu, James Hendler, Anind K. Dey, and Dakuo Wang. "Leveraging large language models for mental health prediction via online text data." arXiv preprint arXiv:2307.14385 (2023).
 
-\bibitem{Zhang_Xin24}
-Zhang, Xin, Linhai Zhang, Deyu Zhou, and Guoqiang Xu. "Fine-grainedly Synthesize Streaming Data Based On Large Language Models With Graph Structure Understanding For Data Sparsity." arXiv preprint arXiv:2403.06139 (2024).
+%\bibitem{Zhang_Xin24}
+%Zhang, Xin, Linhai Zhang, Deyu Zhou, and Guoqiang Xu. "Fine-grainedly Synthesize Streaming Data Based On Large Language Models With Graph Structure Understanding For Data Sparsity." arXiv preprint arXiv:2403.06139 (2024).
 
 \bibitem{Wu24}
 Wu, Tongtong, Linhao Luo, Yuan-Fang Li, Shirui Pan, Thuy-Trang Vu, and Gholamreza Haffari. "Continual learning for large language models: A survey." arXiv preprint arXiv:2402.01364 (2024).
 
-\bibitem{Brown20}
-Brown, Tom, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D. Kaplan, Prafulla Dhariwal, Arvind Neelakantan et al. "Language models are few-shot learners." Advances in neural information processing systems 33 (2020): 1877-1901.
+%\bibitem{Brown20}
+%Brown, Tom, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D. Kaplan, Prafulla Dhariwal, Arvind Neelakantan et al. "Language models are few-shot learners." Advances in neural information processing systems 33 (2020): 1877-1901.
 
-\bibitem{Gama13}
-Gama, Joao, Raquel Sebastiao, and Pedro Pereira Rodrigues. "On evaluating stream learning algorithms." Machine learning 90 (2013): 317-346.
+%\bibitem{Gama13}
+%Gama, Joao, Raquel Sebastiao, and Pedro Pereira Rodrigues. "On evaluating stream learning algorithms." Machine learning 90 (2013): 317-346.
 
-\bibitem{Jang21}
-Jang, Joel, Seonghyeon Ye, Sohee Yang, Joongbo Shin, Janghoon Han, Gyeonghun Kim, Stanley Jungkyu Choi, and Minjoon Seo. "Towards continual knowledge learning of language models." arXiv preprint arXiv:2110.03215 (2021).
+%\bibitem{Jang21}
+%Jang, Joel, Seonghyeon Ye, Sohee Yang, Joongbo Shin, Janghoon Han, Gyeonghun Kim, Stanley Jungkyu Choi, and Minjoon Seo. "Towards continual knowledge learning of language models." arXiv preprint arXiv:2110.03215 (2021).
 
 \bibitem{Geisler13}
 Geisler, Sandra. "Data stream management systems." In Dagstuhl Follow-Ups, vol. 5. Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik, 2013.
@@ -627,35 +631,35 @@ Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan 
 \bibitem{Devlin18}
 Devlin, Jacob, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. "Bert: Pre-training of deep bidirectional transformers for language understanding." arXiv preprint arXiv:1810.04805 (2018).
 
-\bibitem{Yenduri24}
-Yenduri, Gokul, M. Ramalingam, G. Chemmalar Selvi, Y. Supriya, Gautam Srivastava, Praveen Kumar Reddy Maddikunta, G. Deepti Raj et al. "GPT (Generative Pre-trained Transformer)–A Comprehensive Review on Enabling Technologies, Potential Applications, Emerging Challenges, and Future Directions." IEEE Access (2024).
+%\bibitem{Yenduri24}
+%Yenduri, Gokul, M. Ramalingam, G. Chemmalar Selvi, Y. Supriya, Gautam Srivastava, Praveen Kumar Reddy Maddikunta, G. Deepti Raj et al. "GPT (Generative Pre-trained Transformer)–A Comprehensive Review on Enabling Technologies, Potential Applications, Emerging Challenges, and Future Directions." IEEE Access (2024).
 
-\bibitem{Lester21}
-Lester, Brian, Rami Al-Rfou, and Noah Constant. "The power of scale for parameter-efficient prompt tuning." arXiv preprint arXiv:2104.08691 (2021).
+%\bibitem{Lester21}
+%Lester, Brian, Rami Al-Rfou, and Noah Constant. "The power of scale for parameter-efficient prompt tuning." arXiv preprint arXiv:2104.08691 (2021).
 
-\bibitem{So19}
-So, David, Quoc Le, and Chen Liang. "The evolved transformer." In International conference on machine learning, pp. 5877-5886. PMLR, 2019.
+%\bibitem{So19}
+%So, David, Quoc Le, and Chen Liang. "The evolved transformer." In International conference on machine learning, pp. 5877-5886. PMLR, 2019.
 
-\bibitem{Zhao22}
-Zhao, Feng, Xinning Li, Yating Gao, Ying Li, Zhiquan Feng, and Caiming Zhang. "Multi-layer features ablation of BERT model and its application in stock trend prediction." Expert Systems with Applications 207 (2022): 117958.
+%\bibitem{Zhao22}
+%Zhao, Feng, Xinning Li, Yating Gao, Ying Li, Zhiquan Feng, and Caiming Zhang. "Multi-layer features ablation of BERT model and its application in stock trend prediction." Expert Systems with Applications 207 (2022): 117958.
 
-\bibitem{Ren24}
-Ren, Yilong, Yue Chen, Shuai Liu, Boyue Wang, Haiyang Yu, and Zhiyong Cui. "TPLLM: A Traffic Prediction Framework Based on Pretrained Large Language Models." arXiv preprint arXiv:2403.02221 (2024).
+%\bibitem{Ren24}
+%Ren, Yilong, Yue Chen, Shuai Liu, Boyue Wang, Haiyang Yu, and Zhiyong Cui. "TPLLM: A Traffic Prediction Framework Based on Pretrained Large Language Models." arXiv preprint arXiv:2403.02221 (2024).
 
-\bibitem{Liu24}
-Liu, Chenxi, Sun Yang, Qianxiong Xu, Zhishuai Li, Cheng Long, Ziyue Li, and Rui Zhao. "Spatial-temporal large language model for traffic prediction." arXiv preprint arXiv:2401.10134 (2024).
+%\bibitem{Liu24}
+%Liu, Chenxi, Sun Yang, Qianxiong Xu, Zhishuai Li, Cheng Long, Ziyue Li, and Rui Zhao. "Spatial-temporal large language model for traffic prediction." arXiv preprint arXiv:2401.10134 (2024).
 
-\bibitem{Yang22}
-Yang, Xi, Aokun Chen, Nima PourNejatian, Hoo Chang Shin, Kaleb E. Smith, Christopher Parisien, Colin Compas et al. "A large language model for electronic health records." NPJ digital medicine 5, no. 1 (2022): 194.
+%\bibitem{Yang22}
+%Yang, Xi, Aokun Chen, Nima PourNejatian, Hoo Chang Shin, Kaleb E. Smith, Christopher Parisien, Colin Compas et al. "A large language model for electronic health records." NPJ digital medicine 5, no. 1 (2022): 194.
 
 \bibitem{Gupta23}
 Gupta, Kshitij, Benjamin Thérien, Adam Ibrahim, Mats L. Richter, Quentin Anthony, Eugene Belilovsky, Irina Rish, and Timothée Lesort. "Continual Pre-Training of Large Language Models: How to (re) warm your model?." arXiv preprint arXiv:2308.04014 (2023).
 
-\bibitem{Naga23}
-Naga Sanjay, "Continuous Training of ML models. A case-study on how to keep our machine learning models relevant.", Medium, June 25, 2023
+%\bibitem{Naga23}
+%Naga Sanjay, "Continuous Training of ML models. A case-study on how to keep our machine learning models relevant.", Medium, June 25, 2023
 
-\bibitem{Prapas21}
-Prapas, Ioannis, Behrouz Derakhshan, Alireza Rezaei Mahdiraji, and Volker Markl. "Continuous training and deployment of deep learning models." Datenbank-Spektrum 21, no. 3 (2021): 203-212.
+%\bibitem{Prapas21}
+%Prapas, Ioannis, Behrouz Derakhshan, Alireza Rezaei Mahdiraji, and Volker Markl. "Continuous training and deployment of deep learning models." Datenbank-Spektrum 21, no. 3 (2021): 203-212.
 
 \bibitem{Araci19}
 Araci, Dogu. "Finbert: Financial sentiment analysis with pre-trained language models." arXiv preprint arXiv:1908.10063 (2019).
@@ -741,8 +745,8 @@ Yang, Yutao, Jie Zhou, Xuanwen Ding, Tianyu Huai, Shunyu Liu, Qin Chen, Liang He
 \bibitem{Razda23}
 Razdaibiedina, Anastasia, Yuning Mao, Rui Hou, Madian Khabsa, Mike Lewis, and Amjad Almahairi. "Progressive prompts: Continual learning for language models." arXiv preprint arXiv:2301.12314 (2023).
 
-\bibitem{Lester21}
-Lester, Brian, Rami Al-Rfou, and Noah Constant. "The power of scale for parameter-efficient prompt tuning." arXiv preprint arXiv:2104.08691 (2021).
+%\bibitem{Lester21}
+%Lester, Brian, Rami Al-Rfou, and Noah Constant. "The power of scale for parameter-efficient prompt tuning." arXiv preprint arXiv:2104.08691 (2021).
 
 \bibitem{Rusu16}
 Rusu, Andrei A., Neil C. Rabinowitz, Guillaume Desjardins, Hubert Soyer, James Kirkpatrick, Koray Kavukcuoglu, Razvan Pascanu, and Raia Hadsell. "Progressive neural networks." arXiv preprint arXiv:1606.04671 (2016).
