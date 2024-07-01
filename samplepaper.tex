@@ -17,13 +17,14 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{subcaption}
+\usepackage{hyperref}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
 % If you use the hyperref package, please uncomment the following two lines
 % to display URLs in blue roman font according to Springer's eBook style:
-%\usepackage{color}
-%\renewcommand\UrlFont{\color{blue}\rmfamily}
+\usepackage{color}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
 %\urlstyle{rm}
 %
 \begin{document}
@@ -89,12 +90,12 @@ Later models using word embeddings such as Word2Vec solve the problems of earlie
 in the vector space \cite{Mikolov13}. Word embeddings successfully reduces the dimensionality of word representations and can work with larger documents by combining techniques such as "Continuous Bags of Words" \cite{Mikolov13}. \\   
 \noindent \newline
 With the development of neural networks, more powerful models such as the Seq2Seq model began to take a more important role in many application fields such as
-machine translation \cite{Sutskever14}. The core idea of the Seq2Seq model is that it uses the Long Short-Term Memory networks as an encoder to map the input to a vector with fixed dimensionality, and then
-uses another LSTM to decode the output sentence from the vector. The use of LSTM makes it possible for the model to handle long input sequences and the encoder-decoder structure enables the model 
+machine translation \cite{Sutskever14}. The core idea of the Seq2Seq model is that it uses the Long Short-Term Memory(LSTM) networks as an encoder to map the input to a vector with fixed dimensionality, and then
+uses another LSTM to decode the output sentence from the vector. By regulating the present and past information and gradient flow, LSTM makes it possible for the model to handle long input sequences and the encoder-decoder structure enables the model 
 to manage different lengths for input and output sequences \cite{Sutskever14}. \\
 \noindent \newline
 Large language models start to have a huge leap forward after the introduction of the transformer architecture \cite{Vaswani17}. \cite{Radford18} demonstrates that the transformer architecture can
-effectively improve the language understanding ability of language models even with large unlabeled text corpora by first generatively pre-training the model on the text data and then discriminative fine-tuning them on various tasks.
+effectively improve the language understanding ability of language models even with large unlabeled text corpora by first generatively pre-training the model on the text data and then discriminatively fine-tuning them on various tasks.
 Modern models usually own a large number of parameters and large-scale training datasets, but the source of the training datasets can vary from model to model. For example, 
 according to \cite{Radford19}, GPT-2 (with 1.5 billion parameters) is trained on massive training datasets including the crawling results from millions of different web pages, called WebText. BERT (BERT$_{BASE}$ with 110 million
 parameters, BERT$_{LARGE}$ with 340 million parameters) is trained on the English Wikipedia (2,500 million words) and BookCorpus (800 million words), a large dataset of books used for machine learning approaches \cite{Devlin18}. 
@@ -160,7 +161,7 @@ by the encoder along with the previously generated tokens to produce the next to
   \label{fig:attention}
 \end{figure}
 \noindent \newline
-Various input text datasets must be pre-processed as valid input representations before they can be used for the training process, and the data pre-processing includes the following steps \cite{Roum23}:
+Various input text datasets must be pre-processed as valid input representations before they can be used for the training process, and the data pre-processing includes the following procedures \cite{Roum23}:
 \begin{itemize}
   \item Tokenization involves segmenting text into tokens, which are the basic units of broken text. Tokenization can simplify and standardize the input data and improve model performance \cite{Devlin18}.
   \item Subword encoding refers to breaking down the input text into smaller units and helping handle rare or out-of-vocabulary words in the input text.
@@ -237,7 +238,7 @@ approaches are often not suitable anymore, a new system called Data Stream Manag
  has evolved to address this issue \cite{Geisler16}. \\
 \noindent \newline
 Data stream has many informal definitions, \cite{Patro06} describes data stream as "time-varying, volatile, unpredicted and possibly unbounded information". \cite{Golab03} describes data stream as
-"a data set that is produced incrementally over time, rather than being available in full before its processing begins". According to \cite{Geisler13}, data stream has the following formal definition:
+"a data set that is produced incrementally over time, rather than being available in full before its processing begins". According to \cite{Geisler13}, a data stream has the following formal definition:
 \begin{definition}
   A data stream $S$ is an unbounded, potentially infinite multiset of data stream elements $(s,\tau)$, where $\tau \in \mathbb{T}$. $\mathbb{T}$ is a timestamp attribute with values from a monotonic, infinite time domain $\mathbb{T}$ with discrete time units.
 \end{definition} 
@@ -249,13 +250,13 @@ overall outcome for the data stream. Task-based solutions, on the other hand, of
   \item Window is a task-based solution and it refers to adjusting a continuous data stream into bounded segments of data (windows), each window is executed over the items of a single data stream and returns a concrete and finite data segment \cite{Patro06}.
 \end{itemize}
 
-\section{LLMs with Data Stream}
+\section{LLMs with Data Streams}
 Although large language models have shown strong capabilities in many application fields, their knowledge remains static as they are pre-trained on static datasets. In some occasions, however, a user query
 expects up-to-date results. Considering the following questions: \textit{Who is the current president of the USA?} The answer to such a question expires likely every 4 years, which seems a reasonable time
 for an update of the large language model's training datasets. The question \textit{What are the results of the last Bundesliga match day?} would require the knowledge of large language models to be updated
 at least every week. The question \textit{What is the current traffic condition in the Königstraße of city Aachen?} would require even a near real-time result. Thus, in many application fields, the performance of a 
-pre-trained large language model is likely to gradually degrade over time \cite{Shi24}. In this section, we will first summarize some approaches where large language models are combined with data streams, then We
-will discuss some common issues and challenges in this field. Finally, we will list some use cases that address some of the challenges.
+pre-trained large language model is likely to gradually degrade over time \cite{Shi24}. In this section, we will first summarize some approaches where large language models are combined with data streams, then discuss some common issues and challenges in this field.
+Finally, we will list some use cases that address some of the challenges.
 
 \subsection{Continual Learning}
 The need for regular updates of large language models brings intense focus to the concept of \textbf{Continual Learning}.  
@@ -281,8 +282,13 @@ continual learning into 3 stages as figure \ref{fig:acl_stages} shows:
   \includegraphics[width=0.95\textwidth]{CL stages.png}
   \caption{Stages of continual learning \cite{Wu24}}
   \label{fig:acl_stages}
-\end{figure}
-Furthermore, \cite{Shi24} demonstrates that there are various methods of computing continual learning while mitigating
+\end{figure} 
+
+\subsubsection{Challenge of CL}
+\noindent \newline
+A critical challenge of continual learning is catastrophic forgetting, which refers to the models forgetting previously learned knowledge 
+when they are updated with new data \cite{Gupta23}. Catastrophic forgetting happens in the continual pre-training stage as the model is continuously updated with a data stream.
+\cite{Shi24} demonstrates that there are various methods of computing continual learning while mitigating
 catastrophic forgetting \cite{Gupta23} and categorize them as follows:
 \begin{itemize}
   \item Replay-Based Methods: The model keeps a small subset of previous tasks and re-trains them periodically.
@@ -290,12 +296,8 @@ catastrophic forgetting \cite{Gupta23} and categorize them as follows:
 that reflects the consolidation of previous knowledge.
   \item Architecture-Based Methods: Change the architecture of the model for each new task and introduce new parameters that fit the task.
 \end{itemize}
-
-\subsubsection{Challenge of CL}
 \noindent \newline
-A critical challenge of continual learning is catastrophic forgetting, which refers to the models forgetting previously learned knowledge 
-when they are updated with new data \cite{Gupta23}. Catastrophic forgetting happens in the continual pre-training stage as the model is continuously updated with a data stream.
-As discussed earlier, there are currently 3 types of methods that can mitigate catastrophic forgetting \cite{Shi24}. The architecture-based methods often face the problem of the growing 
+The architecture-based methods often face the problem of the growing 
 training cost, as their models' parameter size grows with new tasks linearly\cite{Jovanov}. The regularization methods avoid the expanding parameters challenge but the computational cost
 increases due to the extra computation of the regularization term \cite{Wang24}. Therefore, the replay-based methods are often considered to be
 a better approach considering large data stream input, although the choice of selecting the right exemplars from previous tasks can still be difficult \cite{Jovanov}. \\
@@ -434,16 +436,41 @@ and the input prompt, As figure \ref{fig:TStreamLLM} illustrates.
   \label{fig:TStreamLLM}
 \end{figure}
 
+%\section{Conclusion}
+%This paper discussed the gap between large language models, which are pre-trained on massive static datasets,
+%and data streams, which are continuous and potentially unbounded. Two approaches were presented to mitigate this issue. 
+%The first approach, continual learning of large language models, enables the model to continually pre-train over data stream input.
+%By applying continual instruction tuning and continual alignment, the model can adapt to the continuous data input. However,
+% catastrophic forgetting is likely to occur during this process, so replay-based, regularization-based,
+%  and architecture-based methods are applied to mitigate its effects. The second approach, applicable in some fields,
+%   involves converting the data stream input into model-readable input and updating the model's knowledge via prompt engineering.
+%    This method, however, heavily relies on the quality of the prompts formulated by users.
+
 \section{Conclusion}
-This paper discussed the gap between large language models, which are pre-trained on massive static datasets, and data streams, which are continuous and potentially unbounded.
-Two approaches were presented to mitigate this issue:
-\begin{itemize}
-  \item Continual learning of large language models enables the model to continually pre-train over data stream input and by applying continual instruction tuning and continual alignment,
-the model can adapt itself to the continuous data input. However, catastrophic forgetting is likely to occur during this process, so replay-based, regularization-based and architecture-based
-methods are applied to mitigate the effect of catastrophic forgetting. 
-  \item In some application fields, another option is to convert the data stream input into model-readable input and update the model's knowledge via prompt engineering. However, this method is
-heavily relied on the quality of the prompt formulated by users.
-\end{itemize}
+This paper addressed the gap between large language models, which are pre-trained on massive static datasets, and data streams, which are continuous and potentially unbounded.
+Two main approaches were proposed to mitigate this issue. 
+The first approach involves the continual learning of large language models, allowing them to pre-train continually over data stream inputs. 
+By applying continual pre-training, continual instruction tuning and continual alignment, the model can adapt to continuous data inputs.
+However, catastrophic forgetting is likely to occur during this process, so replay-based, regularization-based, and architecture-based methods are applied to mitigate its effects. 
+The second approach converts data stream input into model-readable inputs and update the model's knowledge via prompt engineering, which relies heavily on the quality of the prompts formulated by users.
+
+The primary contribution of this paper lies in presenting these two viable approaches to enable large language models to handle continuous data streams effectively. 
+The continual learning approach, in particular, offers a robust solution to adapt models in real-time, 
+while the prompt engineering method provides a more flexible, though prompt-dependent, alternative.
+
+However, there are several shortcomings in this analysis. Firstly, the continual learning approach, 
+while promising, still faces challenges related to catastrophic forgetting and the computational overhead associated with continual retraining. 
+Secondly, the reliance on high-quality prompts in the second approach poses a limitation, as it requires significant human effort and expertise to formulate effective prompts consistently.
+
+Future work should focus on refining the methods to address these shortcomings. For continual learning, 
+developing more efficient algorithms to reduce computational overhead and further mitigate catastrophic forgetting is essential. 
+For prompt engineering, automating the prompt generation process and improving the model's ability to understand and generate effective prompts autonomously could enhance its applicability. 
+Additionally, exploring hybrid approaches that combine continual learning with automated prompt engineering may offer a more comprehensive solution to handling continuous data streams.
+
+In conclusion, while this paper makes significant strides in adapting large language models to continuous data streams, 
+further research and development are needed to overcome existing challenges and fully realize the potential of these approaches.
+
+
 %\paragraph{Sample Heading (Fourth Level)}
 %The contribution should contain no more than four levels of
 %headings. Table~\ref{tab1} gives a summary of all heading levels.
