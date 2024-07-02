@@ -65,12 +65,12 @@
 %
 \section{Introduction}
 Large language models have shown their wide usage and significant competence in many fields according to \cite{Liu23}, such as learning and answering users' questions in academic fields,
-assisting in diagnosing diseases in medical fields, generating text and classifying text data to various categories and so on. However, as \cite{Gupta23} demonstrates, 
+assisting in diagnosing diseases in medical fields, generating text and classifying text data to various categories, and so on. However, as \cite{Gupta23} demonstrates, 
 there is a significant limitation of current large language models: they are trained based on certain static datasets that will not automatically be updated, and this causes the resulting models to only be able to access information from its training datasets. 
 When the models need to be updated as new data becomes available, the only way is to start the training process over again. But in many scenarios such models can't satisfy our needs. 
 For example, to have a better traffic prediction, real-time traffic data is needed \cite{Zhang24},
 Analyzing news and events sentiment can help predict the financial market \cite{Araci19}, 
-real-time health data is of great importance when monitoring patients' health condition \cite{Thiru23} and so on.
+real-time health data is of great importance when monitoring patients' health condition \cite{Thiru23}, and so on.
 So to have models that can fulfill those use cases, we need to find and compare useful methods that combine large language models and continuous data input (data streams) and also summarize the current major obstacles. 
 
 \section{Related Works}
@@ -100,7 +100,7 @@ effectively improve the language understanding ability of language models even w
 Modern models usually own a large number of parameters and large-scale training datasets, but the source of the training datasets can vary from model to model. For example, 
 according to \cite{Radford19}, GPT-2 (with 1.5 billion parameters) is trained on massive training datasets including the crawling results from millions of different web pages, called WebText. BERT (BERT$_{BASE}$ with 110 million
 parameters, BERT$_{LARGE}$ with 340 million parameters) is trained on the English Wikipedia (2,500 million words) and BookCorpus (800 million words), a large dataset of books used for machine learning approaches \cite{Devlin18}. 
-A more recent model collection called LLaMA (with 7 to 65 billion parameters) is trained on various open-source data such as commoncrawl\footnote{\url{https://commoncrawl.org/}}, C4, Github, Wikipedia and so on \cite{Touvron23}. 
+A more recent model collection called LLaMA (with 7 to 65 billion parameters) is trained on various open-source data such as commoncrawl\footnote{\url{https://commoncrawl.org/}}, C4, Github, Wikipedia, and so on \cite{Touvron23}. 
 Table \ref{table:comparison} provides a brief overview of the 3 models together with information on the most recent GPT-3.5 and GPT-4 models according to the OpenAI blog\footnote{https://platform.openai.com/docs/models/gpt-base}. \\
 
 \begin{table}[H]
@@ -208,7 +208,7 @@ predicts only the masked words instead of reconstructing the entire input. NSP i
 having 2 sentences A and B as input, B is replaced by another random sentence from the training set for half of the time and remains unchanged for the other half of the time.
 The BERT is trained to predict whether the second sentence in the input is the actual sentence B. According to \cite{Devlin18}, NSP has significant benefits for question answering (QA).
 Fine-tuning BERT is relatively inexpensive compared with pre-training, as it only involves fine-tuning the parameters while feeding BERT with various task-specific inputs and outputs 
-such as QA tasks, single sentence classification tasks, sentence pair classification tasks and so on. When fine-tuning, an additional output layer is added to BERT so that the minimal number of 
+such as QA tasks, single sentence classification tasks, sentence pair classification tasks, and so on. When fine-tuning, an additional output layer is added to BERT so that the minimal number of 
 parameters need to be learned from scratch again.
 
 \begin{figure}[H]
@@ -222,7 +222,7 @@ parameters need to be learned from scratch again.
 GPT-2 and LLaMA make some improvements to the pre-training process such as normalizing the input for each transformer layer and adding a normalization layer
 after the last self-attention layer to improve the training stability (GPT-2 and LLaMA) \cite{Radford19}, replacing the ReLU layer with a SwiGLU layer to improve model performance (LLaMA) and
 replacing the absolute positional encoding with the rotary positional embeddings (RoPE) to increase efficiency and scalability (LLaMA) \cite{Touvron23}. Together with more efficient code implementation
-GPT-2 and LLaMA gain better scores on many evaluation fields such as QA, reading comprehension, summarization, translation and so on. Similarly, GPT-2 and LLaMA are fine-tuned with various tasks,
+GPT-2 and LLaMA gain better scores on many evaluation fields such as QA, reading comprehension, summarization, translation, and so on. Similarly, GPT-2 and LLaMA are fine-tuned with various tasks,
 figure \ref{fig:gpt_finetune} illustrates some fine-tuning tasks of the original GPT.
 
 
@@ -236,7 +236,7 @@ figure \ref{fig:gpt_finetune} illustrates some fine-tuning tasks of the original
 
 \subsection{Data Stream}
 In many application fields nowadays, data is often generated and processed at a very high rate. These include health sensors that track body temperature and blood pressure \cite{Geisler13},
-monitoring of production lines, information on stock trading, posted content on social networks and so on. \cite{Geisler16}. Due to its near real-time and huge amounts characteristics, traditional data management
+monitoring of production lines, information on stock trading, posted content on social networks, and so on. \cite{Geisler16}. Due to its near real-time and huge amounts characteristics, traditional data management
 approaches are often not suitable anymore, a new system called Data Stream Management Systems (DSMS) which supports continuous queries, low latency processing, simple scalability and resource management
  has evolved to address this issue \cite{Geisler16}. \\
 \noindent \newline
