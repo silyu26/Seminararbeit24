@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  2 JUL 2024 22:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  2 JUL 2024 23:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -461,80 +461,75 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (6.87927pt too wide) in paragraph at lines 57--59
-[]\T1/cmr/m/n/9 Large lan-guage mod-els, such as Chat-GPT, have be-come widely
- []
-
-[1
+) [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 84--105
+Underfull \hbox (badness 10000) in paragraph at lines 89--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--105
+Underfull \hbox (badness 10000) in paragraph at lines 89--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--105
+Underfull \hbox (badness 10000) in paragraph at lines 89--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--105
+Underfull \hbox (badness 10000) in paragraph at lines 89--110
 
  []
 
 [2]
-Overfull \hbox (0.8984pt too wide) in paragraph at lines 120--120
+Overfull \hbox (0.8984pt too wide) in paragraph at lines 125--125
 []\T1/cmr/m/n/9 Wikipedia(en)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
 \T1/cmr/m/n/9 & Book-Cor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
 []\T1/cmr/m/n/9 Various
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
 \T1/cmr/m/n/9 open-source
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 126--126
+Underfull \hbox (badness 5924) in paragraph at lines 131--131
 []\T1/cmr/m/n/9 Text gen-er-a-
  []
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 126--126
+Underfull \hbox (badness 5924) in paragraph at lines 131--131
 []\T1/cmr/m/n/9 Text gen-er-a-
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 126--131
+Underfull \hbox (badness 2478) in paragraph at lines 131--136
 []\T1/cmr/m/n/9 Content gen-
  []
 
 
-Overfull \hbox (8.30943pt too wide) in paragraph at lines 108--133
+Overfull \hbox (8.30943pt too wide) in paragraph at lines 113--138
  [][] 
  []
 
 <models overview.png, id=82, 518.43687pt x 395.97937pt>
 File: models overview.png Graphic file (type png)
 <use models overview.png>
-Package pdftex.def Info: models overview.png  used on input line 144.
+Package pdftex.def Info: models overview.png  used on input line 149.
 (pdftex.def)             Requested size: 277.69987pt x 212.11575pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--147
+Underfull \hbox (badness 10000) in paragraph at lines 142--152
 
  []
 
@@ -542,14 +537,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--147
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 150--157
+Underfull \hbox (badness 10000) in paragraph at lines 155--162
 
  []
 
 <attention1.jpg, id=106, 1324.95pt x 1866.975pt>
 File: attention1.jpg Graphic file (type jpg)
 <use attention1.jpg>
-Package pdftex.def Info: attention1.jpg  used on input line 160.
+Package pdftex.def Info: attention1.jpg  used on input line 165.
 (pdftex.def)             Requested size: 208.27623pt x 293.48036pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -558,10 +553,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <BERT input repres.png, id=127, 592.2125pt x 184.18813pt>
 File: BERT input repres.png Graphic file (type png)
 <use BERT input repres.png>
-Package pdftex.def Info: BERT input repres.png  used on input line 179.
+Package pdftex.def Info: BERT input repres.png  used on input line 184.
 (pdftex.def)             Requested size: 277.69987pt x 86.37167pt.
  [5 <./attention1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 195--200
+Underfull \hbox (badness 10000) in paragraph at lines 200--205
 
  []
 
@@ -569,16 +564,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--200
 <BERT Finetuning.png, id=168, 754.82pt x 305.64188pt>
 File: BERT Finetuning.png Graphic file (type png)
 <use BERT Finetuning.png>
-Package pdftex.def Info: BERT Finetuning.png  used on input line 216.
+Package pdftex.def Info: BERT Finetuning.png  used on input line 221.
 (pdftex.def)             Requested size: 329.7663pt x 133.52676pt.
  [7 <./BERT Finetuning.png>]
 <gpt finetune.png, id=186, 488.32437pt x 250.43562pt>
 File: gpt finetune.png Graphic file (type png)
 <use gpt finetune.png>
-Package pdftex.def Info: gpt finetune.png  used on input line 232.
+Package pdftex.def Info: gpt finetune.png  used on input line 237.
 (pdftex.def)             Requested size: 277.69987pt x 142.41731pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--246
+Underfull \hbox (badness 10000) in paragraph at lines 243--251
 
  []
 
@@ -586,25 +581,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--246
 <CL stages.png, id=241, 790.45313pt x 285.065pt>
 File: CL stages.png Graphic file (type png)
 <use CL stages.png>
-Package pdftex.def Info: CL stages.png  used on input line 285.
+Package pdftex.def Info: CL stages.png  used on input line 290.
 (pdftex.def)             Requested size: 329.7663pt x 118.92613pt.
  [10 <./CL stages.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 302--316
+Underfull \hbox (badness 10000) in paragraph at lines 307--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--316
+Underfull \hbox (badness 10000) in paragraph at lines 307--321
 
  []
 
 <swallow.png, id=281, 484.81125pt x 236.885pt>
 File: swallow.png Graphic file (type png)
 <use swallow.png>
-Package pdftex.def Info: swallow.png  used on input line 338.
+Package pdftex.def Info: swallow.png  used on input line 343.
 (pdftex.def)             Requested size: 277.69987pt x 135.69453pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--341
+Underfull \hbox (badness 10000) in paragraph at lines 331--346
 
  []
 
@@ -612,21 +607,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--341
 <progressive.png, id=300, 623.32875pt x 289.08pt>
 File: progressive.png Graphic file (type png)
 <use progressive.png>
-Package pdftex.def Info: progressive.png  used on input line 352.
+Package pdftex.def Info: progressive.png  used on input line 357.
 (pdftex.def)             Requested size: 312.40906pt x 144.8881pt.
  [12 <./swallow.png>]
 <prompt_ds_1.PNG, id=322, 638.76141pt x 519.44063pt>
 File: prompt_ds_1.PNG Graphic file (type png)
 <use prompt_ds_1.PNG>
-Package pdftex.def Info: prompt_ds_1.PNG  used on input line 373.
+Package pdftex.def Info: prompt_ds_1.PNG  used on input line 378.
 (pdftex.def)             Requested size: 166.61781pt x 135.49522pt.
 <prompt_ds_2.PNG, id=323, 649.30078pt x 514.92375pt>
 File: prompt_ds_2.PNG Graphic file (type png)
 <use prompt_ds_2.PNG>
-Package pdftex.def Info: prompt_ds_2.PNG  used on input line 380.
+Package pdftex.def Info: prompt_ds_2.PNG  used on input line 385.
 (pdftex.def)             Requested size: 166.61781pt x 132.13274pt.
  [13 <./progressive.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 400--402
+Underfull \hbox (badness 10000) in paragraph at lines 405--407
 
  []
 
@@ -634,12 +629,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 400--402
 <chainforge.png, id=353, 958.07938pt x 342.27875pt>
 File: chainforge.png Graphic file (type png)
 <use chainforge.png>
-Package pdftex.def Info: chainforge.png  used on input line 412.
+Package pdftex.def Info: chainforge.png  used on input line 417.
 (pdftex.def)             Requested size: 329.7663pt x 117.80948pt.
 <LLMLight.PNG, id=361, 590.205pt x 348.17578pt>
 File: LLMLight.PNG Graphic file (type png)
 <use LLMLight.PNG>
-Package pdftex.def Info: LLMLight.PNG  used on input line 424.
+Package pdftex.def Info: LLMLight.PNG  used on input line 429.
 (pdftex.def)             Requested size: 329.7663pt x 194.54144pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -648,21 +643,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <Prompt LLMLight.PNG, id=380, 470.88422pt x 172.39406pt>
 File: Prompt LLMLight.PNG Graphic file (type png)
 <use Prompt LLMLight.PNG>
-Package pdftex.def Info: Prompt LLMLight.PNG  used on input line 439.
+Package pdftex.def Info: Prompt LLMLight.PNG  used on input line 444.
 (pdftex.def)             Requested size: 329.7663pt x 120.73026pt.
  [16 <./LLMLight.PNG> <./Prompt LLMLight.PNG>]
 <GT-TDI.png, id=397, 522.95375pt x 442.65375pt>
 File: GT-TDI.png Graphic file (type png)
 <use GT-TDI.png>
-Package pdftex.def Info: GT-TDI.png  used on input line 453.
+Package pdftex.def Info: GT-TDI.png  used on input line 458.
 (pdftex.def)             Requested size: 173.56177pt x 146.91371pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--487
+Underfull \hbox (badness 10000) in paragraph at lines 474--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--487
+Underfull \hbox (badness 10000) in paragraph at lines 474--492
 
  []
 
@@ -677,9 +672,9 @@ Here is how much of TeX's memory you used:
  30062 multiletter control sequences out of 15000+600000
  484920 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,10n,77p,524b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,10n,77p,419b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on samplepaper.pdf (20 pages, 2866627 bytes).
+Output written on samplepaper.pdf (20 pages, 2866650 bytes).
 PDF statistics:
  527 PDF objects out of 1000 (max. 8388607)
  331 compressed objects within 4 object streams
