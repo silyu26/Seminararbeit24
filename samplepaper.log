@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  1 JUL 2024 23:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.16)  2 JUL 2024 22:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -626,53 +626,63 @@ File: prompt_ds_2.PNG Graphic file (type png)
 Package pdftex.def Info: prompt_ds_2.PNG  used on input line 380.
 (pdftex.def)             Requested size: 166.61781pt x 132.13274pt.
  [13 <./progressive.png>]
-<LLMLight.PNG, id=343, 590.205pt x 348.17578pt>
+Underfull \hbox (badness 10000) in paragraph at lines 400--402
+
+ []
+
+[14 <./prompt_ds_1.PNG> <./prompt_ds_2.PNG>]
+<chainforge.png, id=353, 958.07938pt x 342.27875pt>
+File: chainforge.png Graphic file (type png)
+<use chainforge.png>
+Package pdftex.def Info: chainforge.png  used on input line 412.
+(pdftex.def)             Requested size: 329.7663pt x 117.80948pt.
+<LLMLight.PNG, id=361, 590.205pt x 348.17578pt>
 File: LLMLight.PNG Graphic file (type png)
 <use LLMLight.PNG>
-Package pdftex.def Info: LLMLight.PNG  used on input line 410.
+Package pdftex.def Info: LLMLight.PNG  used on input line 424.
 (pdftex.def)             Requested size: 329.7663pt x 194.54144pt.
- [14 <./prompt_ds_1.PNG> <./prompt_ds_2.PNG>]
-<Prompt LLMLight.PNG, id=365, 470.88422pt x 172.39406pt>
-File: Prompt LLMLight.PNG Graphic file (type png)
-<use Prompt LLMLight.PNG>
-Package pdftex.def Info: Prompt LLMLight.PNG  used on input line 425.
-(pdftex.def)             Requested size: 329.7663pt x 120.73026pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15 <./LLMLight.PNG>]
-<GT-TDI.png, id=381, 522.95375pt x 442.65375pt>
+ [15 <./chainforge.png>]
+<Prompt LLMLight.PNG, id=380, 470.88422pt x 172.39406pt>
+File: Prompt LLMLight.PNG Graphic file (type png)
+<use Prompt LLMLight.PNG>
+Package pdftex.def Info: Prompt LLMLight.PNG  used on input line 439.
+(pdftex.def)             Requested size: 329.7663pt x 120.73026pt.
+ [16 <./LLMLight.PNG> <./Prompt LLMLight.PNG>]
+<GT-TDI.png, id=397, 522.95375pt x 442.65375pt>
 File: GT-TDI.png Graphic file (type png)
 <use GT-TDI.png>
-Package pdftex.def Info: GT-TDI.png  used on input line 439.
+Package pdftex.def Info: GT-TDI.png  used on input line 453.
 (pdftex.def)             Requested size: 173.56177pt x 146.91371pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--473
+Underfull \hbox (badness 10000) in paragraph at lines 469--487
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--473
+Underfull \hbox (badness 10000) in paragraph at lines 469--487
 
  []
 
-[16 <./Prompt LLMLight.PNG> <./GT-TDI.png>] Excluding 'comment' comment. Excluding 'comment' comment. [17] [18] [19] [20] (./samplepaper.aux)
+[17 <./GT-TDI.png>] Excluding 'comment' comment. Excluding 'comment' comment. [18] [19] [20] (./samplepaper.aux)
 Package rerunfilecheck Info: File `samplepaper.out' has not changed.
 (rerunfilecheck)             Checksum: 4DC7176AA7106B7AA4C3423DE5F5BE3A;248.
  ) 
 Here is how much of TeX's memory you used:
- 12113 strings out of 478268
- 190776 string characters out of 5850345
- 488622 words of memory out of 5000000
- 30054 multiletter control sequences out of 15000+600000
+ 12124 strings out of 478268
+ 190961 string characters out of 5850345
+ 488725 words of memory out of 5000000
+ 30062 multiletter control sequences out of 15000+600000
  484920 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,10n,77p,524b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti0700.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on samplepaper.pdf (20 pages, 2703569 bytes).
+Output written on samplepaper.pdf (20 pages, 2866635 bytes).
 PDF statistics:
- 516 PDF objects out of 1000 (max. 8388607)
- 326 compressed objects within 4 object streams
- 98 named destinations out of 1000 (max. 500000)
- 74 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 527 PDF objects out of 1000 (max. 8388607)
+ 331 compressed objects within 4 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

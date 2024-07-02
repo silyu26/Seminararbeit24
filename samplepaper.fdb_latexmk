@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1719868388 "c:/Users/11584/OneDrive/桌面/Seminar 24/Seminararbeit24/samplepaper.tex" "samplepaper.pdf" "samplepaper" 1719868390
+["pdflatex"] 1719952941 "c:/Users/11584/OneDrive/桌面/Seminar 24/Seminararbeit24/samplepaper.tex" "samplepaper.pdf" "samplepaper" 1719952944
   "BERT Finetuning.png" 1715601310 147875 49d065e2499d16a824e8932b06e42ec3 ""
   "BERT input repres.png" 1715601310 51110 af7403a5bf8a25261641a409d3fb63d4 ""
   "CL stages.png" 1716072526 360646 e0bf89f9249f3d2523d18bc280fb1c11 ""
@@ -7,7 +7,7 @@
   "LLMLight.PNG" 1716279051 279903 7e52a0da09d1e8c7c6101c66cc95c273 ""
   "Prompt LLMLight.PNG" 1716279051 115468 e4f7074bb6700fc1633383bf71879d2e ""
   "attention1.jpg" 1715601310 580529 623be731324c7d64314fdbd78aaf241f ""
-  "c:/Users/11584/OneDrive/桌面/Seminar 24/Seminararbeit24/samplepaper.tex" 1719868385 58820 5dd64173f5bccdcc09d255d772968dcb ""
+  "c:/Users/11584/OneDrive/桌面/Seminar 24/Seminararbeit24/samplepaper.tex" 1719952941 60521 ce3b7c53453df2654f7539edffe54e81 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1650145138 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650145138 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1650145329 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -123,15 +123,16 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1650146186 4448422 53302d27d6d34c8e3e97ce3a8b4bdfa7 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1650146233 2826460 c7954e1c326f9ca8e9bd8ec08bfbd56c ""
   "c:/texlive/2022/texmf.cnf" 1650146170 713 e69b156964470283e0530f5060668171 ""
+  "chainforge.png" 1719949112 184539 95dbeedc068f7ffd91af6ac52b331778 ""
   "gpt finetune.png" 1718633314 115631 66c4ee2642b50f1da483476af15c7538 ""
   "llncs.cls" 1715601310 44646 5fb5a2dc40571aa40f3d199c00cbb986 ""
   "models overview.png" 1715807705 131970 97369df12bcf639fa5604bfee8bfba24 ""
   "progressive.png" 1718717187 200755 dfc873a6d2b197e881c0b6ec98a564dd ""
   "prompt_ds_1.PNG" 1716279051 153115 df39bc0d6405f4114381470c7f0e0bc2 ""
   "prompt_ds_2.PNG" 1716279051 191736 1765f002b47e5a5aef9532865a4a8022 ""
-  "samplepaper.aux" 1719868390 9569 13f79eb25cc6aa9fe96aaf50404673c0 "pdflatex"
-  "samplepaper.out" 1719868390 248 4dc7176aa7106b7aa4c3423de5f5be3a "pdflatex"
-  "samplepaper.tex" 1719868385 58820 5dd64173f5bccdcc09d255d772968dcb ""
+  "samplepaper.aux" 1719952943 9934 6e29fc4d78dbbe7d00491dda4f8b54d5 "pdflatex"
+  "samplepaper.out" 1719952943 248 4dc7176aa7106b7aa4c3423de5f5be3a "pdflatex"
+  "samplepaper.tex" 1719952941 60521 ce3b7c53453df2654f7539edffe54e81 ""
   "swallow.png" 1716323869 133411 82eaf8e1c16d10c7e87fc2c18b1a2b59 ""
   (generated)
   "samplepaper.aux"

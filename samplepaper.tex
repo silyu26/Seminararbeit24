@@ -71,7 +71,7 @@ When the models need to be updated as new data becomes available, the only way i
 For example, to have a better traffic prediction, real-time traffic data is needed \cite{Zhang24},
 Analyzing news and events sentiment can help predict the financial market \cite{Araci19}, 
 real-time health data is of great importance when monitoring patients' health condition \cite{Thiru23} and so on.
-So to have models that can fulfill those use cases, we need to find and compare useful methods that combine large language models and continuous data input (data streams) together, and also summarize the current major obstacles. 
+So to have models that can fulfill those use cases, we need to find and compare useful methods that combine large language models and continuous data input (data streams) and also summarize the current major obstacles. 
 
 \section{Related Works}
 In this chapter, the following concepts and techniques that are related to this topic will be covered.
@@ -123,7 +123,7 @@ Table \ref{table:comparison} provides a brief overview of the 3 models together 
   %\hline
   %\textbf{Performance} & SOTA on many NLP tasks & High on NLU tasks & High on text generation and NLU tasks & High on NLU tasks \\
   \hline
-  \textbf{Major Applications?} & QA & Text generation \& Translation & Text generation \& QA & Content generation \& QA \\
+  \textbf{Major Applications} & QA & Text generation \& Translation & Text generation \& QA \& Translation & Content generation \& QA \& Translation \\
   %\hline
   %\textbf{Pricing} & Subscription-based & Open-source & Open-source & Open-source \\
   %\hline
@@ -292,7 +292,7 @@ continual learning into 3 stages as figure \ref{fig:acl_stages} shows:
 A critical challenge of continual learning is catastrophic forgetting, which refers to the models forgetting previously learned knowledge 
 when they are updated with new data \cite{Gupta23}. Catastrophic forgetting happens in the continual pre-training stage as the model is continuously updated with a data stream.
 \cite{Shi24} demonstrates that there are various methods of computing continual learning while mitigating
-catastrophic forgetting \cite{Gupta23} and categorize them as follows:
+catastrophic forgetting \cite{Gupta23} and categorizes them as follows:
 \begin{itemize}
   \item Replay-Based Methods: The model keeps a small subset of previous tasks and re-trains them periodically.
   \item Regularization-Based Methods: The capacity of the model is typically fixed, and the model adds a regularization term (typically a loss function)
@@ -342,15 +342,15 @@ The results showed that despite the large data stream input, Swallow managed to 
 
 \noindent \newline
 A more recent study proposes another technique called \textit{Progressive Prompt} based on continual learning, while typical continual learning methods train a model on various large datasets, progressive prompt only needs
-to learn less than 0,1\% of all parameters but still match the performance of continual pre-training and fine-tuning on large datasets \cite{Razda23}. Before progressive prompt is proposed, another technique called \textit{Progressive Network}
-was proposed to help a model continually learn from new tasks without catastrophic forgetting \cite{Rusu16}. The idea of progressive network is to freeze the network of parameters learned from a previously task prompt and let it stay accessible by copying it to new
-network of incoming tasks. Since the learned parameters are frozen while learning new networks, it can mitigate the effect of catastrophic forgetting. However, progressive network adds a new copy of the model for each task, causing it extremely 
-computationally expensive for large language models with more parameter size, as figure \ref{fig:progressive} shows. In progressive prompt, however, a separate prompt is learned for each new task and is sequentially concatenated from learned prompts.
-That means the frozen parameters are not copied, but directly accessible to the parameters of new task prompts. Progressive prompt shows significant improvement in efficiency and can be applied to all transformer-based architecture.
+to learn less than 0,1\% of all parameters but still match the performance of continual pre-training and fine-tuning on large datasets \cite{Razda23}. Before Progressive Prompt is proposed, another technique called \textit{Progressive Network}
+was proposed to help a model continually learn from new tasks without catastrophic forgetting \cite{Rusu16}. The idea of Progressive Network is to freeze the network of parameters learned from a previously task prompt and let it stay accessible by copying it to new
+network of incoming tasks. Since the learned parameters are frozen while learning new networks, it can mitigate the effect of catastrophic forgetting. However, Progressive Network adds a new copy of the model for each task, causing it extremely 
+computationally expensive for large language models with more parameter size, as figure \ref{fig:progressive} shows. In Progressive Prompt, however, a separate prompt is learned for each new task and is sequentially concatenated from learned prompts.
+That means the frozen parameters are not copied, but directly accessible to the parameters of new task prompts. Progressive Prompt shows significant improvement in efficiency and can be applied to all transformer-based architecture.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{progressive.png}
-  \caption{Illustration of progressive network and progressive prompt \cite{Razda23}}
+  \caption{Illustration of Progressive Network and Progressive Prompt \cite{Razda23}}
   \label{fig:progressive}
 \end{figure}
 
@@ -398,7 +398,21 @@ Furthermore, they demonstrate that prompt formulation should follow the specific
   \item Consequences: It explains the possible effect of this prompt pattern.
 \end{itemize}
 However, \cite{White23} also points out that for different issue categories such as "Alternative Approaches Pattern" (which guides the model to output alternative options) and "Fact Check List Pattern" 
-(which guides the model to provide a list of facts), the specific implementation of each component could differ.
+(which guides the model to provide a list of facts), the specific implementation of each component could differ. \\
+
+\noindent \newline
+To enhance prompt engineering and evaluate the output of large language models, \cite{Arawjo24} proposes a tool called \textbf{ChainForge}. The core idea is to provide a user interface so that users
+can first select and adjust the prompt template, select the LLM models to be evaluated and see the evaluation of the responses from the selected models. The system provides users with high-level
+flexibilities such that users can define their evaluation rules using an evaluator in the system, select multiple models to have an overview of their performance according to the evaluation rules
+and send multiple requests easily by chaining prompt templates. Figure \ref{fig:chainforge} shows the workflow of ChainForge where 2 different prompt templates are chained using the same input variable in \{\} brackets.
+By chaining the 5 input elements with the \{game\} variable, the system can send 10 requests at once to each LLM model selected. With the help of ChainForge, users can evaluate the quality of a prompt on various models more easily. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{chainforge.png}
+  \caption{The workflow of ChainForge \cite{Arawjo24}}
+  \label{fig:chainforge}
+\end{figure}
 
 \subsubsection{Use Cases}
 \noindent \newline
@@ -428,8 +442,8 @@ Figure \ref{fig:llmlight_prompt} shows an example template of the prompt \cite{L
 \end{figure} 
 \noindent 
 Prompt engineering is also applied in the field of traffic data imputation, \cite{Zhang24} proposes a Graph Transformer-based Traffic Data Imputation (GT-TDI) model to compute the missing and faulty values from 
-the large-scale road network traffic data collected by various sensors, both road-attached and vehicle-carried. The core idea of the GT-TDI model is to model sensors and their relations as nodes and edges in 
-a road network graph, the graph is later processed by a Graph Neural Network component. The data collected by sensors are transformed into prompts with a series of semantic descriptions that contain the spatiotemporal information of the network,
+the large-scale road network traffic data streams collected by various sensors, both road-attached and vehicle-carried. The core idea of the GT-TDI model is to model sensors and their relations as nodes and edges in 
+a road network graph, the graph is later processed by a Graph Neural Network component. The data streams collected by sensors are transformed into many prompts with a series of semantic descriptions that contain the spatiotemporal information of the network,
 they are then encoded and passed to the GT-TDI model. By training on the input datasets, the model is then fine-tuned in the domain of traffic data. Finally, by providing the correct prompt such as 
 \textit{"Predict the missing traffic volume for sensor B456 between 3 PM and 4 PM considering the last known values and nearby sensors' data."}, the corresponding missing value can be computed by the model based on the similarity of historical training data
 and the input prompt, As figure \ref{fig:TStreamLLM} illustrates. 
@@ -668,7 +682,7 @@ Araci, Dogu. "Finbert: Financial sentiment analysis with pre-trained language mo
 Roumeliotis, Konstantinos I., and Nikolaos D. Tselikas. "Chatgpt and open-ai models: A preliminary review." Future Internet 15, no. 6 (2023): 192.
 
 \bibitem{Cavnar94}
-Cavnar, William B., and John M. Trenkle. "N-gram-based text categorization." In Proceedings of SDAIR-94, 3rd annual symposium on document analysis and information retrieval, vol. 161175, p. 14. 1994.
+Cavnar, William B., and John M. Trenkle. "N-gram-based Text Categorization." In Proceedings of SDAIR-94, 3rd Annual Symposium on Document Analysis and Information Retrieval, 161-175. Las Vegas, NV, 1994. Ann Arbor, MI: Environmental Research Institute of Michigan (ERIM).
 
 \bibitem{Mikolov13}
 Mikolov, Tomas, Ilya Sutskever, Kai Chen, Greg S. Corrado, and Jeff Dean. "Distributed representations of words and phrases and their compositionality." Advances in neural information processing systems 26 (2013).
@@ -689,7 +703,7 @@ Kaplan, Jared, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon
 Gozalo-Brizuela, Roberto, and Eduardo C. Garrido-Merchan. "ChatGPT is not all you need. A State of the Art Review of large Generative AI models." arXiv preprint arXiv:2301.04655 (2023).
 
 \bibitem{Patro06}
-Patroumpas, Kostas, and Timos Sellis. "Window specification over data streams." In International Conference on Extending Database Technology, pp. 445-464. Berlin, Heidelberg: Springer Berlin Heidelberg, 2006.
+Patroumpas, Kostas, and Timos Sellis. "Window specification over data streams." In International Conference on Extending Database Technology, pp. 445-464. Berlin, 2006. Heidelberg: Springer Berlin Heidelberg.
 
 \bibitem{Golab03}
 Golab, Lukasz, and M. Tamer Özsu. "Issues in data stream management." ACM Sigmod Record 32, no. 2 (2003): 5-14.
@@ -710,7 +724,7 @@ Lai, Siqi, Zhao Xu, Weijia Zhang, Hao Liu, and Hui Xiong. "Large language models
 Liu, Xiao, Kaixuan Ji, Yicheng Fu, Weng Lam Tam, Zhengxiao Du, Zhilin Yang, and Jie Tang. "P-tuning v2: Prompt tuning can be comparable to fine-tuning universally across scales and tasks." arXiv preprint arXiv:2110.07602 (2021).
 
 \bibitem{Jovanov}
-Jovanović, Mlađan. "Towards Incremental Learning in Large Language Models: A Critical Review."
+Jovanović, Mlađan. "Towards Incremental Learning in Large Language Models: A Critical Review." (2024).
 
 \bibitem{Wang24}
 Wang, Yifan, Yafei Liu, Chufan Shi, Haoling Li, Chen Chen, Haonan Lu, and Yujiu Yang. "InsCL: A Data-efficient Continual Learning Paradigm for Fine-tuning Large Language Models with Instructions." arXiv preprint arXiv:2403.11435 (2024).
@@ -750,6 +764,9 @@ Razdaibiedina, Anastasia, Yuning Mao, Rui Hou, Madian Khabsa, Mike Lewis, and Am
 
 \bibitem{Rusu16}
 Rusu, Andrei A., Neil C. Rabinowitz, Guillaume Desjardins, Hubert Soyer, James Kirkpatrick, Koray Kavukcuoglu, Razvan Pascanu, and Raia Hadsell. "Progressive neural networks." arXiv preprint arXiv:1606.04671 (2016).
+
+\bibitem{Arawjo24}
+Arawjo, Ian, Chelse Swoopes, Priyan Vaithilingam, Martin Wattenberg, and Elena L. Glassman. "ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing." In Proceedings of the CHI Conference on Human Factors in Computing Systems, pp. 1-18. Honolulu, HI, 2024. New York: ACM.
 \end{thebibliography}
 
 \end{document}
